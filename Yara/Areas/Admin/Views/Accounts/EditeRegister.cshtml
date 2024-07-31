@@ -1,0 +1,140 @@
+﻿@model ViewmMODeElMASTER
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Home</title>
+	<link rel="stylesheet" href="~/Admin/assets/styles/style.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="~/Admin/assets/plugin/waves/waves.min.css">
+
+	<!-- RTL -->
+	<link rel="stylesheet" href="~/Admin/assets/styles/style-rtl.min.css">
+</head>
+
+<body>
+
+	<div id="single-wrapper">
+		<form class="frm-single" method="post" asp-controller="Accounts" asp-action="RegistersEdite" enctype="multipart/form-data">
+			<div class="inside">
+				<div class="title"><strong>Yara  </strong>Admin</div>
+				<!-- /.title -->
+				<div class="frm-title">Edite user</div>
+				<!-- /.frm-title -->
+
+				<input type="hidden" asp-for="returnUrl" id="url">
+				<input type="hidden" asp-for="sUser.Id" >
+				<div class="frm-input">
+					<input asp-for="sUser.Email" type="email" placeholder="Email" class="frm-inp">
+					<i class="fa fa-envelope frm-ico">
+					</i>
+					<span asp-validation-for="sUser.Email"></span>
+				</div>
+				<!-- /.frm-input -->
+				<div class="frm-input">
+					<input asp-for="sUser.UserName" type="text" placeholder="Username" class="frm-inp">
+					<i class="fa fa-user frm-ico">
+					</i>
+					<span asp-validation-for="sUser.UserName"></span>
+				</div>
+
+				<div class="frm-input">
+					<input asp-for="sUser.Name" type="text" placeholder="full Name" class="frm-inp">
+					<i class="fa fa-user-plus frm-ico">
+					</i>
+					<span asp-validation-for="sUser.Name"></span>
+				</div>
+				<div class="frm-input">
+					<input asp-for="sUser.PhoneNumber" type="tel" placeholder="Phone Number" class="frm-inp">
+					<i class="fa fa-phone frm-ico">
+					</i>
+					<span asp-validation-for="sUser.PhoneNumber"></span>
+				</div>
+
+				<div class="switch primary"><input asp-for="sUser.ActiveUser" type="checkbox" checked="" id="switch-2"><label for="switch-2">Active</label></div>
+
+				<!-- /.frm-input -->
+			@* 	<div class="frm-input">
+					<input asp-for="NewRegister.Password" type="NewRegister.password" placeholder="Password" class="frm-inp">
+					<i class="fa fa-lock frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.Password"></span>
+				</div>
+				<div class="frm-input">
+					<input asp-for="NewRegister.ComparePassword" type="password" placeholder="Compare Password" class="frm-inp">
+					<i class="fa fa-key frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.ComparePassword"></span>
+
+				</div> *@
+				<div class="form-group">
+					<label for="exampleInputFile">File input</label>
+					<input asp-for="sUser.ImageUser" type="file" id="exampleInputFile" name="Files">
+				
+					<span style="color:red"> <strong>@TempData["Message"]</strong></span>
+
+					<img src="@string.Format("/Images/Users/{0}",Model.sUser.ImageUser)" class="img-bordered img-circle img-circle"
+						 style="width:100px; height:100px;margin-top:20px;margin-bottom:20px">
+				</div>
+			
+				<button type="submit" class="frm-submit" >Save<i class="fa fa-arrow-circle-right"></i></button>
+	
+			
+			</div>
+			<!-- .inside -->
+		</form>
+
+	</div>
+	<script src="~/Admin/assets/scripts/jquery.min.js"></script>
+	<script src="~/Admin/assets/scripts/modernizr.min.js"></script>
+	<script src="~/Admin/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/Admin/assets/plugin/nprogress/nprogress.js"></script>
+	<script src="~/Admin/assets/plugin/waves/waves.min.js"></script>
+
+	<script src="~/Admin/assets/scripts/main.min.js"></script>
+
+
+
+
+	<!-- Full Screen Plugin -->
+	<script src="~/Admin/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
+
+	<!-- Dropify -->
+	<script src="~/Admin/assets/plugin/dropify/js/dropify.min.js"></script>
+	<script src="~/Admin/assets/scripts/fileUpload.demo.min.js"></script>
+
+	<script src="~/Admin/assets/scripts/main.min.js"></script>
+
+
+
+
+	<script src="~/Admin/assets/scripts/jquery.min.js"></script>
+	<script src="~/Admin/assets/scripts/modernizr.min.js"></script>
+	<script src="~/Admin/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/Admin/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="~/Admin/assets/plugin/nprogress/nprogress.js"></script>
+	<script src="~/Admin/assets/plugin/sweet-alert/sweetalert.min.js"></script>
+	<script src="~/Admin/assets/plugin/waves/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="~/Admin/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
+
+	<!-- Dropify -->
+	<script src="~/Admin/assets/plugin/dropify/js/dropify.min.js"></script>
+	<script src="~/Admin/assets/scripts/fileUpload.demo.min.js"></script>
+
+	<script src="~/Admin/assets/scripts/main.min.js"></script>
+	<script>
+		$("#url").val(window.location.href);
+	</script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ClintPricePerkgUnder10" xml:space="preserve">
+    <value>Please include the price per kilo within the customer’s category of less than 10 kilos so that the process can be completed successfully....!</value>
+  </data>
+  <data name="ComparePassword" xml:space="preserve">
+    <value>Please retype the password...!</value>
+  </data>
+  <data name="ComparePasswordcomferm" xml:space="preserve">
+    <value>Passwords must match...!</value>
+  </data>
+  <data name="MaxLength100" xml:space="preserve">
+    <value>The number of characters entered must not exceed 100 characters...!</value>
+  </data>
+  <data name="MaxLength20" xml:space="preserve">
+    <value>The number of characters entered must not exceed 20 characters...!</value>
+  </data>
+  <data name="MaxLength2000" xml:space="preserve">
+    <value>The number of characters entered must not exceed 2000 characters...!</value>
+  </data>
+  <data name="MaxLength25" xml:space="preserve">
+    <value>The number of characters entered must not exceed 25 characters...!</value>
+  </data>
+  <data name="MaxLength300" xml:space="preserve">
+    <value>The number of characters entered must not exceed 300 characters...!</value>
+  </data>
+  <data name="MaxLength500" xml:space="preserve">
+    <value>The number of characters entered must not exceed 500 characters...!</value>
+  </data>
+  <data name="MinLength1" xml:space="preserve">
+    <value>The number of characters entered must not be less than one character, and the # symbol can be used to indicate the same page....!</value>
+  </data>
+  <data name="MinLength3" xml:space="preserve">
+    <value>The number of characters entered must not be less than 3 characters....!</value>
+  </data>
+  <data name="MinLength5" xml:space="preserve">
+    <value>The number of characters entered must not be less than 5 characters....!</value>
+  </data>
+  <data name="MinLengthPassword5" xml:space="preserve">
+    <value>The minimum number of characters for the password must be at least 5 characters</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Please enter the password for the process to complete successfully...!</value>
+  </data>
+  <data name="PhoneNumber" xml:space="preserve">
+    <value>Please enter phone number...!</value>
+  </data>
+  <data name="RegisterEmail" xml:space="preserve">
+    <value>Please include your email..!</value>
+  </data>
+  <data name="RegisterEmailError" xml:space="preserve">
+    <value>The entered format must be the email format...!</value>
+  </data>
+  <data name="RegisterEmaillogin" xml:space="preserve">
+    <value>Please enter your email...!</value>
+  </data>
+  <data name="RegisterName" xml:space="preserve">
+    <value>Please include full name.....!</value>
+  </data>
+  <data name="RoleName" xml:space="preserve">
+    <value>Please enter your user permission for the process to complete successfully..!</value>
+  </data>
+  <data name="userName" xml:space="preserve">
+    <value>You must enter the user name...!</value>
+  </data>
+  <data name="VlAddres" xml:space="preserve">
+    <value>Please include the address for the process to complete successfully</value>
+  </data>
+  <data name="VlAddresCompany" xml:space="preserve">
+    <value>Please include the company address for the process to complete successfully...!</value>
+  </data>
+  <data name="VlBlackMarketExchangeRate" xml:space="preserve">
+    <value>Please include the exchange rate in the local currency on the black market for the process to complete successfully....!</value>
+  </data>
+  <data name="VlBuilding" xml:space="preserve">
+    <value>VlBuilding</value>
+  </data>
+  <data name="VlCatchReceiptNo" xml:space="preserve">
+    <value>please inclode the Catch Receipt</value>
+  </data>
+  <data name="VlClintDelivery" xml:space="preserve">
+    <value>Please include the customer's delivery price so that the process is completed successfully...!</value>
+  </data>
+  <data name="VlClintPricePerkgAbove10" xml:space="preserve">
+    <value>Please include the price per kilo within the customer’s category of more than 10 kilos so that the process can be completed successfully....!</value>
+  </data>
+  <data name="Vlcode" xml:space="preserve">
+    <value>Please include the local currency code for the operation to complete successfully..!</value>
+  </data>
+  <data name="VlCompanyDelivery" xml:space="preserve">
+    <value>Please include the company's delivery price so that the process can be completed successfully...!</value>
+  </data>
+  <data name="VlCompanyDescription" xml:space="preserve">
+    <value>Please include the company's delivery price so that the process can be completed successfully...!</value>
+  </data>
+  <data name="VlCompanyName" xml:space="preserve">
+    <value>Please include the company name for the process to complete successfully...!</value>
+  </data>
+  <data name="VlCoPricePerkgAbove10" xml:space="preserve">
+    <value>Please include the price per kilo within the category higher than 10 kilograms received from the shipping company so that the process can be completed successfully....!</value>
+  </data>
+  <data name="VlCoPricePerkgUnder10" xml:space="preserve">
+    <value>Please include the price per kilo within the category of less than 10 kilograms received from the shipping company so that the process can be completed successfully....!</value>
+  </data>
+  <data name="VlCountry" xml:space="preserve">
+    <value>Please include the country for the process to complete successfully...!</value>
+  </data>
+  <data name="VlCurrency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="VlDescription" xml:space="preserve">
+    <value>Enter The Description</value>
+  </data>
+  <data name="VlDescriptionClint" xml:space="preserve">
+    <value>Please include a description of the link between the customer and the pricing. The process is completed successfully...!</value>
+  </data>
+  <data name="VlDescriptionOrder" xml:space="preserve">
+    <value>Please include the order description for the process to complete successfully</value>
+  </data>
+  <data name="VlEmail" xml:space="preserve">
+    <value>Please include the nickname for the process to complete successfully..!</value>
+  </data>
+  <data name="VlEmailCompany" xml:space="preserve">
+    <value>Please include the company's email so that the process is completed successfully...!</value>
+  </data>
+  <data name="VlFloor" xml:space="preserve">
+    <value>VlFloor</value>
+  </data>
+  <data name="VlForeignCurrency" xml:space="preserve">
+    <value>Please add the exchange rate in foreign currency for the process to complete successfully...!</value>
+  </data>
+  <data name="VlGlobalExchangeRate" xml:space="preserve">
+    <value>Please include the exchange rate in the local currency for the process to complete successfully...!</value>
+  </data>
+  <data name="VllocalCurrency" xml:space="preserve">
+    <value>Please include the exchange rate in the local currency for the process to complete successfully...!</value>
+  </data>
+  <data name="VlMoblie" xml:space="preserve">
+    <value>VlMoblie</value>
+  </data>
+  <data name="VlNikeNAme" xml:space="preserve">
+    <value>Please include the nickname for the process to complete successfully..!</value>
+  </data>
+  <data name="VlOffice" xml:space="preserve">
+    <value>VlOffice</value>
+  </data>
+  <data name="VlPasswordEmail" xml:space="preserve">
+    <value>Please include the Password Email for the process to complete successfully...!</value>
+  </data>
+  <data name="VlPhone" xml:space="preserve">
+    <value>Enter The Phone</value>
+  </data>
+  <data name="VlPhoneCompany" xml:space="preserve">
+    <value>Please include the phone number for the process to complete successfully....!</value>
+  </data>
+  <data name="VlProfitAmount" xml:space="preserve">
+    <value>Profit Amount</value>
+  </data>
+  <data name="VlReceiptNo" xml:space="preserve">
+    <value>Please include a bond number for the process to complete successfully...!</value>
+  </data>
+  <data name="VlReceiptStatment" xml:space="preserve">
+    <value>Please include the receipt statement for the process to be completed successfully....!</value>
+  </data>
+  <data name="VlResivedMony" xml:space="preserve">
+    <value>Please include the amount for the transaction to complete successfully..!</value>
+  </data>
+  <data name="VlSmtpServer" xml:space="preserve">
+    <value>Please include the Smtp Server for the process to complete successfully...!</value>
+  </data>
+  <data name="VlShippingAddress" xml:space="preserve">
+    <value>Shipping Address</value>
+  </data>
+  <data name="VlStreet" xml:space="preserve">
+    <value>Enter the Street</value>
+  </data>
+  <data name="VlTitle" xml:space="preserve">
+    <value>VlTitle</value>
+  </data>
+  <data name="VlTitleShipping" xml:space="preserve">
+    <value>Please include the appropriate address in the shipping category for the process to complete successfully...!</value>
+  </data>
+  <data name="VLTypEmail" xml:space="preserve">
+    <value>The entered format must be the email format for the process to complete successfully...!</value>
+  </data>
+  <data name="VlTypesCompanies" xml:space="preserve">
+    <value>Please include the nickname for the process to complete successfully..!</value>
+  </data>
+  <data name="VlTypeSystem" xml:space="preserve">
+    <value>Please include the system type for the process to complete successfully..!</value>
+  </data>
+  <data name="VlTypeSystemDelivery" xml:space="preserve">
+    <value>Please include the type of delivery system for the process to complete successfully...!</value>
+  </data>
+  <data name="VlTypesOfRequest" xml:space="preserve">
+    <value>Please include the Types Of Request for the process to complete successfully...!</value>
+  </data>
+  <data name="VlTypesOfMessage" xml:space="preserve">
+    <value>Please include the Types Of Message  for the process to complete successfully...!</value>
+  </data>
+  <data name="MaxLength1000" xml:space="preserve">
+    <value>The number of characters entered must not exceed 1000 characters...!</value>
+  </data>
+  <data name="VlDescreption" xml:space="preserve">
+    <value>Please include descreption for the process to complete successfully...!</value>
+  </data>
+  <data name="VlFAQ" xml:space="preserve">
+    <value>please include FAQ to complete successfully...!</value>
+  </data>
+  <data name="VlListFAQ" xml:space="preserve">
+    <value>Please include List FAQ for the process to complete successfully...!</value>
+  </data>
+  <data name="VlMessageDescription" xml:space="preserve">
+    <value>Please include the Message Description for the process to complete successfully...!</value>
+  </data>
+</root>

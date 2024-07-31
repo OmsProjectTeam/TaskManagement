@@ -1,0 +1,178 @@
+﻿@model RegisterViewModel
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Home</title>
+	<link rel="stylesheet" href="~/Admin/assets/styles/style.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="~/Admin/assets/plugin/waves/waves.min.css">
+
+	<!-- RTL -->
+	<link rel="stylesheet" href="~/Admin/assets/styles/style-rtl.min.css">
+</head>
+
+<body>
+
+	<div id="single-wrapper">
+		<form class="frm-single" method="post" asp-controller="Accounts" asp-action="RegistersCustomer" enctype="multipart/form-data">
+			<div class="inside">
+				<div class="title"><strong>Yara  </strong>New User</div>
+				<!-- /.title -->
+				<div class="frm-title">Register</div>
+				<!-- /.frm-title -->
+				<span style="color:red"> <strong>@TempData["Message2"]</strong></span>
+				<input type="hidden" asp-for="NewRegister.returnUrl" id="url">
+				<div class="frm-input">
+					<input asp-for="NewRegister.Email" type="email" placeholder="Email" class="frm-inp" id="email">
+					<i class="fa fa-envelope frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.Email"></span>
+				</div>
+				<!-- /.frm-input -->
+				<div class="frm-input">
+					<input asp-for="NewRegister.userName" type="text" placeholder="Username" class="frm-inp" id="userName">
+					<i class="fa fa-user frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.userName"></span>
+				</div>
+
+				<div class="frm-input">
+					<input asp-for="NewRegister.Name" type="text" placeholder="full Name" class="frm-inp" id="name">
+					<i class="fa fa-user-plus frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.Name"></span>
+				</div>
+				<div class="frm-input">
+					<input asp-for="NewRegister.PhoneNumber" type="tel" placeholder="Phone Number" class="frm-inp" id="phoneNumber">
+					<i class="fa fa-phone frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.PhoneNumber"></span>
+				</div>
+				<!-- /.frm-input -->
+				<div class="frm-input">
+					<input asp-for="NewRegister.Password" type="password" placeholder="Password" class="frm-inp" id="password">
+					<i class="fa fa-lock frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.Password"></span>
+				</div>
+				<div class="frm-input">
+					<input asp-for="NewRegister.ComparePassword" type="password" placeholder="Compare Password" class="frm-inp" id="comparePassword">
+					<i class="fa fa-key frm-ico">
+					</i>
+					<span asp-validation-for="NewRegister.ComparePassword"></span>
+
+				</div>
+				<div class="form-group">
+					<label for="exampleInputFile">File input</label>
+					<input asp-for="NewRegister.ImageUser" type="file" id="exampleInputFile" name="Files">
+
+					<span style="color:red"> <strong>@TempData["Message"]</strong></span>
+				</div>
+				<!-- /.frm-input -->
+				<div class="clearfix margin-bottom-20">
+					<div class="checkbox primary">
+						<input type="checkbox" id="accept">
+						<label for="accept">I accept Terms and Conditions</label>
+					</div>
+					<!-- /.checkbox -->
+				</div>
+				<!-- /.clearfix -->
+				<button type="submit" class="frm-submit">Register<i class="fa fa-arrow-circle-right"></i></button>
+				<div class="row small-spacing">
+					<div class="col-sm-12">
+						<div class="txt-login-with txt-center">or register with</div>
+						<!-- /.txt-login-with -->
+					</div>
+					<!-- /.col-sm-12 -->
+					<div class="col-sm-6">
+						<button type="button" class="btn btn-sm btn-icon btn-icon-left btn-social-with-text btn-facebook text-white waves-effect waves-light">
+							<i class="ico fa fa-facebook">
+
+							</i><span>Facebook</span>
+						</button>
+					</div>
+					<!-- /.col-sm-6 -->
+					<div class="col-sm-6"><button type="button" class="btn btn-sm btn-icon btn-icon-left btn-social-with-text btn-google-plus text-white waves-effect waves-light"><i class="ico fa fa-google-plus"></i>Google+</button></div>
+					<!-- /.col-sm-6 -->
+				</div>
+				<!-- /.row -->
+				<a asp-area="Admin" asp-controller="Accounts" asp-action="Login" class="a-link">
+					<i class="fa fa-sign-in"></i>Already have account? Login.
+				</a>
+				<div class="frm-footer">Yara solution soft © 2024.</div>
+				<!-- /.footer -->
+			</div>
+			<!-- .inside -->
+		</form>
+
+	</div>
+	<script src="~/Admin/assets/scripts/jquery.min.js"></script>
+	<script src="~/Admin/assets/scripts/modernizr.min.js"></script>
+	<script src="~/Admin/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/Admin/assets/plugin/nprogress/nprogress.js"></script>
+	<script src="~/Admin/assets/plugin/waves/waves.min.js"></script>
+	<script src="~/Admin/assets/scripts/main.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="~/Admin/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
+	<!-- Dropify -->
+	<script src="~/Admin/assets/plugin/dropify/js/dropify.min.js"></script>
+	<script src="~/Admin/assets/scripts/fileUpload.demo.min.js"></script>
+	<script src="~/Admin/assets/scripts/main.min.js"></script>
+	<script src="~/Admin/assets/scripts/jquery.min.js"></script>
+	<script src="~/Admin/assets/scripts/modernizr.min.js"></script>
+	<script src="~/Admin/assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="~/Admin/assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="~/Admin/assets/plugin/nprogress/nprogress.js"></script>
+	<script src="~/Admin/assets/plugin/sweet-alert/sweetalert.min.js"></script>
+	<script src="~/Admin/assets/plugin/waves/waves.min.js"></script>
+	<!-- Full Screen Plugin -->
+	<script src="~/Admin/assets/plugin/fullscreen/jquery.fullscreen-min.js"></script>
+	<!-- Dropify -->
+	<script src="~/Admin/assets/plugin/dropify/js/dropify.min.js"></script>
+	<script src="~/Admin/assets/scripts/fileUpload.demo.min.js"></script>
+	<script src="~/Admin/assets/scripts/main.min.js"></script>
+	<script>
+		$("#url").val(window.location.href);
+
+		$('#phoneNumber').on('blur', function () {
+			var phoneNumber = $(this).val();
+			console.log('Phone number entered:', phoneNumber);
+			if (phoneNumber) {
+				$.ajax({
+					url: '@Url.Action("GetUserByPhoneNumber", "Accounts")',
+					type: 'GET',
+					data: { phoneNumber: phoneNumber },
+					success: function (data) {
+						console.log("User found", data)
+						if (data) {
+							$('#email').val(data.email);
+							$('#userName').val(data.userName);
+							$('#name').val(data.name);
+							$('#password').val(data.password);
+							$('#comparePassword').val(data.password);
+						}
+					},
+					error: function () {
+						console.log('User not found or error occurred');
+					}
+				});
+			}
+		});
+		var loadFile = function (event) {
+			var image = document.getElementById('output');
+			image.src = URL.createObjectURL(event.target.files[0]);
+		};
+	</script>
+</body>
+</html>

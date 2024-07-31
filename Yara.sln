@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34601.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yara", "Yara\Yara.csproj", "{2B2562C1-3E96-4AC2-A582-5E218D5BD11E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domin", "Domin\Domin.csproj", "{4BB261C2-FAB5-4DDB-A6D7-EC5D7395D26E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infarstuructre", "Infarstuructre\Infarstuructre.csproj", "{F25FF5A6-E7E8-4CD2-98B6-39B125541C16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B2562C1-3E96-4AC2-A582-5E218D5BD11E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2562C1-3E96-4AC2-A582-5E218D5BD11E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2562C1-3E96-4AC2-A582-5E218D5BD11E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2562C1-3E96-4AC2-A582-5E218D5BD11E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB261C2-FAB5-4DDB-A6D7-EC5D7395D26E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB261C2-FAB5-4DDB-A6D7-EC5D7395D26E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB261C2-FAB5-4DDB-A6D7-EC5D7395D26E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB261C2-FAB5-4DDB-A6D7-EC5D7395D26E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25FF5A6-E7E8-4CD2-98B6-39B125541C16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25FF5A6-E7E8-4CD2-98B6-39B125541C16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25FF5A6-E7E8-4CD2-98B6-39B125541C16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25FF5A6-E7E8-4CD2-98B6-39B125541C16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEE5CF6A-5AA1-40A6-8DD5-CC9DA4F8E9D0}
+	EndGlobalSection
+EndGlobal

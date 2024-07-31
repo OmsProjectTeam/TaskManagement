@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LbActive" xml:space="preserve">
+    <value>حالة التعامل</value>
+  </data>
+  <data name="LbActiveUser" xml:space="preserve">
+    <value>مستخدم نشط</value>
+  </data>
+  <data name="LBAddArea" xml:space="preserve">
+    <value>إضافة وتعديل المناطق</value>
+  </data>
+  <data name="LBAddAreaDeliveryTariffs" xml:space="preserve">
+    <value>إضافة وتعديل أسعار شركات التوصيل للمناطق</value>
+  </data>
+  <data name="LBAddCity" xml:space="preserve">
+    <value>إضافة وتعديل بيانات المدينة</value>
+  </data>
+  <data name="LBAddCityDeliveryTariffs" xml:space="preserve">
+    <value>إضافة وتعديل أسعار شركات التوصيل للمدن</value>
+  </data>
+  <data name="LBAddClintWitheDeliveryTariffs" xml:space="preserve">
+    <value>إضافة وتعديل أنظمة العميل مع تعرفة التوصيل</value>
+  </data>
+  <data name="LBAddCurrenciesExchangeRates" xml:space="preserve">
+    <value>إضافة وتعديل العملات</value>
+  </data>
+  <data name="LBAddCustomerMessages" xml:space="preserve">
+    <value>أضافة وتعديل مسجات العملاء</value>
+  </data>
+  <data name="LbAddEditInformationCompanies" xml:space="preserve">
+    <value>إضافة وتعديل بيانات الشركة</value>
+  </data>
+  <data name="LBAddEmailAlartSetting" xml:space="preserve">
+    <value>إضافةو تعديل سيرفر التنبيهات </value>
+  </data>
+  <data name="LBAddExchangeRate" xml:space="preserve">
+    <value>إضافة وتعديل سعر الصرف</value>
+  </data>
+  <data name="LBAddFAQ" xml:space="preserve">
+    <value>إضافة وتعديل التعليمات</value>
+  </data>
+  <data name="LBAddFAQDescreption" xml:space="preserve">
+    <value>اضافة وصف</value>
+  </data>
+  <data name="LBAddFAQList" xml:space="preserve">
+    <value>اضافة قائمة</value>
+  </data>
+  <data name="LBAddOrderCase" xml:space="preserve">
+    <value>إضافة وتعديل حالة الطلب</value>
+  </data>
+  <data name="LBAddOrderNew" xml:space="preserve">
+    <value>اضافة وتعديل اضافة طلب جديد</value>
+  </data>
+  <data name="LBAddOrderStatus" xml:space="preserve">
+    <value>إضافة وتعديل حالة الطلب</value>
+  </data>
+  <data name="LBAddPaing" xml:space="preserve">
+    <value>إضافة مدفوعات</value>
+  </data>
+  <data name="LBAddProfit" xml:space="preserve">
+    <value>إضافة ربح</value>
+  </data>
+  <data name="LbAddres" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="LbAddresCompany" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="LBAddRolesName" xml:space="preserve">
+    <value>إضافة وتعديل الأدوار</value>
+  </data>
+  <data name="LBAddShippingAddress" xml:space="preserve">
+    <value>إضافة عنوان شحن</value>
+  </data>
+  <data name="LBAddShippingPrice" xml:space="preserve">
+    <value>إضافة وتعديل الأسعار لأنظمة الشحن</value>
+  </data>
+  <data name="LBAddTaskStatus" xml:space="preserve">
+    <value>إضافة وتعديل حالة المهمة</value>
+  </data>
+  <data name="LBAddTransaction" xml:space="preserve">
+    <value>إضافة وتعديل حاسبة العملات</value>
+  </data>
+  <data name="LBAddTransfer" xml:space="preserve">
+    <value>إضافة وتعديل عملية تحويل</value>
+  </data>
+  <data name="LBAddTypesCompanies" xml:space="preserve">
+    <value>إضافة وتعديل فئات الشركة</value>
+  </data>
+  <data name="LBAddTypesOfMessage" xml:space="preserve">
+    <value>أضافة وتعديل أنواع المسجات </value>
+  </data>
+  <data name="LBAddTypesOfRequest" xml:space="preserve">
+    <value>إضافة وتعديل انواع الطلبات </value>
+  </data>
+  <data name="LBAddTypeSystem" xml:space="preserve">
+    <value>إضافة وتعديل الأنظمة</value>
+  </data>
+  <data name="LBAddTypeSystemDelivery" xml:space="preserve">
+    <value>إضافة وتعديل نوع نظام التسليم</value>
+  </data>
+  <data name="LbAmount" xml:space="preserve">
+    <value>الكمية</value>
+  </data>
+  <data name="Lbbgw" xml:space="preserve">
+    <value>bgw</value>
+  </data>
+  <data name="Lbbranch" xml:space="preserve">
+    <value>الفرع</value>
+  </data>
+  <data name="LBBuilding" xml:space="preserve">
+    <value>البناء</value>
+  </data>
+  <data name="Lbbypass" xml:space="preserve">
+    <value>التجاوز</value>
+  </data>
+  <data name="LbCatchReceiptNo" xml:space="preserve">
+    <value>ايصال القبض</value>
+  </data>
+  <data name="LbCity" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="LbClintDelivery" xml:space="preserve">
+    <value>سعر التوصيل للزبون</value>
+  </data>
+  <data name="LBClintInformation" xml:space="preserve">
+    <value>معلومات العميل</value>
+  </data>
+  <data name="LbClintPricePerkgAbove10" xml:space="preserve">
+    <value>سعر الشحن للعملاء أكثر من 10</value>
+  </data>
+  <data name="LbClintPricePerkgUnder10" xml:space="preserve">
+    <value>سعر الشحن للعملاء أقل من 10</value>
+  </data>
+  <data name="Lbcode" xml:space="preserve">
+    <value>الرمز</value>
+  </data>
+  <data name="Lbcodeto" xml:space="preserve">
+    <value>الرمز</value>
+  </data>
+  <data name="LbCompanyDelivery" xml:space="preserve">
+    <value>أسعار شركات التوصيل</value>
+  </data>
+  <data name="LbCompanyDescription" xml:space="preserve">
+    <value>وصف الشركة</value>
+  </data>
+  <data name="LbCompanyName" xml:space="preserve">
+    <value>اسم الشركة</value>
+  </data>
+  <data name="LbCompanyNamem" xml:space="preserve">
+    <value>اسم الشركة التجارية</value>
+  </data>
+  <data name="LbCompanyURl" xml:space="preserve">
+    <value>الموقع الاكتروني</value>
+  </data>
+  <data name="LbConvertedAmount" xml:space="preserve">
+    <value>المبلغ المحول</value>
+  </data>
+  <data name="LbCoPricePerkgAbove10" xml:space="preserve">
+    <value>سعر الشحن للشركة أكثر من 10</value>
+  </data>
+  <data name="LbCoPricePerkgUnder10" xml:space="preserve">
+    <value>سعر الشحن للشركة أقل من 10</value>
+  </data>
+  <data name="LbCostPrice" xml:space="preserve">
+    <value>سعر الكلفة</value>
+  </data>
+  <data name="LbCountry" xml:space="preserve">
+    <value>العملة</value>
+  </data>
+  <data name="LbCountryto" xml:space="preserve">
+    <value>سعر الصرف إلى</value>
+  </data>
+  <data name="Lbcredit" xml:space="preserve">
+    <value>ائتمان</value>
+  </data>
+  <data name="LbCurrency" xml:space="preserve">
+    <value>العملة</value>
+  </data>
+  <data name="lbCurrentState" xml:space="preserve">
+    <value>حالة</value>
+  </data>
+  <data name="LBCustomeronorder" xml:space="preserve">
+    <value>العميل </value>
+  </data>
+  <data name="LBCustomers" xml:space="preserve">
+    <value>العملاء</value>
+  </data>
+  <data name="Lbcust_landmark" xml:space="preserve">
+    <value>أقرب نقطة علام</value>
+  </data>
+  <data name="Lbcust_mob" xml:space="preserve">
+    <value>الهاتف الاول</value>
+  </data>
+  <data name="Lbcust_mob2" xml:space="preserve">
+    <value>الهاتف الثاني</value>
+  </data>
+  <data name="Lbcust_name" xml:space="preserve">
+    <value>الزبون</value>
+  </data>
+  <data name="Lbcust_profile" xml:space="preserve">
+    <value>الملف الشخصي</value>
+  </data>
+  <data name="Lbcust_status" xml:space="preserve">
+    <value>الحالة القديمة</value>
+  </data>
+  <data name="LbDataEntry" xml:space="preserve">
+    <value>ادخال بيانات</value>
+  </data>
+  <data name="LbDateTimeEntry" xml:space="preserve">
+    <value>وقت وتاريخ الدخول</value>
+  </data>
+  <data name="LBDeliveryAddress" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Lbdelivery_charges" xml:space="preserve">
+    <value>رسوم التوصيل</value>
+  </data>
+  <data name="LbDescription" xml:space="preserve">
+    <value>المنطقة</value>
+  </data>
+  <data name="LbDescription1" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Lbdescriptioncity" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="LbDescriptionClint" xml:space="preserve">
+    <value>وصف العميل</value>
+  </data>
+  <data name="LbDescriptionOrder" xml:space="preserve">
+    <value>وصف الطلب</value>
+  </data>
+  <data name="LbdescriptionOrderStuse" xml:space="preserve">
+    <value>وصف حالة الطلب</value>
+  </data>
+  <data name="LBEmageSise" xml:space="preserve">
+    <value>حجم الصورة 150*150</value>
+  </data>
+  <data name="LbEmailCompany" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
+  <data name="LbExchangeAmount" xml:space="preserve">
+    <value>الصرف</value>
+  </data>
+  <data name="LbExchangedPrice" xml:space="preserve">
+    <value>سعر الصرف</value>
+  </data>
+  <data name="LbExchangeRate" xml:space="preserve">
+    <value>سعر الصرف</value>
+  </data>
+  <data name="LbFAQ" xml:space="preserve">
+    <value>التعليمات</value>
+  </data>
+  <data name="LbFAQDescreption" xml:space="preserve">
+    <value>معرف وصف التعليمة</value>
+  </data>
+  <data name="LbFAQList" xml:space="preserve">
+    <value>قائمة السؤال</value>
+  </data>
+  <data name="Lbfbid" xml:space="preserve">
+    <value>fb</value>
+  </data>
+  <data name="LBFloor" xml:space="preserve">
+    <value>الطابق</value>
+  </data>
+  <data name="Lbfull_package" xml:space="preserve">
+    <value>حزمة كاملة</value>
+  </data>
+  <data name="LBGeneralSettings" xml:space="preserve">
+    <value>الاعدادات العامة</value>
+  </data>
+  <data name="Lbgisurl" xml:space="preserve">
+    <value>رابط</value>
+  </data>
+  <data name="Lbhexcode" xml:space="preserve">
+    <value>الرمز</value>
+  </data>
+  <data name="Lbhidden" xml:space="preserve">
+    <value>مخفي</value>
+  </data>
+  <data name="LBhxcode" xml:space="preserve">
+    <value>الرمز الست عشري</value>
+  </data>
+  <data name="LbId" xml:space="preserve">
+    <value>المعرف</value>
+  </data>
+  <data name="LbIdFAQ" xml:space="preserve">
+    <value>معرف التعليمة</value>
+  </data>
+  <data name="LbIdFAQDescreption" xml:space="preserve">
+    <value>معرف وصف السؤال</value>
+  </data>
+  <data name="LbIdFAQList" xml:space="preserve">
+    <value>معرف قائمة السؤال</value>
+  </data>
+  <data name="LbInformaition" xml:space="preserve">
+    <value>المعلومات</value>
+  </data>
+  <data name="LbInformaitioncl" xml:space="preserve">
+    <value>معلومات العميل</value>
+  </data>
+  <data name="LbInformaitionco" xml:space="preserve">
+    <value>معلومات الشركة</value>
+  </data>
+  <data name="LbInformationCompany" xml:space="preserve">
+    <value>معلومات الشركة</value>
+  </data>
+  <data name="Lbinsert_dt" xml:space="preserve">
+    <value>تاريخ الاضافة</value>
+  </data>
+  <data name="LbIsNorth" xml:space="preserve">
+    <value>الجنوب</value>
+  </data>
+  <data name="lbIsPaid" xml:space="preserve">
+    <value>الدفع</value>
+  </data>
+  <data name="LbisPublic" xml:space="preserve">
+    <value>عام</value>
+  </data>
+  <data name="Lblat" xml:space="preserve">
+    <value>خط العرض</value>
+  </data>
+  <data name="LBLbAreaName" xml:space="preserve">
+    <value>اسم المنطقة</value>
+  </data>
+  <data name="LBLbRoles" xml:space="preserve">
+    <value>الصلاحيات</value>
+  </data>
+  <data name="LbListFAQ" xml:space="preserve">
+    <value>قائمة السؤال</value>
+  </data>
+  <data name="Lblon" xml:space="preserve">
+    <value>خط الطول</value>
+  </data>
+  <data name="lbMailSender" xml:space="preserve">
+    <value>بريد الارسال</value>
+  </data>
+  <data name="LBMerchantInformation" xml:space="preserve">
+    <value>معلومات التاجر</value>
+  </data>
+  <data name="LBMerchants" xml:space="preserve">
+    <value>التجار</value>
+  </data>
+  <data name="Lbmerchant_mob" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="LbMerchant_name" xml:space="preserve">
+    <value>اسم التاجر</value>
+  </data>
+  <data name="LbMessageDescription" xml:space="preserve">
+    <value>رسالة العميل </value>
+  </data>
+  <data name="lbMsgErrorLogin" xml:space="preserve">
+    <value>خطأ في اسم المستخدم أو كلمة المرور .....!</value>
+  </data>
+  <data name="lbMsgNotSavedChangePassword" xml:space="preserve">
+    <value>خطأ لم يتم حفظ كلمة المرور الجديدة...!</value>
+  </data>
+  <data name="lbMsgSavedChangePassword" xml:space="preserve">
+    <value>تم حفظ كلمة المرور الجديدة بنجاح</value>
+  </data>
+  <data name="LBMyArea" xml:space="preserve">
+    <value>المناطق</value>
+  </data>
+  <data name="LBMyAreaDeliveryTariffs" xml:space="preserve">
+    <value>أسعار شركات التوصيل للمناطق</value>
+  </data>
+  <data name="LBMyCity" xml:space="preserve">
+    <value>بيانات المدن</value>
+  </data>
+  <data name="LBMyCityDeliveryTariffs" xml:space="preserve">
+    <value>أسعار شركات التوصيل للمدن</value>
+  </data>
+  <data name="LBMyClintWitheDeliveryTariffs" xml:space="preserve">
+    <value>العميل مع رسوم التوصيل</value>
+  </data>
+  <data name="LBMyCurrenciesExchangeRates" xml:space="preserve">
+    <value>العملات</value>
+  </data>
+  <data name="LBMyCustomer" xml:space="preserve">
+    <value>بيانات العملاء الفردية</value>
+  </data>
+  <data name="LBMyCustomerMessages" xml:space="preserve">
+    <value>رسائل العملاء </value>
+  </data>
+  <data name="LBMyEmailAlartSettingAr" xml:space="preserve">
+    <value>أعدادات بريدي التنبيهات</value>
+  </data>
+  <data name="LBMyExchangeRate" xml:space="preserve">
+    <value>سعر الصرف</value>
+  </data>
+  <data name="LbMyFAQ" xml:space="preserve">
+    <value>التعليمات</value>
+  </data>
+  <data name="LbMyFAQDescreption" xml:space="preserve">
+    <value>وصف التعليمات </value>
+  </data>
+  <data name="LbMyFAQList" xml:space="preserve">
+    <value>قائمة السؤال</value>
+  </data>
+  <data name="LBMYInformationCompanies" xml:space="preserve">
+    <value>معلومات الشركات</value>
+  </data>
+  <data name="LBMyMerchant" xml:space="preserve">
+    <value>بيانات التجار</value>
+  </data>
+  <data name="LBMyOrder" xml:space="preserve">
+    <value>الطلب</value>
+  </data>
+  <data name="LBMyOrderCase" xml:space="preserve">
+    <value>حالات الطلب</value>
+  </data>
+  <data name="LBMyOrderNew" xml:space="preserve">
+    <value>طلب جديد</value>
+  </data>
+  <data name="LBMyOrderStatus" xml:space="preserve">
+    <value>حالة الطلب</value>
+  </data>
+  <data name="LBMyRolesName" xml:space="preserve">
+    <value>الأدوار</value>
+  </data>
+  <data name="LBMyShippingAddress" xml:space="preserve">
+    <value>عناوين الشحن</value>
+  </data>
+  <data name="LBMyShippingPrice" xml:space="preserve">
+    <value>أسعار أنظمة الشحن</value>
+  </data>
+  <data name="LBMyTaskStatus" xml:space="preserve">
+    <value>حالة المهمة</value>
+  </data>
+  <data name="LBMyTransaction" xml:space="preserve">
+    <value>حاسبة العملة</value>
+  </data>
+  <data name="LBMyTransfers" xml:space="preserve">
+    <value>التحويلات</value>
+  </data>
+  <data name="LBMyTypesCompanies" xml:space="preserve">
+    <value>فئات الشركات</value>
+  </data>
+  <data name="LBMyTypesOfMessage" xml:space="preserve">
+    <value>أنواع المسجات </value>
+  </data>
+  <data name="LBMyTypesOfRequest" xml:space="preserve">
+    <value>أنواع الطلبات</value>
+  </data>
+  <data name="LBMyTypeSystem" xml:space="preserve">
+    <value>الأنظمة</value>
+  </data>
+  <data name="LBMyTypeSystemDelivery" xml:space="preserve">
+    <value>نوع نظام التسليم</value>
+  </data>
+  <data name="LbName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LbNameRols" xml:space="preserve">
+    <value>اسم الدور</value>
+  </data>
+  <data name="LbNikeNAme" xml:space="preserve">
+    <value>اللقب</value>
+  </data>
+  <data name="LbNikeNAmeM" xml:space="preserve">
+    <value>اسم شركة التاجر</value>
+  </data>
+  <data name="LbNormalizedName" xml:space="preserve">
+    <value>الاسم الطبيعي</value>
+  </data>
+  <data name="Lbnotes" xml:space="preserve">
+    <value>ملاحظات</value>
+  </data>
+  <data name="lbNotSaved" xml:space="preserve">
+    <value>حدث خطأ أثناء الحفظ. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="lbNotSavedMsgRole" xml:space="preserve">
+    <value>لم يتم حفظ عملية الصلاحية، يرجى التحقق والمحاولة مرة أخرى لاحقًا</value>
+  </data>
+  <data name="lbNotSavedMsgUser" xml:space="preserve">
+    <value>لم يتم حفظ عملية الصلاحية، يرجى التحقق والمحاولة مرة أخرى لاحقًا</value>
+  </data>
+  <data name="lbNotSavedMsgUserRole" xml:space="preserve">
+    <value>لم يتم حفظ عملية الصلاحية، يرجى التحقق والمحاولة مرة أخرى لاحقًا</value>
+  </data>
+  <data name="lbNotUpdate" xml:space="preserve">
+    <value>حدث خطأ أثناء عملية التحرير. يرجى التحقق والمحاولة مرة أخرى لاحقا..!</value>
+  </data>
+  <data name="lbNotUpdateMsgRole" xml:space="preserve">
+    <value>حدث خطأ أثناء عملية التحرير. يرجى التحقق والمحاولة مرة أخرى لاحقا..!</value>
+  </data>
+  <data name="lbNotUpdateMsgUser" xml:space="preserve">
+    <value>حدث خطأ أثناء عملية التحرير. يرجى التحقق والمحاولة مرة أخرى لاحقا..!</value>
+  </data>
+  <data name="lbNotUpdateMsgUserRole" xml:space="preserve">
+    <value>حدث خطأ أثناء عملية التحرير. يرجى التحقق والمحاولة مرة أخرى لاحقا..!</value>
+  </data>
+  <data name="LbNouts" xml:space="preserve">
+    <value>ملاحظة</value>
+  </data>
+  <data name="LbNoutsOrder" xml:space="preserve">
+    <value>ملاحظات الطلب </value>
+  </data>
+  <data name="LbOffice" xml:space="preserve">
+    <value>المكتب</value>
+  </data>
+  <data name="lbOldeAndUserGide" xml:space="preserve">
+    <value>الصورة القديمة</value>
+  </data>
+  <data name="LbOpration" xml:space="preserve">
+    <value>العمليات</value>
+  </data>
+  <data name="Lborder" xml:space="preserve">
+    <value>الطلبات</value>
+  </data>
+  <data name="LbOrderCase" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="LborderCases" xml:space="preserve">
+    <value>حالات الطلب</value>
+  </data>
+  <data name="LbOrderDate" xml:space="preserve">
+    <value>تاريخ الطلب</value>
+  </data>
+  <data name="LBOrderInformation" xml:space="preserve">
+    <value>معلومات الطلب</value>
+  </data>
+  <data name="LBOrdersSystem" xml:space="preserve">
+    <value>نظام الطلبيات</value>
+  </data>
+  <data name="LBOrderStatus" xml:space="preserve">
+    <value>حالة الطلب</value>
+  </data>
+  <data name="Lboutskirts" xml:space="preserve">
+    <value>ضواحي المدينة</value>
+  </data>
+  <data name="LBPaidingInformations" xml:space="preserve">
+    <value>معلومات الدفع</value>
+  </data>
+  <data name="LBPaidings" xml:space="preserve">
+    <value>المدفوعات</value>
+  </data>
+  <data name="lbPasswordEmail" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="LbPhoneCompany" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="LbPhoneCompanySecand" xml:space="preserve">
+    <value>رقم الهاتف 2</value>
+  </data>
+  <data name="LbPhoto" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="lbPortServer" xml:space="preserve">
+    <value>المنفذ</value>
+  </data>
+  <data name="LbPrice" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="LBPricingSystem" xml:space="preserve">
+    <value>نظام الاسعار</value>
+  </data>
+  <data name="LBProfile" xml:space="preserve">
+    <value>الملف الشخصي</value>
+  </data>
+  <data name="LbProfitAmount" xml:space="preserve">
+    <value>كمية الربح</value>
+  </data>
+  <data name="LBProfitsInformations" xml:space="preserve">
+    <value>معلومات الأرباح</value>
+  </data>
+  <data name="LbQuastion" xml:space="preserve">
+    <value>السؤال</value>
+  </data>
+  <data name="LbQuastionDesc" xml:space="preserve">
+    <value>وصف السؤال</value>
+  </data>
+  <data name="LbQuastionList" xml:space="preserve">
+    <value>قائمة السؤال</value>
+  </data>
+  <data name="LbRate" xml:space="preserve">
+    <value>سعر الصرف</value>
+  </data>
+  <data name="LbReceiptStatment" xml:space="preserve">
+    <value>بيان الاستلام</value>
+  </data>
+  <data name="LBreceipt_dt" xml:space="preserve">
+    <value>تاريخ الاستلام</value>
+  </data>
+  <data name="LBreceipt_no" xml:space="preserve">
+    <value>رقم الإيصال</value>
+  </data>
+  <data name="LbResivedMony" xml:space="preserve">
+    <value>المبلغ المستلم</value>
+  </data>
+  <data name="Lbrole" xml:space="preserve">
+    <value>الدور</value>
+  </data>
+  <data name="LbRolesName" xml:space="preserve">
+    <value>اسم الدور</value>
+  </data>
+  <data name="lbSave" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="lbSaveMsgRole" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="LbSector" xml:space="preserve">
+    <value>القطاع</value>
+  </data>
+  <data name="LBservice_charges" xml:space="preserve">
+    <value>رسوم الخدمات</value>
+  </data>
+  <data name="LBShippingAddress" xml:space="preserve">
+    <value>عناوين الشحن</value>
+  </data>
+  <data name="LBShippingAddressInfo" xml:space="preserve">
+    <value>معلومات عناوين الشحن</value>
+  </data>
+  <data name="LBShippingAddressLocation" xml:space="preserve">
+    <value>موقع عناوين الشحن</value>
+  </data>
+  <data name="Lbsms_alert" xml:space="preserve">
+    <value>التنبيه عبر الرسائل القصيرة</value>
+  </data>
+  <data name="lbSmtpServer" xml:space="preserve">
+    <value>سيرفر الارسال</value>
+  </data>
+  <data name="Lbsorting" xml:space="preserve">
+    <value>التصنيف</value>
+  </data>
+  <data name="LbSpec" xml:space="preserve">
+    <value>مساحة</value>
+  </data>
+  <data name="lbSsl_validity" xml:space="preserve">
+    <value>صلاحية SSL</value>
+  </data>
+  <data name="LBStreet" xml:space="preserve">
+    <value>الشارع</value>
+  </data>
+  <data name="LbTaskStatus" xml:space="preserve">
+    <value>حالة المهمة</value>
+  </data>
+  <data name="LbTitle" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="LbTitleShipping" xml:space="preserve">
+    <value>عنوان الشحن</value>
+  </data>
+  <data name="LbTransferAmount" xml:space="preserve">
+    <value>المبلغ</value>
+  </data>
+  <data name="LBTransferInformations" xml:space="preserve">
+    <value>معلومات التحويل</value>
+  </data>
+  <data name="LbTypesCompanies" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="LbTypesCompaniesM" xml:space="preserve">
+    <value>أنواع الشركات التجارية</value>
+  </data>
+  <data name="LbTypesOfMessage" xml:space="preserve">
+    <value>نوع المسج</value>
+  </data>
+  <data name="LbTypesOfRequest" xml:space="preserve">
+    <value>النوع </value>
+  </data>
+  <data name="LbTypeSystem" xml:space="preserve">
+    <value>النظام</value>
+  </data>
+  <data name="lbUpdate" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="lbUpdateMsgRole" xml:space="preserve">
+    <value>تحديث</value>
+  </data>
+  <data name="LBUpload_image" xml:space="preserve">
+    <value>رفع</value>
+  </data>
+  <data name="LbUserEmage" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="LbUserEmail" xml:space="preserve">
+    <value>البريد الالكتروني للمستخدم</value>
+  </data>
+  <data name="LbUserName" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="LbUserPhone" xml:space="preserve">
+    <value>الهاتف</value>
+  </data>
+  <data name="Lbuserpwd" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="LBUsersInformationEn" xml:space="preserve">
+    <value>معلومات المستخدمين</value>
+  </data>
+  <data name="LbUS_delivery" xml:space="preserve">
+    <value>مستخدم نظام التوصيل</value>
+  </data>
+  <data name="LbWeight" xml:space="preserve">
+    <value>الوزن</value>
+  </data>
+  <data name="Lbwith_delivery" xml:space="preserve">
+    <value>مع تسليم</value>
+  </data>
+  <data name="LbZone" xml:space="preserve">
+    <value>الحي السكني</value>
+  </data>
+  <data name="LTitleShipping" xml:space="preserve">
+    <value>شرح صلاحية الشحن</value>
+  </data>
+  <data name="VLAreadoplceted" xml:space="preserve">
+    <value>تمت بالفعل إضافة التسعير إلى المنطقة. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLCitydoplceted" xml:space="preserve">
+    <value>تم إدخال سعر التسليم لهذه المدينة. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLCompanyNameDoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال الشركة. يرجى التحقق والمحاولة مرة أخرى لاحقا....!</value>
+  </data>
+  <data name="VLCountryDoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال البلاد. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLCustMob2doplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال هاتف العميل. يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
+  </data>
+  <data name="VLCustMobdoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال هاتف العميل. يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
+  </data>
+  <data name="VLCustNamedoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال اسم العميل. يرجى التحقق والمحاولة مرة أخرى لاحقا....!</value>
+  </data>
+  <data name="VLCustomerDoplceted" xml:space="preserve">
+    <value>تم تعريف العميل بنظام التسعير. يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
+  </data>
+  <data name="VLDeleteError" xml:space="preserve">
+    <value>لم يكتمل الحذف. كان هناك خطأ</value>
+  </data>
+  <data name="VLDeletesuccessful" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="VLdELETESuccessfully" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="VLDescriptionareadoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال المنطقة. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLDescriptionClintDoplceted" xml:space="preserve">
+    <value>تم بالفعل إدخال وصف الاتصال بنظام التعريفة. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLDescriptionDoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل دخول المدينة. يرجى التحقق والمحاولة مرة أخرى لاحقا....!</value>
+  </data>
+  <data name="VLDescriptiondplceted" xml:space="preserve">
+    <value>تم إدخال حالة الطلب. يرجى التأكيد والمحاولة مرة أخرى لاحقا....!</value>
+  </data>
+  <data name="VLDescriptionOrderDoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال وصف الطلب. يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
+  </data>
+  <data name="VLEmailOreUserOrPaswo" xml:space="preserve">
+    <value>البريد الإلكتروني أو اسم المستخدم موجود بالفعل...!</value>
+  </data>
+  <data name="VLErrorDeleteData" xml:space="preserve">
+    <value>خطأ بالحذف...!</value>
+  </data>
+  <data name="VLErrorSave" xml:space="preserve">
+    <value>خطأ أثناء عملية الحفظ....!</value>
+  </data>
+  <data name="VLErrorUpdate" xml:space="preserve">
+    <value>خطأ في عملية التحرير....!</value>
+  </data>
+  <data name="VLExchangeRateDoplceted" xml:space="preserve">
+    <value>تم إدخال العملة بالفعل. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLFAQDoplceted" xml:space="preserve">
+    <value>تم إدخال السؤال مسبقا.. يرجى التأكد والمحاولة لاحقا..!</value>
+  </data>
+  <data name="VLHxcodedoplceted" xml:space="preserve">
+    <value>تم إدخال الرمز بالفعل، يرجى التحقق والمحاولة مرة أخرى لاحقًا...!</value>
+  </data>
+  <data name="VLimageuplode" xml:space="preserve">
+    <value>من فضلك ارفع الصورة...!</value>
+  </data>
+  <data name="VLMerchantDoplceted" xml:space="preserve">
+    <value>تم تعريف التاجر بنظام التسعير. يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
+  </data>
+  <data name="VLMerchantMobDoplceted" xml:space="preserve">
+    <value>لقد تم إدخال رقم الهاتف بالفعل. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLMerchantNameDoplceted" xml:space="preserve">
+    <value>تمت إضافة عنوان البريد الإلكتروني بالفعل. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLRoleNameDoplceted" xml:space="preserve">
+    <value>لقد تم إدخال الصلاحية بالفعل، يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
+  </data>
+  <data name="VLSavedSuccessfully" xml:space="preserve">
+    <value>تمت عملية الحفظ بنجاح</value>
+  </data>
+  <data name="VLTitleShippingoplceted" xml:space="preserve">
+    <value>تم إدخال عنوان سعر الشحن. يرجى التحقق والمحاولة مرة أخرى لاحقا....!</value>
+  </data>
+  <data name="VLTypesCompaniesDoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال فئة الشركة. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
+  </data>
+  <data name="VLTypesOfMessageDoplceted" xml:space="preserve">
+    <value>تم إدخال نوع الرسالة مسبقا يرجى التأكد وإعادة المحاولة لاحقا ...</value>
+  </data>
+  <data name="VLTypesOfRequestDoplceted" xml:space="preserve">
+    <value>تم ادخال نوع الطلب مسبقا يرجى التأكد وإعادة المحاولة لاحقا ..!</value>
+  </data>
+  <data name="VLTypeSystemDeliveryDoplceted" xml:space="preserve">
+    <value>نوع نظام التسليم مدرج بالفعل، يرجى التحقق والمحاولة مرة أخرى لاحقًا...!</value>
+  </data>
+  <data name="VLTypeSystemDoplceted" xml:space="preserve">
+    <value>لقد تم بالفعل إدخال النظام. يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
+  </data>
+  <data name="VLUpdatedSuccessfully" xml:space="preserve">
+    <value>تمت عملية التعديل بنجاح</value>
+  </data>
+</root>

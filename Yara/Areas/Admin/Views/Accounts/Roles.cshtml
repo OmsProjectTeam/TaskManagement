@@ -1,0 +1,123 @@
+﻿@model ViewmMODeElMASTER
+@{
+    ViewData["Title"] = @ResourceWeb.LBLbRoles;
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="col-xs-12">
+    <div class="box-content">
+        <ul class="list-inline">
+            <li class="margin-bottom-10"><a href="#"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Roles Information</button></a></li>/
+            <li class="margin-bottom-10"><a asp-area="Admin"asp-controller="Home"asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Admin Home</button></a></li>/
+            <li class="margin-bottom-10"><a asp-area=""asp-controller="Home"asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Home</button></a></li>
+
+            <span style="color:royalblue"> <strong>@TempData["Delete successful"]</strong></span>
+            <span style="color:red"> <strong>@TempData["Delete Error"]</strong></span>
+          
+        </ul>
+        <!-- /.box-title -->
+        <div class="dropdown js__drop_down">
+            <a asp-area="Admin" asp-controller="Accounts" asp-action="AddEditRoles"><button type="button" class="btn btn-violet btn-rounded btn-bordered waves-effect waves-light" style="margin-bottom:20px">Add</button></a>
+
+          
+            <!-- /.sub-menu -->
+        </div>
+        <!-- /.dropdown js__dropdown -->
+        <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+         @*    <div class="row">
+                <div class="col-sm-6">
+                    <div class="dataTables_length" id="example_length">
+                        <label>Show <select name="example_length" aria-controls="example" class="form-control input-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div id="example_filter" class="dataTables_filter">
+                        <label>
+                            Search:<input type="search" class="form-control input-sm" placeholder="" aria-controls="example">
+                        </label>
+                    </div>
+                </div>
+            </div> *@
+           
+            <div class="row">
+               
+                <div class="col-sm-12">
+                    <table id="example" class="table table-striped table-bordered display dataTable" style="width: 100%;" role="grid" aria-describedby="example_info">
+                       
+                        <thead>
+                            <tr role="row">
+                                <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" >@ResourceWeb.LbNameRols</th>
+                                @* <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWeb.LbNormalizedName</th> *@
+                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" >@ResourceWeb.LbOpration</th>
+
+                        <tfoot>
+                            <tr>
+                                <th rowspan="1" colspan="1">@ResourceWeb.LbNameRols</th>
+                               @*  <th rowspan="1" colspan="1">@ResourceWeb.LbNormalizedName</th> *@
+                                <th rowspan="1" colspan="1">@ResourceWeb.LbOpration</th>
+
+                        </tfoot>
+                        <tbody>
+                                    @foreach (var item in Model.ListIdentityRole)
+                                    {
+                                <tr role="row" class="odd">
+                                    <td class="sorting_1">
+
+
+                                                @switch (@item.Name)
+                                                {
+                                                    case "Super Admin":
+                                                <span class="btn btn-danger btn-rounded btn-bordered waves-effect waves-light" >@item.Name</span>
+                                                        break;
+                                                    case "Admin":
+                                                <span class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">@item.Name</span>
+                                                        break;
+                                                    default:
+                                                <span class="btn btn-info btn-rounded btn-bordered waves-effect waves-light">@item.Name</span>
+                                                        break;
+                                                }
+                                    
+                                    
+                                    </td>
+                                  @*   <td>@item.NormalizedName</td> *@
+                                    <td>
+
+
+                                        <ul class="list-inline">
+                                            <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Accounts" asp-action="AddEditRoles" asp-route-Id="@item.Id"><button type="button" class="btn btn-primary btn-circle btn-lg waves-effect waves-light"><i class="ico fa fa-edit"></i></button></a></li>|
+                                            <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Accounts" asp-action="DeleteRole" asp-route-Id="@item.Id"><button type="button" class="btn btn-danger btn-circle btn-lg waves-effect waves-light"><i class="ico fa fa-remove"></i></button></a></li>
+                                        </ul>
+                                        
+                                    
+                                    
+                                    
+                                    </td>
+
+                                </tr>
+                                    }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+         @*    <div class="row">
+                <div class="col-sm-5">
+                    <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries (filtered from 57 total entries)</div>
+                    </div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example_previous"><a href="#" aria-controls="example" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="example_next"><a href="#" aria-controls="example" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div></div> *@
+        </div>
+    </div>
+    <!-- /.box-content -->
+</div>
+@section Scripts
+{
+    <!-- Data Tables -->
+    <script src="~/Admin/assets/plugin/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="~/Admin/assets/plugin/datatables/media/js/dataTables.bootstrap.min.js"></script>
+    <script src="~/Admin/assets/plugin/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Admin/assets/plugin/datatables/extensions/Responsive/js/responsive.bootstrap.min.js"></script>
+    <script src="~/Admin/assets/scripts/datatables.demo.min.js"></script>
+
+}
+
+

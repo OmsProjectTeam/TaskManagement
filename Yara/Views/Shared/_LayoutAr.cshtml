@@ -1,0 +1,441 @@
+﻿@inject SignInManager<ApplicationUser> signInManager
+
+
+
+
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+	<meta charset="utf-8">
+	<title>IT-Firm IT Businees HTML-5 Template | Homepage 02</title>
+	<!-- Stylesheets -->
+	<link href="~/Web/css/bootstrap.css" rel="stylesheet">
+	<link href="~/Web/css/style.css" rel="stylesheet">
+	<link href="~/Web/css/responsive.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+	<link rel="shortcut icon" href="~/Web/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="~/Web/images/favicon.png" type="image/x-icon">
+
+	<!-- Responsive -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+</head>
+
+<body>
+
+	<div class="page-wrapper">
+
+		<!-- Preloader -->
+		<div class="preloader"></div>
+		<!-- End Preloader -->
+		<!-- Main Header / Header Style Two -->
+		<header class="main-header header-style-two">
+
+			<!-- Header Top -->
+			<div class="header-top_two">
+				<div class="auto-container">
+					<div class="d-flex justify-content-center align-items-center flex-wrap">
+
+						<!-- Info List -->
+						<ul class="info-list">
+							<li><a href="#"><span class="icon fa-solid fa-phone fa-fw"></span>(678) 345-3456</a></li>
+							<li><a href="#"><span class="icon fa-solid fa-envelope fa-fw"></span>envato@mail.com</a></li>
+							<li><a href="#"><span class="icon fa-solid fa-map fa-fw"></span>380 Albert St, Melbourne, Australia</a></li>
+						</ul>
+
+						<!-- Social Box -->
+						<ul class="header-social_box">
+							<li><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw"></a></li>
+							<li><a href="https://www.facebook.com/" class="fa-brands fa-twitter fa-fw"></a></li>
+							<li><a href="https://www.linkedin.com/" class="fa-brands fa-linkedin fa-fw"></a></li>
+							<li><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw"></a></li>
+						</ul>
+
+
+
+
+					</div>
+				</div>
+			</div>
+			<!-- End Header Top -->
+			<!-- Header Upper -->
+			<div class="header-upper">
+				<div class="auto-container">
+					<div class="inner-container d-flex">
+						<!-- Logo Box -->
+						<div class="logo"><a href="index.html"><img src="~/Web/images/logo-3.png" alt="" title=""></a></div>
+
+						<!-- Upper Right -->
+						<div class="upper-right">
+							<div class="nav-outer d-flex justify-content-between align-items-center flex-wrap">
+
+								<!-- Main Menu -->
+								<nav class="main-menu show navbar-expand-md">
+									<div class="navbar-header">
+										<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+
+									<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+										<ul class="navigation clearfix">
+											<li class="dropdown current">
+												<a href="#">Home</a>
+												<ul>
+													<li><a href="index.html">Homepage One</a></li>
+													<li><a href="index-2.html">Homepage Two</a></li>
+													<li><a href="index-3.html">Homepage Three</a></li>
+													<li><a href="index-4.html">Homepage Four</a></li>
+													<li class="dropdown">
+														<a href="#">Header Styles</a>
+														<ul>
+															<li><a href="index.html">Header Style One</a></li>
+															<li><a href="index-2.html">Header Style Two</a></li>
+															<li><a href="index-3.html">Header Style Three</a></li>
+															<li><a href="index-4.html">Header Style Four</a></li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+											<li><a href="about.html">About Us</a></li>
+											<li class="dropdown">
+												<a href="#">Services</a>
+												<ul>
+													<li><a href="services.html">Services</a></li>
+													<li><a href="service-detail.html">Service Detail</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a href="#">Project</a>
+												<ul>
+													<li><a href="project.html">project</a></li>
+													<li><a href="project-detail.html">project Detail</a></li>
+												</ul>
+											</li>
+											<li class="dropdown">
+												<a href="#">Blog</a>
+												<ul>
+													<li><a href="blog.html">Our Blog</a></li>
+													<li><a href="blog-detail.html">Blog Detail</a></li>
+													<li><a href="not-found.html">Not Found</a></li>
+												</ul>
+											</li>
+											<li><a href="contact.html">Contact</a></li>
+
+
+
+										</ul>
+									</div>
+
+								</nav>
+								<!-- Main Menu End-->
+
+								<div class="outer-box d-flex align-items-center">
+
+									<!-- Search Box -->
+									<div class="search-box">
+										<form method="post" action="contact.html">
+											<div class="form-group">
+												<input type="search" name="search-field" value="" placeholder="Search..." required>
+												<button type="submit"><span class="icon fa fa-search"></span></button>
+											</div>
+										</form>
+									</div>
+
+									<!-- Language -->
+									<div class="language dropdown">
+										<button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-globe fa-fw"></i>اللغة &nbsp;<span class="fa fa-angle-down"></span></button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a asp-area="" asp-controller="Home" asp-action="Index">English </a></li>
+											<li><a asp-area="" asp-controller="Home" asp-action="IndexAr">اللغة العربية</a></li>
+										</ul>
+									</div>
+									<!-- Language -->
+									<div class="language dropdown">
+										<button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-lock fa-fw"></i>Account &nbsp;<span class="fa fa-angle-down"></span></button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+											@if (signInManager.IsSignedIn(User))
+											{
+												<li><a asp-area="Admin" asp-controller="Accounts" asp-action="Logout1">Logout</a></li>
+												<li><a asp-area="Admin" asp-controller="Home" asp-action="Index">Admin Panel</a></li>
+											}
+											else
+											{
+												<li><a asp-area="Admin" asp-controller="Accounts" asp-action="Login">login</a></li>
+												<li><a asp-area="Admin" asp-controller="Accounts" asp-action="Register">Register</a></li>
+											}
+
+
+
+										</ul>
+									</div>
+									<div class="button-box">
+										<a class="btn-style-three theme-btn btn-item" href="#">
+											<div class="btn-wrap">
+												<span class="text-one">Get a quote now <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+												<span class="text-two">Get a quote now <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+											</div>
+										</a>
+									</div>
+
+									<!-- Mobile Navigation Toggler -->
+									<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Sticky Header  -->
+			<div class="sticky-header">
+				<div class="auto-container">
+					<div class="d-flex justify-content-between align-items-center">
+						<!-- Logo -->
+						<div class="logo">
+							<a href="index.html" title=""><img src="~/Web/images/logo-3.png" alt="" title=""></a>
+						</div>
+
+						<!-- Right Col -->
+						<div class="right-box d-flex align-items-center flex-wrap">
+							<!-- Main Menu -->
+							<nav class="main-menu">
+								<!--Keep This Empty / Menu will come through Javascript-->
+							</nav>
+							<!-- Main Menu End-->
+
+							<div class="outer-box d-flex align-items-center">
+
+								<!-- Search Box -->
+								<div class="search-box">
+									<form method="post" action="contact.html">
+										<div class="form-group">
+											<input type="search" name="search-field" value="" placeholder="Search..." required>
+											<button type="submit"><span class="icon fa fa-search"></span></button>
+										</div>
+									</form>
+								</div>
+
+								<!-- Language -->
+								<div class="language dropdown">
+									<button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-globe fa-fw"></i>English &nbsp;<span class="fa fa-angle-down"></span></button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+										<li><a href="#">English Branch</a></li>
+										<li><a href="#">German Branch</a></li>
+										<li><a href="#">UAE Branch</a></li>
+										<li><a href="#">Qatar Branch</a></li>
+									</ul>
+								</div>
+								<!-- Language -->
+								<div class="language dropdown">
+									<button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-globe fa-fw"></i>login &nbsp;<span class="fa fa-angle-down"></span></button>
+									<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+										<li><a href="#">login Branch</a></li>
+										<li><a href="#">login Branch</a></li>
+										<li><a href="#">login</a></li>
+										<li><a href="#">login</a></li>
+									</ul>
+								</div>
+								<div class="button-box">
+									<a class="btn-style-three theme-btn btn-item" href="#">
+										<div class="btn-wrap">
+											<span class="text-one">Get a quote now <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+											<span class="text-two">Get a quote now <i class="fa-solid fa-arrow-right fa-fw"></i></span>
+										</div>
+									</a>
+								</div>
+
+								<!-- Mobile Navigation Toggler -->
+								<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- End Sticky Menu -->
+			<!-- Mobile Menu  -->
+			<div class="mobile-menu">
+				<div class="menu-backdrop"></div>
+				<div class="close-btn"><span class="icon flaticon-020-x-mark"></span></div>
+				<nav class="menu-box">
+					<div class="nav-logo"><a href="index.html"><img src="~/Web/images/logo.png" alt="" title=""></a></div>
+					<!-- Search -->
+					<div class="search-box">
+						<form method="post" action="contact.html">
+							<div class="form-group">
+								<input type="search" name="search-field" value="" placeholder="SEARCH HERE" required>
+								<button type="submit"><span class="icon flaticon-001-loupe"></span></button>
+							</div>
+						</form>
+					</div>
+					<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+				</nav>
+			</div>
+			<!-- End Mobile Menu -->
+
+		</header>
+		<!-- End Main Header -->
+		@RenderBody()
+		<!-- Main Slider -->
+		<!-- End Main Slider -->
+		<!-- Footer -->
+		<footer class="main-footer" style="background-image:url('/Web/images/background/pattern-11.png')">
+			<div class="auto-container">
+				<!-- Widgets Section -->
+				<div class="widgets-section">
+					<div class="row clearfix">
+
+						<!-- Big Column -->
+						<div class="big-column col-lg-6 col-md-12 col-sm-12">
+							<div class="row clearfix">
+
+								<!-- Footer Column -->
+								<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+									<div class="footer-widget logo-widget">
+										<div class="logo">
+											<a href="index.html"><img src="~/Web/images/footer-logo.png" alt="" /></a>
+										</div>
+										<div class="text">We work with a passion of taking challenges and creating new ones in advertising sector.</div>
+										<a href="#" class="theme-btn about-btn">About us</a>
+									</div>
+								</div>
+
+								<!-- Footer Column -->
+								<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+									<div class="footer-widget newsletter-widget">
+										<h4>Newsletter</h4>
+										<div class="text">Subscribe our newsletter to get our latest update & news</div>
+
+										<!-- Email Box -->
+										<div class="email-box">
+											<form method="post" action="contact.html">
+												<div class="form-group">
+													<input type="email" name="search-field" value="" placeholder="Your mail address" required>
+													<button type="submit"><span class="icon fa-solid fa-paper-plane fa-fw"></span></button>
+												</div>
+											</form>
+										</div>
+
+										<!-- Social Box -->
+										<ul class="social-box">
+											<li><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw"></a></li>
+											<li><a href="https://www.facebook.com/" class="fa-brands fa-twitter fa-fw"></a></li>
+											<li><a href="https://dribbble.com/" class="fa-solid fa-dribbble fa-fw"></a></li>
+											<li><a href="https://behance.com/" class="fa-solid fa-behance fa-fw"></a></li>
+										</ul>
+										<!-- End Social Box -->
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- Big Column -->
+						<div class="big-column col-lg-6 col-md-12 col-sm-12">
+							<div class="row clearfix">
+
+								<!-- Footer Column -->
+								<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+									<div class="footer-widget contact-widget">
+										<h4>Official info:</h4>
+										<ul class="contact-list">
+											<li><span class="icon fa fa-phone"></span> 30 Commercial Road <br> Fratton, Australia</li>
+											<li><span class="icon fa fa-envelope"></span> 1-888-452-1505</li>
+										</ul>
+										<div class="timing">
+											<strong>Open Hours: </strong>
+											Mon - Sat: 8 am - 5 pm, <br> Sunday: CLOSED
+										</div>
+									</div>
+								</div>
+
+								<!-- Footer Column -->
+								<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+									<div class="footer-widget instagram-widget">
+										<h4>Gallery</h4>
+										<div class="widget-content">
+											<div class="images-outer clearfix">
+												<!--Image Box-->
+												<figure class="image-box"><a class="lightbox-image" href="~/Web/images/gallery/project-1.jpg"><img src="~/Web/images/gallery/footer-gallery-thumb-1.jpg" alt=""></a></figure>
+												<!--Image Box-->
+												<figure class="image-box"><a class="lightbox-image" href="~/Web/images/gallery/project-2.jpg"><img src="~/Web/images/gallery/footer-gallery-thumb-2.jpg" alt=""></a></figure>
+												<!--Image Box-->
+												<figure class="image-box"><a class="lightbox-image" href="~/Web/images/gallery/project-3.jpg"><img src="~/Web/images/gallery/footer-gallery-thumb-3.jpg" alt=""></a></figure>
+												<!--Image Box-->
+												<figure class="image-box"><a class="lightbox-image" href="~/Web/images/gallery/project-4.jpg"><img src="~/Web/images/gallery/footer-gallery-thumb-4.jpg" alt=""></a></figure>
+												<!--Image Box-->
+												<figure class="image-box"><a class="lightbox-image" href="~/Web/images/gallery/project-5.jpg"><img src="~/Web/images/gallery/footer-gallery-thumb-5.jpg" alt=""></a></figure>
+												<!--Image Box-->
+												<figure class="image-box"><a class="lightbox-image" href="~/Web/images/gallery/project-6.jpg"><img src="~/Web/images/gallery/footer-gallery-thumb-6.jpg" alt=""></a></figure>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="footer-bottom">
+					<div class="copyright">2023 &copy; All rights reserved by <a href="#">Themexriver</a></div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- Footer -->
+		<!-- Search Popup -->
+		<div class="search-popup">
+			<div class="color-layer"></div>
+			<button class="close-search"><span class="fa-solid fa-power-off fa-fw"></span></button>
+			<form method="post" action="blog.html">
+				<div class="form-group">
+					<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+					<button class="fa-solid fa-paper-plane fa-fw" type="submit"></button>
+				</div>
+			</form>
+		</div>
+		<!-- End Search Popup -->
+
+	</div>
+	<!-- End PageWrapper -->
+	<!-- Scroll To Top -->
+	<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+
+	<script src="~/Web/js/jquery.js"></script>
+	<script src="~/Web/js/appear.js"></script>
+	<script src="~/Web/js/owl.js"></script>
+	<script src="~/Web/js/wow.js"></script>
+	<script src="~/Web/js/odometer.js"></script>
+	<script src="~/Web/js/mixitup.js"></script>
+	<script src="~/Web/js/popper.min.js"></script>
+	<script src="~/Web/js/parallax-scroll.js"></script>
+	<script src="~/Web/js/parallax.min.js"></script>
+	<script src="~/Web/js/bootstrap.min.js"></script>
+	<script src="~/Web/js/tilt.jquery.min.js"></script>
+	<script src="~/Web/js/magnific-popup.min.js"></script>
+
+	<script src="~/Web/js/script.js"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="~/Web/js/respond.js"></script><![endif]-->
+
+</body>
+</html>

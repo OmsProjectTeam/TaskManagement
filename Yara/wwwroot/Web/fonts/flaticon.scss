@@ -1,0 +1,177 @@
+$flaticon_web_hostings-font: "flaticon_web_hostings";
+
+@font-face {
+    font-family: $flaticon_web_hostings-font;
+    src: url("./flaticon_web_hostings.ttf?fb1c00411b32988b5cb5b645db468cc5") format("truetype"),
+url("./flaticon_web_hostings.woff?fb1c00411b32988b5cb5b645db468cc5") format("woff"),
+url("./flaticon_web_hostings.woff2?fb1c00411b32988b5cb5b645db468cc5") format("woff2"),
+url("./flaticon_web_hostings.eot?fb1c00411b32988b5cb5b645db468cc5#iefix") format("embedded-opentype"),
+url("./flaticon_web_hostings.svg?fb1c00411b32988b5cb5b645db468cc5#flaticon_web_hostings") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_web_hostings !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_web_hostings-map: (
+    "001-loupe": "\f101",
+    "002-search-interface-symbol": "\f102",
+    "017-plus": "\f103",
+    "019-star": "\f104",
+    "020-x-mark": "\f105",
+    "027-click-1": "\f106",
+    "028-click-2": "\f107",
+    "029-money": "\f108",
+    "030-linux-platform": "\f109",
+    "031-uptime": "\f10a",
+    "032-speedometer": "\f10b",
+    "033-rush": "\f10c",
+    "034-exchange": "\f10d",
+    "035-right-arrow": "\f10e",
+    "036-down": "\f10f",
+    "037-down-arrow": "\f110",
+    "038-arrow-down-sign-to-navigate": "\f111",
+    "039-game-cube": "\f112",
+    "040-game-cube-1": "\f113",
+    "041-3d-cube": "\f114",
+    "042-cloud": "\f115",
+    "043-cloud-computing-1": "\f116",
+    "045-right-arrow-1": "\f117",
+    "052-discover": "\f118",
+    "053-option": "\f119",
+    "054-more": "\f11a",
+    "055-menu": "\f11b",
+    "065-scribble": "\f11c",
+    "066-trainer": "\f11d",
+    "070-instagram": "\f11e",
+    "073-location-1": "\f11f",
+    "074-check-mark": "\f120",
+    "075-phone-call": "\f121",
+    "076-cloud-computing-2": "\f122",
+    "077-cloud-database": "\f123",
+    "078-server-1": "\f124",
+    "079-medal": "\f125",
+    "080-control-panel": "\f126",
+);
+
+.flaticon-001-loupe:before {
+    content: map-get($flaticon_web_hostings-map, "001-loupe");
+}
+.flaticon-002-search-interface-symbol:before {
+    content: map-get($flaticon_web_hostings-map, "002-search-interface-symbol");
+}
+.flaticon-017-plus:before {
+    content: map-get($flaticon_web_hostings-map, "017-plus");
+}
+.flaticon-019-star:before {
+    content: map-get($flaticon_web_hostings-map, "019-star");
+}
+.flaticon-020-x-mark:before {
+    content: map-get($flaticon_web_hostings-map, "020-x-mark");
+}
+.flaticon-027-click-1:before {
+    content: map-get($flaticon_web_hostings-map, "027-click-1");
+}
+.flaticon-028-click-2:before {
+    content: map-get($flaticon_web_hostings-map, "028-click-2");
+}
+.flaticon-029-money:before {
+    content: map-get($flaticon_web_hostings-map, "029-money");
+}
+.flaticon-030-linux-platform:before {
+    content: map-get($flaticon_web_hostings-map, "030-linux-platform");
+}
+.flaticon-031-uptime:before {
+    content: map-get($flaticon_web_hostings-map, "031-uptime");
+}
+.flaticon-032-speedometer:before {
+    content: map-get($flaticon_web_hostings-map, "032-speedometer");
+}
+.flaticon-033-rush:before {
+    content: map-get($flaticon_web_hostings-map, "033-rush");
+}
+.flaticon-034-exchange:before {
+    content: map-get($flaticon_web_hostings-map, "034-exchange");
+}
+.flaticon-035-right-arrow:before {
+    content: map-get($flaticon_web_hostings-map, "035-right-arrow");
+}
+.flaticon-036-down:before {
+    content: map-get($flaticon_web_hostings-map, "036-down");
+}
+.flaticon-037-down-arrow:before {
+    content: map-get($flaticon_web_hostings-map, "037-down-arrow");
+}
+.flaticon-038-arrow-down-sign-to-navigate:before {
+    content: map-get($flaticon_web_hostings-map, "038-arrow-down-sign-to-navigate");
+}
+.flaticon-039-game-cube:before {
+    content: map-get($flaticon_web_hostings-map, "039-game-cube");
+}
+.flaticon-040-game-cube-1:before {
+    content: map-get($flaticon_web_hostings-map, "040-game-cube-1");
+}
+.flaticon-041-3d-cube:before {
+    content: map-get($flaticon_web_hostings-map, "041-3d-cube");
+}
+.flaticon-042-cloud:before {
+    content: map-get($flaticon_web_hostings-map, "042-cloud");
+}
+.flaticon-043-cloud-computing-1:before {
+    content: map-get($flaticon_web_hostings-map, "043-cloud-computing-1");
+}
+.flaticon-045-right-arrow-1:before {
+    content: map-get($flaticon_web_hostings-map, "045-right-arrow-1");
+}
+.flaticon-052-discover:before {
+    content: map-get($flaticon_web_hostings-map, "052-discover");
+}
+.flaticon-053-option:before {
+    content: map-get($flaticon_web_hostings-map, "053-option");
+}
+.flaticon-054-more:before {
+    content: map-get($flaticon_web_hostings-map, "054-more");
+}
+.flaticon-055-menu:before {
+    content: map-get($flaticon_web_hostings-map, "055-menu");
+}
+.flaticon-065-scribble:before {
+    content: map-get($flaticon_web_hostings-map, "065-scribble");
+}
+.flaticon-066-trainer:before {
+    content: map-get($flaticon_web_hostings-map, "066-trainer");
+}
+.flaticon-070-instagram:before {
+    content: map-get($flaticon_web_hostings-map, "070-instagram");
+}
+.flaticon-073-location-1:before {
+    content: map-get($flaticon_web_hostings-map, "073-location-1");
+}
+.flaticon-074-check-mark:before {
+    content: map-get($flaticon_web_hostings-map, "074-check-mark");
+}
+.flaticon-075-phone-call:before {
+    content: map-get($flaticon_web_hostings-map, "075-phone-call");
+}
+.flaticon-076-cloud-computing-2:before {
+    content: map-get($flaticon_web_hostings-map, "076-cloud-computing-2");
+}
+.flaticon-077-cloud-database:before {
+    content: map-get($flaticon_web_hostings-map, "077-cloud-database");
+}
+.flaticon-078-server-1:before {
+    content: map-get($flaticon_web_hostings-map, "078-server-1");
+}
+.flaticon-079-medal:before {
+    content: map-get($flaticon_web_hostings-map, "079-medal");
+}
+.flaticon-080-control-panel:before {
+    content: map-get($flaticon_web_hostings-map, "080-control-panel");
+}
