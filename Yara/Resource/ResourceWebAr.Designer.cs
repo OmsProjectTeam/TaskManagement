@@ -241,6 +241,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to إضافة وتعديل فئات المشاريع .
+        /// </summary>
+        public static string LBAddProjectType {
+            get {
+                return ResourceManager.GetString("LBAddProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to العنوان.
         /// </summary>
         public static string LbAddres {
@@ -295,6 +304,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to إضافة وتعديل حالة المهمات .
+        /// </summary>
+        public static string LBAddTaskStatusAr {
+            get {
+                return ResourceManager.GetString("LBAddTaskStatusAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to إضافة وتعديل حاسبة العملات.
         /// </summary>
         public static string LBAddTransaction {
@@ -336,6 +354,15 @@ namespace Yara.Resource {
         public static string LBAddTypesOfRequest {
             get {
                 return ResourceManager.GetString("LBAddTypesOfRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to إضافة وتعديل فئات المهام .
+        /// </summary>
+        public static string LBAddTypesOfTask {
+            get {
+                return ResourceManager.GetString("LBAddTypesOfTask", resourceCulture);
             }
         }
         
@@ -1042,6 +1069,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to مساحات العمل.
+        /// </summary>
+        public static string LBLBWorkspaces {
+            get {
+                return ResourceManager.GetString("LBLBWorkspaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to قائمة السؤال.
         /// </summary>
         public static string LbListFAQ {
@@ -1312,6 +1348,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to فئات المشاريع .
+        /// </summary>
+        public static string LBMyProjectType {
+            get {
+                return ResourceManager.GetString("LBMyProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to الأدوار.
         /// </summary>
         public static string LBMyRolesName {
@@ -1389,6 +1434,15 @@ namespace Yara.Resource {
         public static string LBMyTypesOfRequest {
             get {
                 return ResourceManager.GetString("LBMyTypesOfRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فئات المهام .
+        /// </summary>
+        public static string LBMyTypesOfTask {
+            get {
+                return ResourceManager.GetString("LBMyTypesOfTask", resourceCulture);
             }
         }
         
@@ -1762,6 +1816,24 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to فئة المشروع أنكليزي.
+        /// </summary>
+        public static string LbProjectType {
+            get {
+                return ResourceManager.GetString("LbProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فئة المشروع عربي.
+        /// </summary>
+        public static string LbProjectTypeAr {
+            get {
+                return ResourceManager.GetString("LbProjectTypeAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to السؤال.
         /// </summary>
         public static string LbQuastion {
@@ -1978,6 +2050,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to حالة المهمة عربي .
+        /// </summary>
+        public static string LbTaskStatusAr {
+            get {
+                return ResourceManager.GetString("LbTaskStatusAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to العنوان.
         /// </summary>
         public static string LbTitle {
@@ -2046,6 +2127,24 @@ namespace Yara.Resource {
         public static string LbTypesOfRequest {
             get {
                 return ResourceManager.GetString("LbTypesOfRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فئة المهمة إنكليزي.
+        /// </summary>
+        public static string LbTypesOfTask {
+            get {
+                return ResourceManager.GetString("LbTypesOfTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فئة المهمة عربي.
+        /// </summary>
+        public static string LbTypesOfTaskAr {
+            get {
+                return ResourceManager.GetString("LbTypesOfTaskAr", resourceCulture);
             }
         }
         
@@ -2428,6 +2527,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم تعريف نوع المشروع مسبقا يرجى التأكد وإعادة المحاولة لاحقا.....!.
+        /// </summary>
+        public static string VLProjectTypeDoplceted {
+            get {
+                return ResourceManager.GetString("VLProjectTypeDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to لقد تم إدخال الصلاحية بالفعل، يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!.
         /// </summary>
         public static string VLRoleNameDoplceted {
@@ -2442,6 +2550,24 @@ namespace Yara.Resource {
         public static string VLSavedSuccessfully {
             get {
                 return ResourceManager.GetString("VLSavedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم إدخال حالة المهة مسبقا باللغة العربية يرجى التأكد وإعادجة المحاولة لاحقا ...!.
+        /// </summary>
+        public static string VLTaskStatusArDoplceted {
+            get {
+                return ResourceManager.GetString("VLTaskStatusArDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم إدخال حالة المهمة مسبقا باللغة الانكليزية يرجى التأكد وإعادة المحاولة لاحقا ...!.
+        /// </summary>
+        public static string VLTaskStatusDoplceted {
+            get {
+                return ResourceManager.GetString("VLTaskStatusDoplceted", resourceCulture);
             }
         }
         
@@ -2478,6 +2604,24 @@ namespace Yara.Resource {
         public static string VLTypesOfRequestDoplceted {
             get {
                 return ResourceManager.GetString("VLTypesOfRequestDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم إضافة فئة المهمة مسبقا باللغة العربية يرجى التأكد وإعادة المحاولة لاحقا ...!.
+        /// </summary>
+        public static string VLTypesOfTaskArDoplceted {
+            get {
+                return ResourceManager.GetString("VLTypesOfTaskArDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم إضافة فئة المهمة مسبقا باللغة الانكليزية يرجى التأكد وإعادة المحاولة لاحقا ...!.
+        /// </summary>
+        public static string VLTypesOfTaskDoplceted {
+            get {
+                return ResourceManager.GetString("VLTypesOfTaskDoplceted", resourceCulture);
             }
         }
         

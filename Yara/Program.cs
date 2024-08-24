@@ -94,6 +94,10 @@ builder.Services.AddScoped<IIUserInformation, CLSUserInformation>();
 
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IIRolsInformation, CLSRolsInformation>();
+builder.Services.AddScoped<IIProjectType, CLSTBProjectType>();
+builder.Services.AddScoped<IITypesOfTask, CLSTBTypesOfTask>();
+builder.Services.AddScoped<IITaskStatus, CLSTBTaskStatus>();
+builder.Services.AddScoped<IIProjectInformation, CLSTBProjectInformation>();
 
 
 

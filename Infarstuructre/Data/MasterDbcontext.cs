@@ -31,29 +31,58 @@ namespace Infarstuructre.Data
 			{
 				entity.HasNoKey();
 				entity.ToView("VwUsers");
-			});		
-          
+			});
 
 
-       
-
-
-
-
-
-
-
-
-		}
-
-	
-
-
+            //*********************************************************
+            //---------------------------------
+            builder.Entity<TBProjectType>()
+           .Property(b => b.DateTimeEntry)
+           .HasDefaultValueSql("getdate()");
+            builder.Entity<TBProjectType>()
+           .Property(b => b.CurrentState)
+           .HasDefaultValueSql("((1))");
+            builder.Entity<TBProjectType>()
+           .Property(b => b.Active)
+           .HasDefaultValueSql("((1))");
+            //--------------------------------- 
+            //---------------------------------
+            builder.Entity<TBTypesOfTask>()
+           .Property(b => b.DateTimeEntry)
+           .HasDefaultValueSql("getdate()");
+            builder.Entity<TBTypesOfTask>()
+           .Property(b => b.CurrentState)
+           .HasDefaultValueSql("((1))");
+            builder.Entity<TBTypesOfTask>()
+           .Property(b => b.Active)
+           .HasDefaultValueSql("((1))");
+            //--------------------------------- 
+            //---------------------------------
+            builder.Entity<TBTaskStatus>()
+           .Property(b => b.DateTimeEntry)
+           .HasDefaultValueSql("getdate()");
+            builder.Entity<TBTaskStatus>()
+           .Property(b => b.CurrentState)
+           .HasDefaultValueSql("((1))");
+            builder.Entity<TBTaskStatus>()
+           .Property(b => b.Active)
+           .HasDefaultValueSql("((1))");
+            //--------------------------------- 
+            //---------------------------------
+            builder.Entity<TBProjectInformation>()
+           .Property(b => b.DateTimeEntry)
+           .HasDefaultValueSql("getdate()");
+            builder.Entity<TBProjectInformation>()
+           .Property(b => b.CurrentState)
+           .HasDefaultValueSql("((1))");
+    
+            //---------------------------------
+        }
         //***********************************
         public DbSet<VwUser> VwUsers { get; set; }
-      
-
-
-
+        public DbSet<TBProjectType> TBProjectTypes { get; set; }
+        public DbSet<TBTypesOfTask> TBTypesOfTasks { get; set; } 
+        public DbSet<TBTaskStatus> TBTaskStatuss { get; set; } 
+        public DbSet<TBProjectInformation> TBProjectInformations { get; set; } 
     }
 }

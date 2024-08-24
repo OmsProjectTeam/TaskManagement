@@ -177,6 +177,9 @@
   <data name="LBAddProfit" xml:space="preserve">
     <value>إضافة ربح</value>
   </data>
+  <data name="LBAddProjectType" xml:space="preserve">
+    <value>إضافة وتعديل فئات المشاريع </value>
+  </data>
   <data name="LbAddres" xml:space="preserve">
     <value>العنوان</value>
   </data>
@@ -195,6 +198,9 @@
   <data name="LBAddTaskStatus" xml:space="preserve">
     <value>إضافة وتعديل حالة المهمة</value>
   </data>
+  <data name="LBAddTaskStatusAr" xml:space="preserve">
+    <value>إضافة وتعديل حالة المهمات </value>
+  </data>
   <data name="LBAddTransaction" xml:space="preserve">
     <value>إضافة وتعديل حاسبة العملات</value>
   </data>
@@ -209,6 +215,9 @@
   </data>
   <data name="LBAddTypesOfRequest" xml:space="preserve">
     <value>إضافة وتعديل انواع الطلبات </value>
+  </data>
+  <data name="LBAddTypesOfTask" xml:space="preserve">
+    <value>إضافة وتعديل فئات المهام </value>
   </data>
   <data name="LBAddTypeSystem" xml:space="preserve">
     <value>إضافة وتعديل الأنظمة</value>
@@ -444,6 +453,9 @@
   <data name="LBLbRoles" xml:space="preserve">
     <value>الصلاحيات</value>
   </data>
+  <data name="LBLBWorkspaces" xml:space="preserve">
+    <value>مساحات العمل</value>
+  </data>
   <data name="LbListFAQ" xml:space="preserve">
     <value>قائمة السؤال</value>
   </data>
@@ -534,6 +546,9 @@
   <data name="LBMyOrderStatus" xml:space="preserve">
     <value>حالة الطلب</value>
   </data>
+  <data name="LBMyProjectType" xml:space="preserve">
+    <value>فئات المشاريع </value>
+  </data>
   <data name="LBMyRolesName" xml:space="preserve">
     <value>الأدوار</value>
   </data>
@@ -560,6 +575,9 @@
   </data>
   <data name="LBMyTypesOfRequest" xml:space="preserve">
     <value>أنواع الطلبات</value>
+  </data>
+  <data name="LBMyTypesOfTask" xml:space="preserve">
+    <value>فئات المهام </value>
   </data>
   <data name="LBMyTypeSystem" xml:space="preserve">
     <value>الأنظمة</value>
@@ -684,6 +702,12 @@
   <data name="LBProfitsInformations" xml:space="preserve">
     <value>معلومات الأرباح</value>
   </data>
+  <data name="LbProjectType" xml:space="preserve">
+    <value>فئة المشروع أنكليزي</value>
+  </data>
+  <data name="LbProjectTypeAr" xml:space="preserve">
+    <value>فئة المشروع عربي</value>
+  </data>
   <data name="LbQuastion" xml:space="preserve">
     <value>السؤال</value>
   </data>
@@ -756,6 +780,9 @@
   <data name="LbTaskStatus" xml:space="preserve">
     <value>حالة المهمة</value>
   </data>
+  <data name="LbTaskStatusAr" xml:space="preserve">
+    <value>حالة المهمة عربي </value>
+  </data>
   <data name="LbTitle" xml:space="preserve">
     <value>العنوان</value>
   </data>
@@ -779,6 +806,12 @@
   </data>
   <data name="LbTypesOfRequest" xml:space="preserve">
     <value>النوع </value>
+  </data>
+  <data name="LbTypesOfTask" xml:space="preserve">
+    <value>فئة المهمة إنكليزي</value>
+  </data>
+  <data name="LbTypesOfTaskAr" xml:space="preserve">
+    <value>فئة المهمة عربي</value>
   </data>
   <data name="LbTypeSystem" xml:space="preserve">
     <value>النظام</value>
@@ -906,11 +939,20 @@
   <data name="VLMerchantNameDoplceted" xml:space="preserve">
     <value>تمت إضافة عنوان البريد الإلكتروني بالفعل. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
   </data>
+  <data name="VLProjectTypeDoplceted" xml:space="preserve">
+    <value>تم تعريف نوع المشروع مسبقا يرجى التأكد وإعادة المحاولة لاحقا.....!</value>
+  </data>
   <data name="VLRoleNameDoplceted" xml:space="preserve">
     <value>لقد تم إدخال الصلاحية بالفعل، يرجى التأكيد والمحاولة مرة أخرى لاحقاً...!</value>
   </data>
   <data name="VLSavedSuccessfully" xml:space="preserve">
     <value>تمت عملية الحفظ بنجاح</value>
+  </data>
+  <data name="VLTaskStatusArDoplceted" xml:space="preserve">
+    <value>تم إدخال حالة المهة مسبقا باللغة العربية يرجى التأكد وإعادجة المحاولة لاحقا ...!</value>
+  </data>
+  <data name="VLTaskStatusDoplceted" xml:space="preserve">
+    <value>تم إدخال حالة المهمة مسبقا باللغة الانكليزية يرجى التأكد وإعادة المحاولة لاحقا ...!</value>
   </data>
   <data name="VLTitleShippingoplceted" xml:space="preserve">
     <value>تم إدخال عنوان سعر الشحن. يرجى التحقق والمحاولة مرة أخرى لاحقا....!</value>
@@ -923,6 +965,12 @@
   </data>
   <data name="VLTypesOfRequestDoplceted" xml:space="preserve">
     <value>تم ادخال نوع الطلب مسبقا يرجى التأكد وإعادة المحاولة لاحقا ..!</value>
+  </data>
+  <data name="VLTypesOfTaskArDoplceted" xml:space="preserve">
+    <value>تم إضافة فئة المهمة مسبقا باللغة العربية يرجى التأكد وإعادة المحاولة لاحقا ...!</value>
+  </data>
+  <data name="VLTypesOfTaskDoplceted" xml:space="preserve">
+    <value>تم إضافة فئة المهمة مسبقا باللغة الانكليزية يرجى التأكد وإعادة المحاولة لاحقا ...!</value>
   </data>
   <data name="VLTypeSystemDeliveryDoplceted" xml:space="preserve">
     <value>نوع نظام التسليم مدرج بالفعل، يرجى التحقق والمحاولة مرة أخرى لاحقًا...!</value>

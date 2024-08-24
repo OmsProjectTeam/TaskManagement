@@ -330,4 +330,37 @@
   <data name="VlMessageDescription" xml:space="preserve">
     <value>Please include the Message Description for the process to complete successfully...!</value>
   </data>
+  <data name="VlProjectTypes" xml:space="preserve">
+    <value>Please include the Project Types for the process to complete successfully...!</value>
+  </data>
+  <data name="VlProjectTypesAr" xml:space="preserve">
+    <value>يرجى أدراج نوع المشروع باللغة العربية لتتم العملية بنجاح ...!</value>
+  </data>
+  <data name="VlTypesOfTask" xml:space="preserve">
+    <value>Please include the Type Of Task for the process to complete successfully...!</value>
+  </data>
+  <data name="VlTypesOfTaskAr" xml:space="preserve">
+    <value>يرجى أدراج فئة المهمة باللغة العربية لتتم العملية بنجاح ...!</value>
+  </data>
+  <data name="VlTaskStatus" xml:space="preserve">
+    <value>Please include the Task Status for the process to complete successfully...!</value>
+  </data>
+  <data name="VlTaskStatusAr" xml:space="preserve">
+    <value>يرجى أدراج حالة المهمة لتتم العملية بنجاح .....!</value>
+  </data>
+  <data name="MaxLength3000" xml:space="preserve">
+    <value>أقصى عدد أحرف يمكن أدخاله هو 3000 حرف .. !</value>
+  </data>
+  <data name="VlProjectDescription" xml:space="preserve">
+    <value>Please include the Project Description for the process to complete successfully...!</value>
+  </data>
+  <data name="VlProjectDescriptionAr" xml:space="preserve">
+    <value>يرجى أدراج وصف المشروع باللغة العربيةلتتم العملية بنجاح ...!</value>
+  </data>
+  <data name="VlProjectName" xml:space="preserve">
+    <value>Please include the Project Name for the process to complete successfully...!</value>
+  </data>
+  <data name="VlProjectNameAr" xml:space="preserve">
+    <value>يرجى أدراج اسم المشروع باللغة العربية  لتتم العملية بنجاح ....!</value>
+  </data>
 </root>

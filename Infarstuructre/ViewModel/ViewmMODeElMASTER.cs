@@ -49,9 +49,16 @@ namespace Infarstuructre.ViewModel
 		public string PhoneNumber { get; set; }	
 		
 		public List<IdentityRole> Roles { get; set; }
-		public List<VwUser> Users { get; set; }
+		public List<VwUser> Users { get; set; }	
+		
+		public List<TBProjectType> ListProjectType { get; set; }
+        public TBProjectType ProjectType { get; set; }	
+		public List<TBTypesOfTask> ListTypesOfTask { get; set; }
+        public TBTypesOfTask TypesOfTask { get; set; }
+		public List<TBTaskStatus> ListTaskStatus { get; set; }
+        public TBTaskStatus TaskStatus { get; set; }
 
-      
+
     }
  }
 

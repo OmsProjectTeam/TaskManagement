@@ -180,6 +180,9 @@
   <data name="LBAddProfit" xml:space="preserve">
     <value>Add Profit</value>
   </data>
+  <data name="LBAddProjectType" xml:space="preserve">
+    <value>Add and modify the Project Type</value>
+  </data>
   <data name="LbAddres" xml:space="preserve">
     <value>Address</value>
   </data>
@@ -212,6 +215,9 @@
   </data>
   <data name="LBAddTypesOfRequest" xml:space="preserve">
     <value>Adding and modifying Types Of Request</value>
+  </data>
+  <data name="LBAddTypesOfTask" xml:space="preserve">
+    <value>Adding and modifying Types Of Task</value>
   </data>
   <data name="LBAddTypeSystem" xml:space="preserve">
     <value>Adding and modifying systems</value>
@@ -543,6 +549,9 @@
   <data name="LBMyProfits" xml:space="preserve">
     <value>My Profits</value>
   </data>
+  <data name="LBMyProjectType" xml:space="preserve">
+    <value>Project Type</value>
+  </data>
   <data name="LBMyRolesName" xml:space="preserve">
     <value>Roles </value>
   </data>
@@ -569,6 +578,9 @@
   </data>
   <data name="LBMyTypesOfRequest" xml:space="preserve">
     <value>Types Of Request</value>
+  </data>
+  <data name="LBMyTypesOfTask" xml:space="preserve">
+    <value>Types Of Task</value>
   </data>
   <data name="LBMyTypeSystem" xml:space="preserve">
     <value>Systems</value>
@@ -693,6 +705,12 @@
   <data name="LBProfitsInformations" xml:space="preserve">
     <value>Profits Informations</value>
   </data>
+  <data name="LbProjectType" xml:space="preserve">
+    <value>Project Type</value>
+  </data>
+  <data name="LbProjectTypeAr" xml:space="preserve">
+    <value>Project Type Ar</value>
+  </data>
   <data name="LbQuastion" xml:space="preserve">
     <value>Quastion</value>
   </data>
@@ -765,6 +783,9 @@
   <data name="LbTaskStatus" xml:space="preserve">
     <value>Task Status</value>
   </data>
+  <data name="LbTaskStatusAr" xml:space="preserve">
+    <value>Task Status Ar</value>
+  </data>
   <data name="LbTitle" xml:space="preserve">
     <value>Title</value>
   </data>
@@ -788,6 +809,12 @@
   </data>
   <data name="LbTypesOfRequest" xml:space="preserve">
     <value>Types</value>
+  </data>
+  <data name="LbTypesOfTask" xml:space="preserve">
+    <value>Types Of Task</value>
+  </data>
+  <data name="LbTypesOfTaskAr" xml:space="preserve">
+    <value>فئة المهمة عربي </value>
   </data>
   <data name="LbTypeSystem" xml:space="preserve">
     <value>system</value>
@@ -827,6 +854,9 @@
   </data>
   <data name="Lbwith_delivery" xml:space="preserve">
     <value>with Delivery</value>
+  </data>
+  <data name="LBWorkspaces" xml:space="preserve">
+    <value>Workspaces</value>
   </data>
   <data name="LbZone" xml:space="preserve">
     <value>Residential quarter</value>
@@ -927,6 +957,9 @@
   <data name="VLMerchantNameDoplceted" xml:space="preserve">
     <value>The email address has already been added. Please check and try again later...!</value>
   </data>
+  <data name="VLProjectTypeDoplceted" xml:space="preserve">
+    <value>The project type has already been defined. Please check and try again later...!</value>
+  </data>
   <data name="VLReceiptNoDoplceted" xml:space="preserve">
     <value>The bond number has already been entered. Please check and try again later...!</value>
   </data>
@@ -939,6 +972,12 @@
   <data name="VLSavedSuccessfully" xml:space="preserve">
     <value>The saving process was completed successfully</value>
   </data>
+  <data name="VLTaskStatusArDoplceted" xml:space="preserve">
+    <value>The task status has already been entered in Arabic. Please check and try again later.</value>
+  </data>
+  <data name="VLTaskStatusDoplceted" xml:space="preserve">
+    <value>The task status has already been entered in English. Please check and try again later.</value>
+  </data>
   <data name="VLTitleShippingoplceted" xml:space="preserve">
     <value>The shipping price address has been entered. Please verify and try again later....!</value>
   </data>
@@ -950,6 +989,9 @@
   </data>
   <data name="VLTypesOfRequestDoplceted" xml:space="preserve">
     <value>The ordering system has already been entered. Please confirm and try again later....!</value>
+  </data>
+  <data name="VLTypesOfTaskDoplceted" xml:space="preserve">
+    <value>The task type has already been added, please check and try again later...!</value>
   </data>
   <data name="VLTypeSystemDeliveryDoplceted" xml:space="preserve">
     <value>The delivery system type is already listed, please check and try again later...!</value>
