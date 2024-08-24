@@ -957,6 +957,12 @@
   <data name="VLMerchantNameDoplceted" xml:space="preserve">
     <value>The email address has already been added. Please check and try again later...!</value>
   </data>
+  <data name="VLProjectInformationArDoplceted" xml:space="preserve">
+    <value>The project name has already been entered in Arabic. Please check and try again later...!</value>
+  </data>
+  <data name="VLProjectInformationDoplceted" xml:space="preserve">
+    <value>The project name has already been entered. Please check and try again later....!</value>
+  </data>
   <data name="VLProjectTypeDoplceted" xml:space="preserve">
     <value>The project type has already been defined. Please check and try again later...!</value>
   </data>

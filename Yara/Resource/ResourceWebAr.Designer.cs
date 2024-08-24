@@ -2527,6 +2527,24 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to تم إدخال اسم المشروع باللغة العربية مسبقا يرجى التأكد وإعادة المحاولة لاحقا ...!.
+        /// </summary>
+        public static string VLProjectInformationArDoplceted {
+            get {
+                return ResourceManager.GetString("VLProjectInformationArDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تم إدخال اسم المشروع باللغة الانكليزية  مسبقا يرجى التأكد وإعادة المحاولة لاحقا ...!.
+        /// </summary>
+        public static string VLProjectInformationDoplceted {
+            get {
+                return ResourceManager.GetString("VLProjectInformationDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to تم تعريف نوع المشروع مسبقا يرجى التأكد وإعادة المحاولة لاحقا.....!.
         /// </summary>
         public static string VLProjectTypeDoplceted {

@@ -8,15 +8,15 @@ namespace Infarstuructre.BL
 {
 	public interface IIProjectInformation
 	{
-		List<TBProjectInformation> GetAll();
+		List<TBViewProjectInformation> GetAll();
 		TBProjectInformation GetById(int IdProjectInformation);
 		bool saveData(TBProjectInformation savee);
 		bool UpdateData(TBProjectInformation updatss);
 		bool deleteData(int IdProjectInformation);
-		List<TBProjectInformation> GetAllv(int IdProjectInformation);
+		List<TBViewProjectInformation> GetAllv(int IdProjectInformation);
 
 		// //////////////////////////////////API///////////////////////////////
-		Task<List<TBProjectInformation>> GetAllAsync();
+		Task<List<TBViewProjectInformation>> GetAllAsync();
 		Task<TBProjectInformation> GetByIdAsync(int id);
 		Task<bool> AddDataAsync(TBProjectInformation sslid);
 		Task<bool> UpdateDataAsync(TBProjectInformation sslid);
@@ -32,9 +32,9 @@ namespace Infarstuructre.BL
 			dbcontext= dbcontext1;
 
 		}
-		public List<TBProjectInformation> GetAll()
+		public List<TBViewProjectInformation> GetAll()
 		{
-			List<TBProjectInformation> MySlider = dbcontext.TBProjectInformations.OrderByDescending(n => n.IdProjectInformation).Where(a => a.CurrentState == true).ToList();
+			List<TBViewProjectInformation> MySlider = dbcontext.ViewProjectInformation.OrderByDescending(n => n.IdProjectInformation).Where(a => a.CurrentState == true).ToList();
 			return MySlider;
 		}
 		public TBProjectInformation GetById(int IdProjectInformation)
@@ -84,28 +84,23 @@ namespace Infarstuructre.BL
 			{
 				return false;
 			}
-
 		}
-		public List<TBProjectInformation> GetAllv(int IdProjectInformation)
+		public List<TBViewProjectInformation> GetAllv(int IdProjectInformation)
 		{
-			List<TBProjectInformation> MySlider = dbcontext.TBProjectInformations.OrderByDescending(n => n.IdProjectInformation == IdProjectInformation).Where(a => a.IdProjectInformation == IdProjectInformation).Where(a => a.CurrentState == true).ToList();
+			List<TBViewProjectInformation> MySlider = dbcontext.ViewProjectInformation.OrderByDescending(n => n.IdProjectInformation == IdProjectInformation).Where(a => a.IdProjectInformation == IdProjectInformation).Where(a => a.CurrentState == true).ToList();
 			return MySlider;
 		}
 	// ///////////////////////////////////////////////////APIs///////////////////////////////////////////////////////////
-
-
-		public async Task<List<TBProjectInformation>> GetAllAsync()
+		public async Task<List<TBViewProjectInformation>> GetAllAsync()
 		{
-            List<TBProjectInformation> MySlider = await dbcontext.TBProjectInformations.OrderByDescending(n => n.IdProjectInformation).Where(a => a.CurrentState == true).ToListAsync();
+            List<TBViewProjectInformation> MySlider = await dbcontext.ViewProjectInformation.OrderByDescending(n => n.IdProjectInformation).Where(a => a.CurrentState == true).ToListAsync();
             return MySlider;
         }
-
         public async Task<TBProjectInformation> GetByIdAsync(int id)
         {
             TBProjectInformation sslid = await dbcontext.TBProjectInformations.FirstOrDefaultAsync(a => a.IdProjectInformation == id);
             return sslid;
         }
-
 		public async Task<bool> AddDataAsync(TBProjectInformation sslid)
 		{
             try
@@ -119,7 +114,6 @@ namespace Infarstuructre.BL
                 return false;
             }
         }
-
 		public async Task<bool> UpdateDataAsync(TBProjectInformation sslid)
 		{
             try
@@ -133,7 +127,6 @@ namespace Infarstuructre.BL
                 return false;
             }
         }
-
 		public async Task<bool> DeleteDataAsync(int id)
 		{
             try
@@ -151,6 +144,5 @@ namespace Infarstuructre.BL
                 return false;
             }
         }
-
     }
 }

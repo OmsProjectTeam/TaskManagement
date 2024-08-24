@@ -57,6 +57,8 @@ namespace Infarstuructre.ViewModel
         public TBTypesOfTask TypesOfTask { get; set; }
 		public List<TBTaskStatus> ListTaskStatus { get; set; }
         public TBTaskStatus TaskStatus { get; set; }
+		public List<TBViewProjectInformation> ListViewProjectInformation { get; set; }
+        public TBProjectInformation ProjectInformation { get; set; }
 
 
     }

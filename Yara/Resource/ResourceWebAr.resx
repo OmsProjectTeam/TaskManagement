@@ -939,6 +939,12 @@
   <data name="VLMerchantNameDoplceted" xml:space="preserve">
     <value>تمت إضافة عنوان البريد الإلكتروني بالفعل. يرجى التحقق والمحاولة مرة أخرى لاحقا...!</value>
   </data>
+  <data name="VLProjectInformationArDoplceted" xml:space="preserve">
+    <value>تم إدخال اسم المشروع باللغة العربية مسبقا يرجى التأكد وإعادة المحاولة لاحقا ...!</value>
+  </data>
+  <data name="VLProjectInformationDoplceted" xml:space="preserve">
+    <value>تم إدخال اسم المشروع باللغة الانكليزية  مسبقا يرجى التأكد وإعادة المحاولة لاحقا ...!</value>
+  </data>
   <data name="VLProjectTypeDoplceted" xml:space="preserve">
     <value>تم تعريف نوع المشروع مسبقا يرجى التأكد وإعادة المحاولة لاحقا.....!</value>
   </data>

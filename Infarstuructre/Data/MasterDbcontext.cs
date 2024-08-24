@@ -34,6 +34,17 @@ namespace Infarstuructre.Data
 			});
 
 
+            //*********************************************************  
+            //***********************************************************
+
+
+			builder.Entity<TBViewProjectInformation>(entity =>
+			{
+				entity.HasNoKey();
+				entity.ToView("ViewProjectInformation");
+			});
+
+
             //*********************************************************
             //---------------------------------
             builder.Entity<TBProjectType>()
@@ -84,5 +95,6 @@ namespace Infarstuructre.Data
         public DbSet<TBTypesOfTask> TBTypesOfTasks { get; set; } 
         public DbSet<TBTaskStatus> TBTaskStatuss { get; set; } 
         public DbSet<TBProjectInformation> TBProjectInformations { get; set; } 
+        public DbSet<TBViewProjectInformation> ViewProjectInformation { get; set; } 
     }
 }
