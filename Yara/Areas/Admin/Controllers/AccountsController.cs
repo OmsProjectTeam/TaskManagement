@@ -384,7 +384,7 @@ namespace Yara.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
+        public async Task<IActionResult> LoginAsync(LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
             {

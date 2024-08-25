@@ -1,6 +1,7 @@
 ﻿
 
 
+using Yara.Areas.Admin.Controllers;
 using static Infarstuructre.BL.IIRolsInformation;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -98,6 +99,8 @@ builder.Services.AddScoped<IIProjectType, CLSTBProjectType>();
 builder.Services.AddScoped<IITypesOfTask, CLSTBTypesOfTask>();
 builder.Services.AddScoped<IITaskStatus, CLSTBTaskStatus>();
 builder.Services.AddScoped<IIProjectInformation, CLSTBProjectInformation>();
+
+builder.Services.AddScoped<AccountsController>();
 
 
 

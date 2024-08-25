@@ -1,5 +1,7 @@
 ﻿
 
+using Microsoft.EntityFrameworkCore;
+
 namespace Infarstuructre.BL
 {
     public interface IIProjectType
@@ -10,6 +12,14 @@ namespace Infarstuructre.BL
         bool UpdateData(TBProjectType updatss);
         bool deleteData(int IdProjectType);
         List<TBProjectType> GetAllv(int IdProjectType);
+
+        // ///////////////////////////API//////////////////////////////////////
+        Task<List<TBProjectType>> GetAllAsync();
+        Task<TBProjectType> GetByIdAsync(int id);
+        Task<bool> AddDataAsync(TBProjectType sslid);
+        Task<bool> UpdateDataAsync(TBProjectType sslid);
+        Task<bool> DeleteDataAsync(int id);
+
     }
     public class CLSTBProjectType: IIProjectType
     {
@@ -76,6 +86,67 @@ namespace Infarstuructre.BL
         {
             List<TBProjectType> MySlider = dbcontext.TBProjectTypes.OrderByDescending(n => n.IdProjectType == IdProjectType).Where(a => a.IdProjectType == IdProjectType).Where(a => a.CurrentState == true).ToList();
             return MySlider;
+        }
+
+        // ///////////////////////////////////////////////////APIs///////////////////////////////////////////////////////////
+
+
+        public async Task<List<TBProjectType>> GetAllAsync()
+        {
+            List<TBProjectType> MySlider = await dbcontext.TBProjectTypes.OrderByDescending(n => n.IdProjectType).Where(a => a.CurrentState == true).ToListAsync();
+            return MySlider;
+        }
+
+        public async Task<TBProjectType> GetByIdAsync(int id)
+        {
+            TBProjectType sslid = await dbcontext.TBProjectTypes.FirstOrDefaultAsync(a => a.IdProjectType == id);
+            return sslid;
+        }
+
+        public async Task<bool> AddDataAsync(TBProjectType sslid)
+        {
+            try
+            {
+                await dbcontext.AddAsync<TBProjectType>(sslid);
+                await dbcontext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateDataAsync(TBProjectType sslid)
+        {
+            try
+            {
+                dbcontext.Entry(sslid).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                await dbcontext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteDataAsync(int id)
+        {
+            try
+            {
+                var catr = await GetByIdAsync(id);
+                catr.CurrentState = false;
+                //TbSubCateegoory dele = dbcontex.TbSubCateegoorys.Where(a => a.IdBrand == IdBrand).FirstOrDefault();
+                //dbcontex.TbSubCateegoorys.Remove(dele);
+                dbcontext.Entry(catr).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                await dbcontext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
     }
 }
