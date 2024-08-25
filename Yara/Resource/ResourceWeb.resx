@@ -180,6 +180,9 @@
   <data name="LBAddProfit" xml:space="preserve">
     <value>Add Profit</value>
   </data>
+  <data name="LBAddProjectInformation" xml:space="preserve">
+    <value>Adding and modifying Project Information</value>
+  </data>
   <data name="LBAddProjectType" xml:space="preserve">
     <value>Add and modify the Project Type</value>
   </data>
@@ -426,11 +429,17 @@
   <data name="LbInformaition" xml:space="preserve">
     <value>information</value>
   </data>
+  <data name="LbInformaitionAr" xml:space="preserve">
+    <value>Informaition Ar</value>
+  </data>
   <data name="LbInformaitioncl" xml:space="preserve">
     <value>customer information</value>
   </data>
   <data name="LbInformaitionco" xml:space="preserve">
     <value>company information</value>
+  </data>
+  <data name="LbInformaitionEn" xml:space="preserve">
+    <value>Informaition En</value>
   </data>
   <data name="LbInformationCompany" xml:space="preserve">
     <value>Information Company</value>
@@ -548,6 +557,9 @@
   </data>
   <data name="LBMyProfits" xml:space="preserve">
     <value>My Profits</value>
+  </data>
+  <data name="LBMyProjectInformation" xml:space="preserve">
+    <value>Project Information</value>
   </data>
   <data name="LBMyProjectType" xml:space="preserve">
     <value>Project Type</value>
@@ -704,6 +716,24 @@
   </data>
   <data name="LBProfitsInformations" xml:space="preserve">
     <value>Profits Informations</value>
+  </data>
+  <data name="LbProjectDescriptionAr" xml:space="preserve">
+    <value>Project Description Ar</value>
+  </data>
+  <data name="LbProjectDescriptionEn" xml:space="preserve">
+    <value>Project Description En</value>
+  </data>
+  <data name="LbProjectEnd" xml:space="preserve">
+    <value>Project End</value>
+  </data>
+  <data name="LbProjectNameAr" xml:space="preserve">
+    <value>Project Name Ar</value>
+  </data>
+  <data name="LbProjectNameEn" xml:space="preserve">
+    <value>Project Name En</value>
+  </data>
+  <data name="LbProjectStart" xml:space="preserve">
+    <value>Project Start</value>
   </data>
   <data name="LbProjectType" xml:space="preserve">
     <value>Project Type</value>

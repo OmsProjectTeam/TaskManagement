@@ -241,6 +241,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to أضافة وتعديل معلومات المشاريع .
+        /// </summary>
+        public static string LBAddProjectInformation {
+            get {
+                return ResourceManager.GetString("LBAddProjectInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to إضافة وتعديل فئات المشاريع .
         /// </summary>
         public static string LBAddProjectType {
@@ -979,6 +988,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to المعلومات باللغة العربية .
+        /// </summary>
+        public static string LbInformaitionAr {
+            get {
+                return ResourceManager.GetString("LbInformaitionAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to معلومات العميل.
         /// </summary>
         public static string LbInformaitioncl {
@@ -993,6 +1011,15 @@ namespace Yara.Resource {
         public static string LbInformaitionco {
             get {
                 return ResourceManager.GetString("LbInformaitionco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المعلومات باللغة الانكليزية.
+        /// </summary>
+        public static string LbInformaitionEn {
+            get {
+                return ResourceManager.GetString("LbInformaitionEn", resourceCulture);
             }
         }
         
@@ -1344,6 +1371,15 @@ namespace Yara.Resource {
         public static string LBMyOrderStatus {
             get {
                 return ResourceManager.GetString("LBMyOrderStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المشاريع.
+        /// </summary>
+        public static string LBMyProjectInformation {
+            get {
+                return ResourceManager.GetString("LBMyProjectInformation", resourceCulture);
             }
         }
         
@@ -1812,6 +1848,60 @@ namespace Yara.Resource {
         public static string LBProfitsInformations {
             get {
                 return ResourceManager.GetString("LBProfitsInformations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الوصف باللغة العربية .
+        /// </summary>
+        public static string LbProjectDescriptionAr {
+            get {
+                return ResourceManager.GetString("LbProjectDescriptionAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الوصف باللغة الانكليزية .
+        /// </summary>
+        public static string LbProjectDescriptionEn {
+            get {
+                return ResourceManager.GetString("LbProjectDescriptionEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تاريخ انتهاء المشروع .
+        /// </summary>
+        public static string LbProjectEnd {
+            get {
+                return ResourceManager.GetString("LbProjectEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المشروع باللغة العربية .
+        /// </summary>
+        public static string LbProjectNameAr {
+            get {
+                return ResourceManager.GetString("LbProjectNameAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المشروع باللغة الانكليزية .
+        /// </summary>
+        public static string LbProjectNameEn {
+            get {
+                return ResourceManager.GetString("LbProjectNameEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تاريخ بدأ المشروع .
+        /// </summary>
+        public static string LbProjectStart {
+            get {
+                return ResourceManager.GetString("LbProjectStart", resourceCulture);
             }
         }
         

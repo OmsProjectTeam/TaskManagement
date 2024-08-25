@@ -197,11 +197,8 @@
 				TempData["ErrorSave"] = ResourceWeb.VLErrorDeleteData;
 				return RedirectToAction("MyProjectInformation");
 
-			}
-			// تمرير التاسكات  من الادارة 
-			// استخدام نظام أجايا وجيرا 
+			}		
 		}
-
 		[Authorize(Roles = "Admin")]
 		public IActionResult DeleteDataAr(int IdProjectInformation)
 		{

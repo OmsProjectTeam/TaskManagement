@@ -177,6 +177,9 @@
   <data name="LBAddProfit" xml:space="preserve">
     <value>إضافة ربح</value>
   </data>
+  <data name="LBAddProjectInformation" xml:space="preserve">
+    <value>أضافة وتعديل معلومات المشاريع </value>
+  </data>
   <data name="LBAddProjectType" xml:space="preserve">
     <value>إضافة وتعديل فئات المشاريع </value>
   </data>
@@ -423,11 +426,17 @@
   <data name="LbInformaition" xml:space="preserve">
     <value>المعلومات</value>
   </data>
+  <data name="LbInformaitionAr" xml:space="preserve">
+    <value>المعلومات باللغة العربية </value>
+  </data>
   <data name="LbInformaitioncl" xml:space="preserve">
     <value>معلومات العميل</value>
   </data>
   <data name="LbInformaitionco" xml:space="preserve">
     <value>معلومات الشركة</value>
+  </data>
+  <data name="LbInformaitionEn" xml:space="preserve">
+    <value>المعلومات باللغة الانكليزية</value>
   </data>
   <data name="LbInformationCompany" xml:space="preserve">
     <value>معلومات الشركة</value>
@@ -545,6 +554,9 @@
   </data>
   <data name="LBMyOrderStatus" xml:space="preserve">
     <value>حالة الطلب</value>
+  </data>
+  <data name="LBMyProjectInformation" xml:space="preserve">
+    <value>المشاريع</value>
   </data>
   <data name="LBMyProjectType" xml:space="preserve">
     <value>فئات المشاريع </value>
@@ -701,6 +713,24 @@
   </data>
   <data name="LBProfitsInformations" xml:space="preserve">
     <value>معلومات الأرباح</value>
+  </data>
+  <data name="LbProjectDescriptionAr" xml:space="preserve">
+    <value>الوصف باللغة العربية </value>
+  </data>
+  <data name="LbProjectDescriptionEn" xml:space="preserve">
+    <value>الوصف باللغة الانكليزية </value>
+  </data>
+  <data name="LbProjectEnd" xml:space="preserve">
+    <value>تاريخ انتهاء المشروع </value>
+  </data>
+  <data name="LbProjectNameAr" xml:space="preserve">
+    <value>المشروع باللغة العربية </value>
+  </data>
+  <data name="LbProjectNameEn" xml:space="preserve">
+    <value>المشروع باللغة الانكليزية </value>
+  </data>
+  <data name="LbProjectStart" xml:space="preserve">
+    <value>تاريخ بدأ المشروع </value>
   </data>
   <data name="LbProjectType" xml:space="preserve">
     <value>فئة المشروع أنكليزي</value>
