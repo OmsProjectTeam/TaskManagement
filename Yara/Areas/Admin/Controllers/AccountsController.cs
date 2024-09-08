@@ -44,7 +44,16 @@ namespace Yara.Areas.Admin.Controllers
         #endregion
 
         #region Method
-        [Authorize(Roles = "Admin,User")]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+		public IActionResult IndexAr()
+		{
+			return View();
+		}
+		[Authorize(Roles = "Admin,User")]
         public IActionResult Roles()
         {
             ViewmMODeElMASTER vmodel = new ViewmMODeElMASTER();

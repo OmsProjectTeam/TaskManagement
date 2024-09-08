@@ -14,7 +14,14 @@ namespace Yara.Areas.Admin.Controllers
             dbcontext = dbcontext1;
             iProjectType= iProjectType1; 
         }
-
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult IndexAr()
+        {
+            return View();
+        }
         public IActionResult MyProjectType()
         {
             ViewmMODeElMASTER vmodel = new ViewmMODeElMASTER();

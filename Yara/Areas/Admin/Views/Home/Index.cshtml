@@ -17,62 +17,62 @@
         <div class="box-content">
             <div class="row">
                 <div class="col-5 col-md-4 col-sm-6 col-xs-12">
-                    <a href="#" class="box-content-link">
-                        <div class="icon-box">
-                            <i class="fa fa-shopping-cart"></i>
-                            <h4>Marketplace</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
-                    <a href="#" class="box-content-link">
-                        <div class="icon-box">
-                            <i class="fa fa-star"></i>
-                            <h4>Premium</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
-                    <a href="#" class="box-content-link">
-                        <div class="icon-box">
-                            <i class="fa fa-user"></i>
-                            <h4>Add a Merchants</h4>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
-                    <a href="#" class="box-content-link">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="Accounts" asp-action="Index" asp-route-userId="@user.Id">
                         <div class="icon-box">
                             <i class="fa fa-users"></i>
-                            <h4>Friends</h4>
+                            <h4>User Information</h4>
                         </div>
                     </a>
                 </div>
                 <div class="col-5 col-md-4 col-sm-6 col-xs-12">
-                    <a href="#" class="box-content-link">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="ProjectType" asp-action="Index" asp-route-userId="@user.Id">
+                        <div class="icon-box">
+                            <i class="fa fa-star"></i>
+                            <h4>General Settings</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="ProjectInformation" asp-action="MyProjectInformation" asp-route-userId="@user.Id">
+                        <div class="icon-box">
+                            <i class="fa fa-user"></i>
+                            <h4>WorkSpace</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="CustomerMessages" asp-action="MyCustomerMessages" asp-route-userId="@user.Id">
+                        <div class="icon-box">
+                            <i class="fa fa-users"></i>
+                            <h4>Customers</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="Merchant" asp-action="MyMerchant" asp-route-userId="@user.Id">
                         <div class="icon-box">
                             <i class="fa fa-group"></i>
-                            <h4>Groups</h4>
+                            <h4>Merchants</h4>
                         </div>
                     </a>
                 </div>
                 <div class="col-5 col-md-4 col-sm-6 col-xs-12">
-                    <a href="#" class="box-content-link">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="OrderNew" asp-action="MyOrderNew" asp-route-userId="@user.Id">
                         <div class="icon-box">
                             <i class="fa fa-archive"></i>
-                            <h4>Inventory</h4>
+                            <h4>Order</h4>
                         </div>
                     </a>
                 </div>
                 <div class="col-5 col-md-4 col-sm-6 col-xs-12">
-                    <a href="#" class="box-content-link">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="" asp-action="" asp-route-userId="@user.Id">
                         <div class="icon-box">
                             <i class="fa fa-envelope"></i>
-                            <h4>Messages</h4>
+                            <h4>FAQ</h4>
                         </div>
                     </a>
                 </div>
-                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
+@*                 <div class="col-5 col-md-4 col-sm-6 col-xs-12">
                     <a href="#" class="box-content-link">
                         <div class="icon-box">
                             <i class="fa fa-pencil"></i>
@@ -135,10 +135,10 @@
                             <h4>Quick Sign In</h4>
                         </div>
                     </a>
-                </div>
+                </div> *@
             </div>
             <div class="logout-button-container">
-                <a href="#" class="logout-button">Log Out</a>
+                <a asp-area="Admin" asp-controller="Accounts" asp-action="Logout1" class="logout-button">Log Out</a>
             </div>
         </div>
     </div>

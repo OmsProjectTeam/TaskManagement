@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "IndexAr";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminAr.cshtml";
+}
+
+@model ViewmMODeElMASTER
+@inject UserManager<ApplicationUser> userManager
+@inject SignInManager<ApplicationUser> signInManager
+
+@{
+    var user = await userManager.GetUserAsync(User);
+    var roles = await userManager.GetRolesAsync(user);
+    var userRole = roles.FirstOrDefault();
+}
+<link rel="stylesheet" href="~/css/home.css">
+
+<div class="row small-spacing">
+    <div class="col-xs-12">
+        <div class="box-content">
+            <div class="row">
+                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="ProjectType" asp-action="MyProjectTypeAr" asp-route-userId="@user.Id">
+                        <div class="icon-box">
+                            <i class="fa fa-users"></i>
+                            <h4>نمط المشروع</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="TypesOfTask/" asp-action="MyTypesOfTaskAr" asp-route-userId="@user.Id">
+                        <div class="icon-box">
+                            <i class="fa fa-star"></i>
+                            <h4>نمط المهمة</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-5 col-md-4 col-sm-6 col-xs-12">
+                    <a asp-area="Admin" class="box-content-link" asp-controller="TaskStatus" asp-action="MyTaskStatusAr" asp-route-userId="@user.Id">
+                        <div class="icon-box">
+                            <i class="fa fa-user"></i>
+                            <h4>حالة المهمة</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>

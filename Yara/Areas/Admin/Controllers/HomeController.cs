@@ -22,10 +22,6 @@ namespace Yara.Areas.Admin.Controllers
 			
 		}
 
-
-
-
-
 		public async Task<IActionResult> Index(string userId)
 		{
 			ViewmMODeElMASTER vmodel = new ViewmMODeElMASTER();
