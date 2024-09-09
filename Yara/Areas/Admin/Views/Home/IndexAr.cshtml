@@ -4,29 +4,84 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminAr.cshtml";
 }
 
+	@model ViewmMODeElMASTER
+	@inject UserManager<ApplicationUser> userManager
+	@inject SignInManager<ApplicationUser> signInManager
+@{
+	var user = await userManager.GetUserAsync(User);
+	var roles = await userManager.GetRolesAsync(user);
+	var userRole = roles.FirstOrDefault();
+}
+<link rel="stylesheet" href="~/css/home.css">
+
 <div class="row small-spacing">
 	<div class="col-xs-12">
 		<div class="box-content">
-			<h4 class="box-title">Activity</h4>
-			<!-- /.box-title -->
-			<div class="dropdown js__drop_down">
-				<a href="#" class="dropdown-icon glyphicon glyphicon-option-vertical js__drop_down_button"></a>
-				<ul class="sub-menu">
-					<li><a href="#">Action</a></li>
-					<li><a href="#">Another action</a></li>
-					<li><a href="#">Something else there</a></li>
-					<li class="split"></li>
-					<li><a href="#">Separated link</a></li>
-				</ul>
-				<!-- /.sub-menu -->
+			<div class="row">
+				<div class="col-5 col-md-4 col-sm-6 col-xs-12">
+					<a asp-area="Admin" class="box-content-link" asp-controller="Accounts" asp-action="IndexAr" asp-route-userId="@user.Id">
+						<div class="icon-box">
+							<i class="fa fa-users"></i>
+							<h4>معلومات المستخدمين</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-5 col-md-4 col-sm-6 col-xs-12">
+					<a asp-area="Admin" class="box-content-link" asp-controller="ProjectType" asp-action="Index" asp-route-userId="@user.Id">
+						<div class="icon-box">
+							<i class="fa fa-star"></i>
+							<h4>الإعدادات العامة</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-5 col-md-4 col-sm-6 col-xs-12">
+					<a asp-area="Admin" class="box-content-link" asp-controller="ProjectInformation" asp-action="MyProjectInformationAr" asp-route-userId="@user.Id">
+						<div class="icon-box">
+							<i class="fa fa-user"></i>
+							<h4>WorkSpace</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-5 col-md-4 col-sm-6 col-xs-12">
+					<a asp-area="Admin" class="box-content-link" asp-controller="CustomerMessages" asp-action="MyCustomerMessagesAr" asp-route-userId="@user.Id">
+						<div class="icon-box">
+							<i class="fa fa-users"></i>
+							<h4>العملاء</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-5 col-md-4 col-sm-6 col-xs-12">
+					<a asp-area="Admin" class="box-content-link" asp-controller="Merchant" asp-action="MyMerchantAr" asp-route-userId="@user.Id">
+						<div class="icon-box">
+							<i class="fa fa-group"></i>
+							<h4>التجار</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-5 col-md-4 col-sm-6 col-xs-12">
+					<a asp-area="Admin" class="box-content-link" asp-controller="OrderNew" asp-action="MyOrderNewAr" asp-route-userId="@user.Id">
+						<div class="icon-box">
+							<i class="fa fa-archive"></i>
+							<h4>الطلبات</h4>
+						</div>
+					</a>
+				</div>
+				<div class="col-5 col-md-4 col-sm-6 col-xs-12">
+					<a asp-area="Admin" class="box-content-link" asp-controller="" asp-action="" asp-route-userId="@user.Id">
+						<div class="icon-box">
+							<i class="fa fa-envelope"></i>
+							<h4>الأسئلة الشائعة</h4>
+						</div>
+					</a>
+				</div>
 			</div>
-			<!-- /.dropdown js__dropdown -->
-			<div id="smil-animation-index-chartist-chart" class="chartist-chart" style="height: 320px"></div>
-			<!-- /#smil-animation-chartist-chart.chartist-chart -->
+			<div class="logout-button-container">
+				<a asp-area="Admin" asp-controller="Accounts" asp-action="Logout1" class="logout-button">تسجيل الخروج</a>
+			</div>
 		</div>
-		<!-- /.box-content -->
 	</div>
-	<!-- /.col-xs-12 -->
+</div>
+<div class="row small-spacing">
 	<div class="col-lg-3 col-md-6 col-xs-12">
 		<div class="box-content">
 			<h4 class="box-title">Net required</h4>
