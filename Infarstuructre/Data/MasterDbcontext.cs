@@ -42,6 +42,11 @@ namespace Infarstuructre.Data
 			{
 				entity.HasNoKey();
 				entity.ToView("ViewProjectInformation");
+			});	
+            builder.Entity<TBViewTask>(entity =>
+			{
+				entity.HasNoKey();
+				entity.ToView("ViewTask");
 			});
 
 
@@ -87,6 +92,15 @@ namespace Infarstuructre.Data
            .Property(b => b.CurrentState)
            .HasDefaultValueSql("((1))");
     
+            //---------------------------------  
+            //---------------------------------
+            builder.Entity<TBTask>()
+           .Property(b => b.DateTimeEntry)
+           .HasDefaultValueSql("getdate()");
+            builder.Entity<TBTask>()
+           .Property(b => b.CurrentState)
+           .HasDefaultValueSql("((1))");
+    
             //---------------------------------
         }
         //***********************************
@@ -96,5 +110,7 @@ namespace Infarstuructre.Data
         public DbSet<TBTaskStatus> TBTaskStatuss { get; set; } 
         public DbSet<TBProjectInformation> TBProjectInformations { get; set; } 
         public DbSet<TBViewProjectInformation> ViewProjectInformation { get; set; } 
+        public DbSet<TBTask> TBTasks { get; set; } 
+        public DbSet<TBViewTask> ViewTask { get; set; } 
     }
 }

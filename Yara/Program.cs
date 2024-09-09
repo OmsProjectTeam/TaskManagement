@@ -99,6 +99,7 @@ builder.Services.AddScoped<IIProjectType, CLSTBProjectType>();
 builder.Services.AddScoped<IITypesOfTask, CLSTBTypesOfTask>();
 builder.Services.AddScoped<IITaskStatus, CLSTBTaskStatus>();
 builder.Services.AddScoped<IIProjectInformation, CLSTBProjectInformation>();
+builder.Services.AddScoped<IITask, CLSTBTask>();
 
 builder.Services.AddScoped<AccountsController>();
 

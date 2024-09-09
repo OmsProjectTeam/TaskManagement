@@ -268,6 +268,15 @@ namespace Domin.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to يرجى أدراج منشأ المهمة لتتم العملية بنجاح ...!.
+        /// </summary>
+        public static string VlAddedBy {
+            get {
+                return ResourceManager.GetString("VlAddedBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please include the address for the process to complete successfully.
         /// </summary>
         public static string VlAddres {
@@ -421,11 +430,29 @@ namespace Domin.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to يرجى أدراج الوصف باللغة العربية لتتم العملية بنجاح ...!.
+        /// </summary>
+        public static string VlDescriptionAr {
+            get {
+                return ResourceManager.GetString("VlDescriptionAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please include a description of the link between the customer and the pricing. The process is completed successfully...!.
         /// </summary>
         public static string VlDescriptionClint {
             get {
                 return ResourceManager.GetString("VlDescriptionClint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter the description in English for the process to be successful...!.
+        /// </summary>
+        public static string VlDescriptionEn {
+            get {
+                return ResourceManager.GetString("VlDescriptionEn", resourceCulture);
             }
         }
         
@@ -714,6 +741,24 @@ namespace Domin.Resource {
         public static string VlTitle {
             get {
                 return ResourceManager.GetString("VlTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to يرجى أدراج العنوان باللغة العربية لتتم العملية بنجاح ...!.
+        /// </summary>
+        public static string VlTitleAr {
+            get {
+                return ResourceManager.GetString("VlTitleAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter the task title in English. The process is successful...!.
+        /// </summary>
+        public static string VlTitleEn {
+            get {
+                return ResourceManager.GetString("VlTitleEn", resourceCulture);
             }
         }
         

@@ -59,6 +59,8 @@ namespace Infarstuructre.ViewModel
         public TBTaskStatus TaskStatus { get; set; }
 		public List<TBViewProjectInformation> ListViewProjectInformation { get; set; }
         public TBProjectInformation ProjectInformation { get; set; }
+		public List<TBViewTask> ListViewTask { get; set; }
+        public TBTask Task { get; set; }
 
 
     }
