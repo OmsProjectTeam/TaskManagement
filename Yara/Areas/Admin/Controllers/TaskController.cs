@@ -93,9 +93,7 @@ namespace Yara.Areas.Admin.Controllers
                 slider.DateTimeEntry = model.Task.DateTimeEntry;
                 slider.CurrentState = model.Task.CurrentState;
                 if (slider.IdTask == 0 || slider.IdTask == null)
-                {
-                   
-                  
+                {                                    
                     var reqwest = iTask.saveData(slider);
                     if (reqwest == true)
                     {
