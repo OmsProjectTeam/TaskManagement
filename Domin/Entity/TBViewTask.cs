@@ -18,7 +18,7 @@ namespace Domin.Entity
         public string ProjectDescription { get; set; }
         public string ProjectNameAr { get; set; }
         public string ProjectDescriptionAr { get; set; }
-        public string ProjectStart { get; set; }
+        public DateOnly ProjectStart { get; set; }
         public string TitleAr { get; set; }
         public string TitleEn { get; set; }
         public string DescriptionAr { get; set; }
