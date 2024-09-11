@@ -1017,4 +1017,32 @@
   <data name="VLUpdatedSuccessfully" xml:space="preserve">
     <value>تمت عملية التعديل بنجاح</value>
   </data>
+  <data name="LBMyTask" xml:space="preserve">
+    <value>المهام </value>
+  </data>
+  <data name="LbTitleAr" xml:space="preserve">
+    <value>عنوان المهمة </value>
+  </data>
+  <data name="LbDescriptionAr" xml:space="preserve">
+    <value>وصف المهمة </value>
+  </data>
+  <data name="LbEndtDate" xml:space="preserve">
+    <value>تاريخ نهاية المهمة</value>
+  </data>
+  <data name="LbActualEnd" xml:space="preserve">
+    <value>التاريخ الفعلي للنهاية</value>
+  </data>
+  <data name="LbTitleEn" xml:space="preserve">
+    <value>عنوان المهمة انكليزي</value>
+  </data>
+  <data name="LbDescriptionEn" xml:space="preserve">
+    <value>وصف المهمة أنكليزي</value>
+  </data>
+  <data name="LbAddedBy" xml:space="preserve">
+    <value>المهمة من </value>
+  </data>
+  <data name="LbStartDate" xml:space="preserve">
+    <value>تاريخ البداية</value>
+    <comment>تاريخ البداية</comment>
+  </data>
 </root>

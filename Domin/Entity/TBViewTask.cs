@@ -25,7 +25,7 @@ namespace Domin.Entity
         public string DescriptionEn { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndtDate { get; set; }
-        public DateTime ActualEnd { get; set; }
+        public DateTime? ActualEnd { get; set; }
         public string UserId { get; set; }
         public string Name { get; set; }
         public string ImageUser { get; set; }

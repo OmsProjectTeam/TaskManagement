@@ -32,7 +32,7 @@ namespace Domin.Entity
         public string DescriptionEn { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndtDate { get; set; }
-        public DateTime ActualEnd { get; set; }
+        public DateTime? ActualEnd { get; set; }
         public string UserId { get; set; }
         [Required(ErrorMessageResourceType = typeof(Resource.ResourceData), ErrorMessageResourceName = "VlAddedBy")]
         [MaxLength(300, ErrorMessageResourceType = typeof(Resource.ResourceData), ErrorMessageResourceName = "MaxLength300")]

@@ -126,6 +126,9 @@
   <data name="LbActiveUser" xml:space="preserve">
     <value>Active User</value>
   </data>
+  <data name="LbActualEnd" xml:space="preserve">
+    <value>Actual End</value>
+  </data>
   <data name="LBAddArea" xml:space="preserve">
     <value>Adding and modifying regions</value>
   </data>
@@ -146,6 +149,9 @@
   </data>
   <data name="LBAddCustomerMessages" xml:space="preserve">
     <value>Add and modify the Customer Messages</value>
+  </data>
+  <data name="LbAddedBy" xml:space="preserve">
+    <value>Added By</value>
   </data>
   <data name="LbAddEditInformationCompanies" xml:space="preserve">
     <value>Add and modify company data</value>
@@ -200,6 +206,9 @@
   </data>
   <data name="LBAddShippingPrice" xml:space="preserve">
     <value>Adding and modifying pricing for shipping systems</value>
+  </data>
+  <data name="LBAddTask" xml:space="preserve">
+    <value>Adding and modifying Add Task</value>
   </data>
   <data name="LBAddTaskStatus" xml:space="preserve">
     <value>Adding and modifying Task Status</value>
@@ -351,11 +360,17 @@
   <data name="LbDescription1" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="LbDescriptionAr" xml:space="preserve">
+    <value>Task Description Arabic</value>
+  </data>
   <data name="Lbdescriptioncity" xml:space="preserve">
     <value>City</value>
   </data>
   <data name="LbDescriptionClint" xml:space="preserve">
     <value>Description Clint</value>
+  </data>
+  <data name="LbDescriptionEn" xml:space="preserve">
+    <value>Task Description English</value>
   </data>
   <data name="LbDescriptionOrder" xml:space="preserve">
     <value>Description Order</value>
@@ -371,6 +386,9 @@
   </data>
   <data name="LbEmailCompany" xml:space="preserve">
     <value>E-mail</value>
+  </data>
+  <data name="LbEndtDate" xml:space="preserve">
+    <value>Endt Date</value>
   </data>
   <data name="LbExchangeAmount" xml:space="preserve">
     <value>Exchange Amount</value>
@@ -572,6 +590,9 @@
   </data>
   <data name="LBMyShippingPrice" xml:space="preserve">
     <value>Shipping systems pricing</value>
+  </data>
+  <data name="LBMyTask" xml:space="preserve">
+    <value>Task Information</value>
   </data>
   <data name="LBMyTaskStatus" xml:space="preserve">
     <value>Task Status</value>
@@ -807,6 +828,9 @@
   <data name="lbSsl_validity" xml:space="preserve">
     <value>Ssl validity</value>
   </data>
+  <data name="LbStartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
   <data name="LBStreet" xml:space="preserve">
     <value>Street</value>
   </data>
@@ -818,6 +842,12 @@
   </data>
   <data name="LbTitle" xml:space="preserve">
     <value>Title</value>
+  </data>
+  <data name="LbTitleAr" xml:space="preserve">
+    <value>Task title Arabic</value>
+  </data>
+  <data name="LbTitleEn" xml:space="preserve">
+    <value>Task title English</value>
   </data>
   <data name="LbTitleShipping" xml:space="preserve">
     <value>Title Shipping</value>

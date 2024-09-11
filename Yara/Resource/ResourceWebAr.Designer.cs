@@ -763,6 +763,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to وصف المهمة .
+        /// </summary>
+        public static string LbDescriptionAr {
+            get {
+                return ResourceManager.GetString("LbDescriptionAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to المدينة.
         /// </summary>
         public static string Lbdescriptioncity {
@@ -1416,6 +1425,15 @@ namespace Yara.Resource {
         public static string LBMyShippingPrice {
             get {
                 return ResourceManager.GetString("LBMyShippingPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to المهام .
+        /// </summary>
+        public static string LBMyTask {
+            get {
+                return ResourceManager.GetString("LBMyTask", resourceCulture);
             }
         }
         
@@ -2154,6 +2172,15 @@ namespace Yara.Resource {
         public static string LbTitle {
             get {
                 return ResourceManager.GetString("LbTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عنوان المهمة .
+        /// </summary>
+        public static string LbTitleAr {
+            get {
+                return ResourceManager.GetString("LbTitleAr", resourceCulture);
             }
         }
         

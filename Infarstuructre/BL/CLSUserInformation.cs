@@ -18,10 +18,11 @@ namespace Infarstuructre.BL
 		List<ApplicationUser> GetAllByName(string name);
 		List<VwUser> GetAllbyId(string userId);
 		List<ApplicationUser> GetAllByNameall();
+        List<ApplicationUser> GetAllByRole(string roles);
 
-		// ////////////////////////////////////API//////////////////////////////////
+        // ////////////////////////////////////API//////////////////////////////////
 
-		Task<List<VwUser>> GetAllAsync();
+        Task<List<VwUser>> GetAllAsync();
         Task<ApplicationUser> GetByIdAsync(string? Id);
         Task<List<ApplicationUser>> GetAllByNameAsync(string name);
         Task<List<VwUser>> GetAllbyIdAsync(string userId);
@@ -86,7 +87,39 @@ namespace Infarstuructre.BL
                                                                                                       //List<VwUser> MySlider = dbcontext.VwUsers.OrderByDescending(n => n.Id).Where(a => a.ActiveUser == true).ToList();
             return MySlider;
         }
+        public List<ApplicationUser> GetAllByRole(string roles)
+        {
+            // جلب جميع المستخدمين النشطين
+            List<ApplicationUser> allActiveUsers = GetAllByNameall2();
 
+            // تقسيم الأدوار إذا كانت مفصولة بفاصلة
+            var roleList = roles.Split(',').Select(r => r.Trim()).ToList();
+
+            // تصفية المستخدمين بناءً على الأدوار المطلوبة
+            var usersWithRoles = allActiveUsers
+                .Where(user => roleList.Any(role => UserHasRole(user, role)))
+                .ToList();
+
+            return usersWithRoles;
+        }
+        // دالة تستخدم للتحقق مما إذا كان للمستخدم صلاحية معينة
+        private bool UserHasRole(ApplicationUser user, string role)
+        {
+            // تحقق من الصلاحية - هذا يعتمد على كيفية تخزين الصلاحيات
+            // افترض أن هناك طريقة في _userManager للتحقق من الصلاحيات
+            return _userManager.IsInRoleAsync(user, role).Result;
+        }
+
+        // الدالة الأصلية لجلب جميع المستخدمين النشطين
+        public List<ApplicationUser> GetAllByNameall2()
+        {
+            List<ApplicationUser> MySlider = _userManager.Users
+                .OrderByDescending(x => x.Id)
+                .Where(n => n.ActiveUser == true)
+                .ToList();
+
+            return MySlider;
+        }
         // ///////////////////////////////////APIs///////////////////////////////////////////////
         public async Task<List<ApplicationUser>> GetAllByNameallAsync()
         {

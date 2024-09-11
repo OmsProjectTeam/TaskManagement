@@ -35,7 +35,7 @@ namespace Yara.Areas.Admin.Controllers
         }
         public IActionResult AddTask(int? IdTask)
         {
-            ViewBag.USer = iUserInformation.GetAll();
+            ViewBag.USer = iUserInformation.GetAllByRole("Developer,Admin");
             ViewBag.TaskStatus = iTaskStatus.GetAll();
             ViewBag.ProjectInformation = iProjectInformation.GetAll();
             ViewBag.TypesOfTask = iTypesOfTask.GetAll();
@@ -54,7 +54,7 @@ namespace Yara.Areas.Admin.Controllers
         }
         public IActionResult AddTaskAr(int? IdTask)
         {
-            ViewBag.USer = iUserInformation.GetAll();
+            ViewBag.USer = iUserInformation.GetAllByRole("Developer,Admin");
             ViewBag.TaskStatus = iTaskStatus.GetAll();
             ViewBag.ProjectInformation = iProjectInformation.GetAll();
             ViewBag.TypesOfTask = iTypesOfTask.GetAll();
@@ -81,6 +81,7 @@ namespace Yara.Areas.Admin.Controllers
                 slider.IdTaskStatus = model.Task.IdTaskStatus;
                 slider.IdProjectInformation = model.Task.IdProjectInformation;
                 slider.IdTypesOfTask = model.Task.IdTypesOfTask;
+           
                 slider.TitleAr = model.Task.TitleAr;
                 slider.TitleEn = model.Task.TitleEn;
                 slider.DescriptionAr = model.Task.DescriptionAr;
