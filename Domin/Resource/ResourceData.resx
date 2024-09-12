@@ -378,4 +378,7 @@
   <data name="VlTitleEn" xml:space="preserve">
     <value>Please enter the task title in English. The process is successful...!</value>
   </data>
+  <data name="LBMyEmailAlartSetting" xml:space="preserve">
+    <value>بريد التنبيهات</value>
+  </data>
 </root>

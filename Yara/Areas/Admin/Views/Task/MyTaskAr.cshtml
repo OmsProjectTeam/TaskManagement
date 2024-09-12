@@ -8,13 +8,13 @@
     <div class="box-content">
         <ul class="list-inline">
             <li class="margin-bottom-10"><a href="#"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">@ResourceWebAr.LBMyTask</button></a></li>/
-            <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Home" asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Admin Home</button></a></li>/
-            <li class="margin-bottom-10"><a asp-area="" asp-controller="Home" asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Home</button></a></li>
+            <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Home" asp-action="IndexAr"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Admin Home</button></a></li>/
+            <li class="margin-bottom-10"><a asp-area="" asp-controller="Home" asp-action="IndexAr"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Home</button></a></li>
 
         </ul>
         <!-- /.box-title -->
         <div class="dropdown js__drop_down">
-            <a asp-area="Admin" asp-controller="Task" asp-action="AddTask"><button type="button" class="btn btn-violet btn-rounded btn-bordered waves-effect waves-light" style="margin-bottom:20px">Add</button></a>
+            <a asp-area="Admin" asp-controller="Task" asp-action="AddTaskAr"><button type="button" class="btn btn-violet btn-rounded btn-bordered waves-effect waves-light" style="margin-bottom:20px">Add</button></a>
         </div>
         <!-- /.dropdown js__dropdown -->
         <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
@@ -68,7 +68,6 @@
                                                     <th rowspan="1" colspan="1">@ResourceWebAr.LbDescriptionAr</th>
                                                     <th rowspan="1" colspan="1">@ResourceWebAr.LbProjectNameAr</th>
                                                     <th rowspan="1" colspan="1">@ResourceWebAr.LbStartDate</th>
-
                                                     <th rowspan="1" colspan="1">@ResourceWebAr.LbEndtDate</th>
                                                     <th rowspan="1" colspan="1">@ResourceWebAr.LbActualEnd</th>
                                             </tfoot>

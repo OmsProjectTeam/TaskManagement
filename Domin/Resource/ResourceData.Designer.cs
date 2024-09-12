@@ -88,6 +88,15 @@ namespace Domin.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to بريد التنبيهات.
+        /// </summary>
+        public static string LBMyEmailAlartSetting {
+            get {
+                return ResourceManager.GetString("LBMyEmailAlartSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The number of characters entered must not exceed 100 characters...!.
         /// </summary>
         public static string MaxLength100 {

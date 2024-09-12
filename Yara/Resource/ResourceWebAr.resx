@@ -309,12 +309,6 @@
   <data name="lbCurrentState" xml:space="preserve">
     <value>حالة</value>
   </data>
-  <data name="LBCustomeronorder" xml:space="preserve">
-    <value>العميل </value>
-  </data>
-  <data name="LBCustomers" xml:space="preserve">
-    <value>العملاء</value>
-  </data>
   <data name="Lbcust_landmark" xml:space="preserve">
     <value>أقرب نقطة علام</value>
   </data>
@@ -333,14 +327,17 @@
   <data name="Lbcust_status" xml:space="preserve">
     <value>الحالة القديمة</value>
   </data>
+  <data name="LBCustomeronorder" xml:space="preserve">
+    <value>العميل </value>
+  </data>
+  <data name="LBCustomers" xml:space="preserve">
+    <value>العملاء</value>
+  </data>
   <data name="LbDataEntry" xml:space="preserve">
     <value>ادخال بيانات</value>
   </data>
   <data name="LbDateTimeEntry" xml:space="preserve">
     <value>وقت وتاريخ الدخول</value>
-  </data>
-  <data name="LBDeliveryAddress" xml:space="preserve">
-    <value />
   </data>
   <data name="Lbdelivery_charges" xml:space="preserve">
     <value>رسوم التوصيل</value>
@@ -350,6 +347,9 @@
   </data>
   <data name="LbDescription1" xml:space="preserve">
     <value>الوصف</value>
+  </data>
+  <data name="LbDescriptionAr" xml:space="preserve">
+    <value>وصف المهمة </value>
   </data>
   <data name="Lbdescriptioncity" xml:space="preserve">
     <value>المدينة</value>
@@ -474,17 +474,17 @@
   <data name="lbMailSender" xml:space="preserve">
     <value>بريد الارسال</value>
   </data>
-  <data name="LBMerchantInformation" xml:space="preserve">
-    <value>معلومات التاجر</value>
-  </data>
-  <data name="LBMerchants" xml:space="preserve">
-    <value>التجار</value>
-  </data>
   <data name="Lbmerchant_mob" xml:space="preserve">
     <value>رقم الهاتف</value>
   </data>
   <data name="LbMerchant_name" xml:space="preserve">
     <value>اسم التاجر</value>
+  </data>
+  <data name="LBMerchantInformation" xml:space="preserve">
+    <value>معلومات التاجر</value>
+  </data>
+  <data name="LBMerchants" xml:space="preserve">
+    <value>التجار</value>
   </data>
   <data name="LbMessageDescription" xml:space="preserve">
     <value>رسالة العميل </value>
@@ -523,7 +523,7 @@
     <value>رسائل العملاء </value>
   </data>
   <data name="LBMyEmailAlartSettingAr" xml:space="preserve">
-    <value>أعدادات بريدي التنبيهات</value>
+    <value>أعدادات بريد التنبيهات</value>
   </data>
   <data name="LBMyExchangeRate" xml:space="preserve">
     <value>سعر الصرف</value>
@@ -570,6 +570,9 @@
   <data name="LBMyShippingPrice" xml:space="preserve">
     <value>أسعار أنظمة الشحن</value>
   </data>
+  <data name="LBMyTask" xml:space="preserve">
+    <value>المهام </value>
+  </data>
   <data name="LBMyTaskStatus" xml:space="preserve">
     <value>حالة المهمة</value>
   </data>
@@ -596,9 +599,6 @@
   </data>
   <data name="LBMyTypeSystemDelivery" xml:space="preserve">
     <value>نوع نظام التسليم</value>
-  </data>
-  <data name="LbName" xml:space="preserve">
-    <value />
   </data>
   <data name="LbNameRols" xml:space="preserve">
     <value>اسم الدور</value>
@@ -750,14 +750,14 @@
   <data name="LbRate" xml:space="preserve">
     <value>سعر الصرف</value>
   </data>
-  <data name="LbReceiptStatment" xml:space="preserve">
-    <value>بيان الاستلام</value>
-  </data>
   <data name="LBreceipt_dt" xml:space="preserve">
     <value>تاريخ الاستلام</value>
   </data>
   <data name="LBreceipt_no" xml:space="preserve">
     <value>رقم الإيصال</value>
+  </data>
+  <data name="LbReceiptStatment" xml:space="preserve">
+    <value>بيان الاستلام</value>
   </data>
   <data name="LbResivedMony" xml:space="preserve">
     <value>المبلغ المستلم</value>
@@ -804,6 +804,9 @@
   <data name="lbSsl_validity" xml:space="preserve">
     <value>صلاحية SSL</value>
   </data>
+  <data name="LbStartDate" xml:space="preserve">
+    <value>تاريخ بداية المهمة </value>
+  </data>
   <data name="LBStreet" xml:space="preserve">
     <value>الشارع</value>
   </data>
@@ -815,6 +818,9 @@
   </data>
   <data name="LbTitle" xml:space="preserve">
     <value>العنوان</value>
+  </data>
+  <data name="LbTitleAr" xml:space="preserve">
+    <value>عنوان المهمة </value>
   </data>
   <data name="LbTitleShipping" xml:space="preserve">
     <value>عنوان الشحن</value>
@@ -855,6 +861,9 @@
   <data name="LBUpload_image" xml:space="preserve">
     <value>رفع</value>
   </data>
+  <data name="LbUS_delivery" xml:space="preserve">
+    <value>مستخدم نظام التوصيل</value>
+  </data>
   <data name="LbUserEmage" xml:space="preserve">
     <value>الصورة</value>
   </data>
@@ -872,9 +881,6 @@
   </data>
   <data name="LBUsersInformationEn" xml:space="preserve">
     <value>معلومات المستخدمين</value>
-  </data>
-  <data name="LbUS_delivery" xml:space="preserve">
-    <value>مستخدم نظام التوصيل</value>
   </data>
   <data name="LbWeight" xml:space="preserve">
     <value>الوزن</value>
@@ -1017,32 +1023,22 @@
   <data name="VLUpdatedSuccessfully" xml:space="preserve">
     <value>تمت عملية التعديل بنجاح</value>
   </data>
-  <data name="LBMyTask" xml:space="preserve">
-    <value>المهام </value>
-  </data>
-  <data name="LbTitleAr" xml:space="preserve">
-    <value>عنوان المهمة </value>
-  </data>
-  <data name="LbDescriptionAr" xml:space="preserve">
-    <value>وصف المهمة </value>
-  </data>
   <data name="LbEndtDate" xml:space="preserve">
-    <value>تاريخ نهاية المهمة</value>
+    <value>نهاية المهمة</value>
   </data>
   <data name="LbActualEnd" xml:space="preserve">
-    <value>التاريخ الفعلي للنهاية</value>
+    <value>النهاية الفعلية للمهمة </value>
   </data>
   <data name="LbTitleEn" xml:space="preserve">
-    <value>عنوان المهمة انكليزي</value>
+    <value>عنوان المهمة أنكليزي</value>
   </data>
   <data name="LbDescriptionEn" xml:space="preserve">
     <value>وصف المهمة أنكليزي</value>
   </data>
   <data name="LbAddedBy" xml:space="preserve">
-    <value>المهمة من </value>
+    <value>منشى المهمة </value>
   </data>
-  <data name="LbStartDate" xml:space="preserve">
-    <value>تاريخ البداية</value>
-    <comment>تاريخ البداية</comment>
+  <data name="LBAddTask" xml:space="preserve">
+    <value>أضافة وتعديل المهام </value>
   </data>
 </root>

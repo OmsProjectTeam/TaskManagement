@@ -1,0 +1,87 @@
+﻿@model ViewmMODeElMASTER
+@{
+    ViewData["Title"] = ResourceWeb.LBAddEmailAlartSetting;
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="box-content">
+    <ul class="list-inline">
+        <li class="margin-bottom-10"><a href="#"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">@ResourceWeb.LBAddEmailAlartSetting</button></a></li>/
+        <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Home" asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Admin Home</button></a></li>/
+        <li class="margin-bottom-10"><a asp-area="" asp-controller="Home" asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Home</button></a></li>
+        <span style="color:royalblue"> <strong>@TempData["Saved successfullyl"]</strong></span>
+        <span style="color:red"> <strong>@TempData["ErrorSave"]</strong></span>
+    </ul>
+    <div class="row small-spacing">
+        <div class="col-xs-12">
+            <div class="box-content card white">
+                <h4 class="box-title">@ResourceWeb.LBAddEmailAlartSetting</h4>
+                <!-- /.box-title -->
+                <div class="card-content">
+                    <form role="form" method="post" asp-controller="EmailAlartSetting" asp-action="Save" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="hidden" asp-for="@Model.EmailAlartSetting.DataEntry" class="form-control" value="@User.Identity.Name">
+                            <input type="hidden" asp-for="@Model.EmailAlartSetting.IdEmailAlartSetting" class="form-control">
+                            <input type="hidden" asp-for="@Model.EmailAlartSetting.DateTimeEntry" value="@DateTime.Now">
+                            <input type="hidden" asp-for="@Model.returnUrl" id="url">
+                            <span style="color:royalblue"> <strong>@TempData["Saved successfully"]</strong></span>
+                            <span style="color:red"> <strong>@TempData["ErrorSave"]</strong></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-6">
+                                    <label asp-for="@Model.EmailAlartSetting.MailSender" for="exampleInputEmail1">@ResourceWeb.lbMailSender</label>
+                                    <input asp-for="@Model.EmailAlartSetting.MailSender" type="email" placeholder="@ResourceWeb.lbMailSender ...." class="form-control" maxlength="300">
+                                    <span asp-validation-for="@Model.EmailAlartSetting.MailSender" class="text-danger"></span>
+                                    <span style="color:red"> <strong>@TempData["EmailAlartSetting"]</strong></span>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label asp-for="@Model.EmailAlartSetting.SmtpServer" for="exampleInputEmail1">@ResourceWeb.lbSmtpServer</label>
+                                    <input asp-for="@Model.EmailAlartSetting.SmtpServer" type="text" placeholder="@ResourceWeb.lbSmtpServer ...." class="form-control" maxlength="100">
+                                    <span asp-validation-for="@Model.EmailAlartSetting.SmtpServer" class="text-danger"></span>
+                                  
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-content">
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-6">
+                                    <label asp-for="@Model.EmailAlartSetting.PortServer" for="exampleInputEmail1">@ResourceWeb.lbPortServer</label>
+                                    <input asp-for="@Model.EmailAlartSetting.PortServer" type="number" placeholder="@ResourceWeb.lbPortServer ...." class="form-control" maxlength="10">
+                                    <span asp-validation-for="@Model.EmailAlartSetting.PortServer" class="text-danger"></span>
+                                   
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <label asp-for="@Model.EmailAlartSetting.PasswordEmail" for="exampleInputEmail1">@ResourceWeb.lbPasswordEmail</label>
+                                    <input asp-for="@Model.EmailAlartSetting.PasswordEmail" type="text" placeholder="@ResourceWeb.lbPasswordEmail ...." class="form-control" maxlength="25">
+                                    <span asp-validation-for="@Model.EmailAlartSetting.PasswordEmail" class="text-danger"></span>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="checkbox margin-bottom-20">
+                            <div class="switch success"><input type="checkbox" asp-for="@Model.EmailAlartSetting.Ssl_validity" id="switch-3"><label for="switch-3">@ResourceWeb.lbSsl_validity</label></div>
+                        </div> <div class="checkbox margin-bottom-20">
+                            <div class="switch success"><input type="checkbox" asp-for="@Model.EmailAlartSetting.Active" id="switch-2"><label for="switch-2">@ResourceWeb.LbActive</label></div>
+                        </div>
+                        <div class="checkbox margin-bottom-20">
+                            <div class="switch success"><input type="checkbox" asp-for="@Model.EmailAlartSetting.CurrentState" id="switch-10" checked="checked"><label for="switch-10">@ResourceWeb.lbCurrentState</label></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">@ResourceWeb.lbSave</button>
+                    </form>
+                </div>
+                <!-- /.card-content -->
+            </div>
+            <!-- /.box-content -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/custom-scripts.js"></script>
+
+}
+

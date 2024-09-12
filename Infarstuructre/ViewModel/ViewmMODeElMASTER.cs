@@ -61,6 +61,8 @@ namespace Infarstuructre.ViewModel
         public TBProjectInformation ProjectInformation { get; set; }
 		public List<TBViewTask> ListViewTask { get; set; }
         public TBTask Task { get; set; }
+		public List<TBEmailAlartSetting> ListEmailAlartSetting { get; set; }
+        public TBEmailAlartSetting EmailAlartSetting { get; set; }
 
 
     }

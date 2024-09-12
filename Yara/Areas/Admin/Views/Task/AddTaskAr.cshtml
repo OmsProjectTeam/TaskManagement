@@ -1,8 +1,184 @@
-﻿
+﻿@model ViewmMODeElMASTER
 @{
-    ViewData["Title"] = "AddTaskAr";
+    ViewData["Title"] = ResourceWebAr.LBAddTask;
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminAr.cshtml";
 }
 
-<h2>AddTaskAr</h2>
+<div class="box-content">
+    <ul class="list-inline">
+        <li class="margin-bottom-10"><a href="#"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">@ResourceWebAr.LBAddTask</button></a></li>/
+        <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Home" asp-action="IndexAr"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Admin Home</button></a></li>/
+        <li class="margin-bottom-10"><a asp-area="" asp-controller="Home" asp-action="IndexAr"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Home</button></a></li>
+
+    </ul>
+    <div class="row small-spacing">
+        <div class="col-xs-6">
+            <div class="box-content card white">
+                <h4 class="box-title">@ResourceWebAr.LBAddTask</h4>
+                <!-- /.box-title -->
+                <div class="card-content">
+                    <form role="form" method="post" asp-controller="Task" asp-action="SaveAr" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="hidden" asp-for="@Model.Task.DataEntry" class="form-control" value="@User.Identity.Name">
+                            <input type="hidden" asp-for="@Model.Task.IdTask" class="form-control">
+                            <input type="hidden" asp-for="@Model.Task.DateTimeEntry" value="@DateTime.Now">
+                            <input type="hidden" asp-for="@Model.returnUrl" id="url">
+                            <span style="color:royalblue"> <strong>@TempData["Saved successfully"]</strong></span>
+                            <span style="color:red"> <strong>@TempData["ErrorSave"]</strong></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.UserId" for="merchant-select">@ResourceWebAr.LbUserName</label>
+                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.UserId" asp-items="@(new SelectList(ViewBag.USer, "Id", "Name"))">
+                                        </select>
+                                        <span asp-validation-for="@Model.Task.UserId" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.IdTypesOfTask" for="merchant-select">@ResourceWebAr.LbTypesOfTask</label>
+                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdTypesOfTask" asp-items="@(new SelectList(ViewBag.TypesOfTask, "IdTypesOfTask", "TypesOfTask"))">
+                                        </select>
+                                        <span asp-validation-for="@Model.Task.IdTypesOfTask" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+                                <!-- /.col-xs-3 -->
+                                <!-- /.col-xs-4 -->
+                                <!-- /.col-xs-5 -->
+                            </div>
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.IdTaskStatus" for="merchant-select">@ResourceWebAr.LbTaskStatus</label>
+                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdTaskStatus" asp-items="@(new SelectList(ViewBag.TaskStatus, "IdTaskStatus", "TaskStatus"))">
+                                        </select>
+                                        <span asp-validation-for="@Model.Task.IdTaskStatus" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.IdProjectInformation" for="merchant-select">@ResourceWebAr.LbProjectNameEn</label>
+                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdProjectInformation" asp-items="@(new SelectList(ViewBag.ProjectInformation, "IdProjectInformation", "ProjectName"))">
+                                        </select>
+                                        <span asp-validation-for="@Model.Task.IdProjectInformation" class="text-danger"></span>
+
+                                    </div>
+                                </div>
+                                <!-- /.col-xs-3 -->
+                                <!-- /.col-xs-4 -->
+                                <!-- /.col-xs-5 -->
+                            </div>
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.TitleAr" for="exampleInputEmail1">@ResourceWebAr.LbTitleAr</label>
+                                        <input asp-for="@Model.Task.TitleAr" type="text" placeholder="@ResourceWebAr.LbTitleAr ...." class="form-control" maxlength="300">
+                                        <span asp-validation-for="@Model.Task.TitleAr" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.TitleEn" for="exampleInputEmail1">@ResourceWebAr.LbTitleEn</label>
+                                        <input asp-for="@Model.Task.TitleEn" type="text" placeholder="@ResourceWebAr.LbTitleEn ...." class="form-control" maxlength="300">
+                                        <span asp-validation-for="@Model.Task.TitleEn" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.DescriptionAr" for="exampleInputEmail1">@ResourceWebAr.LbDescriptionAr</label>
+                                        <textarea asp-for="@Model.Task.DescriptionAr" type="text" placeholder="@ResourceWebAr.LbDescriptionAr ...." class="form-control" maxlength="2000" rows="5"></textarea>
+                                        <span asp-validation-for="@Model.Task.DescriptionAr" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.DescriptionEn" for="exampleInputEmail1">@ResourceWebAr.LbDescriptionEn</label>
+                                        <textarea asp-for="@Model.Task.DescriptionEn" type="text" placeholder="@ResourceWebAr.LbDescriptionEn ...." class="form-control" maxlength="2000" rows="5"></textarea>
+                                        <span asp-validation-for="@Model.Task.DescriptionEn" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-3">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.AddedBy" for="exampleInputEmail1">@ResourceWebAr.LbAddedBy</label>
+                                        <input asp-for="@Model.Task.AddedBy" type="text" placeholder="@ResourceWebAr.LbAddedBy ...." class="form-control" maxlength="300">
+                                        <span asp-validation-for="@Model.Task.AddedBy" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-3">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.StartDate" for="exampleInputEmail1">@ResourceWebAr.LbStartDate</label>
+                                        <input asp-for="@Model.Task.StartDate" type="datetime-local" placeholder="@ResourceWebAr.LbStartDate ...." class="form-control">
+                                        <span asp-validation-for="@Model.Task.StartDate" class="text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-3">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.EndtDate" for="exampleInputEmail1">@ResourceWebAr.LbEndtDate</label>
+                                        <input asp-for="@Model.Task.EndtDate" type="datetime-local" placeholder="@ResourceWebAr.LbEndtDate ...." class="form-control">
+                                        <span asp-validation-for="@Model.Task.EndtDate" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-3">
+                                    <div class="form-group">
+                                        <label asp-for="@Model.Task.ActualEnd" for="exampleInputEmail1">@ResourceWebAr.LbActualEnd</label>
+                                        <input asp-for="@Model.Task.ActualEnd" type="datetime-local" placeholder="@ResourceWebAr.LbActualEnd ...." class="form-control">
+                                        <span asp-validation-for="@Model.Task.ActualEnd" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!-- /.row -->
+                        </div>
+
+                        <div class="card-content">
+
+
+
+
+
+                            <button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">@ResourceWebAr.lbSave</button>
+
+                        </div>
+
+                    </form>
+                </div>
+                <!-- /.card-content -->
+            </div>
+            <!-- /.box-content -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var loadFile = function (event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+    <script>
+        $("#url").val(window.location.href);
+    </script>
+}
 

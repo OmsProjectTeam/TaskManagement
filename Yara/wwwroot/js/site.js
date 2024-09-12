@@ -63,3 +63,5 @@ $(document).ready(function () {
         $(this).text(truncatedText); // Set the truncated text back to the cell
     });
 });
+
+
