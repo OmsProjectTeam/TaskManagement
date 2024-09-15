@@ -88,6 +88,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Actual End.
+        /// </summary>
+        public static string LbActualEnd {
+            get {
+                return ResourceManager.GetString("LbActualEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adding and modifying regions.
         /// </summary>
         public static string LBAddArea {
@@ -147,6 +156,15 @@ namespace Yara.Resource {
         public static string LBAddCustomerMessages {
             get {
                 return ResourceManager.GetString("LBAddCustomerMessages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Added By.
+        /// </summary>
+        public static string LbAddedBy {
+            get {
+                return ResourceManager.GetString("LbAddedBy", resourceCulture);
             }
         }
         
@@ -250,6 +268,24 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adding and modifying Project Information.
+        /// </summary>
+        public static string LBAddProjectInformation {
+            get {
+                return ResourceManager.GetString("LBAddProjectInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add and modify the Project Type.
+        /// </summary>
+        public static string LBAddProjectType {
+            get {
+                return ResourceManager.GetString("LBAddProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Address.
         /// </summary>
         public static string LbAddres {
@@ -291,6 +327,15 @@ namespace Yara.Resource {
         public static string LBAddShippingPrice {
             get {
                 return ResourceManager.GetString("LBAddShippingPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adding and modifying Add Task.
+        /// </summary>
+        public static string LBAddTask {
+            get {
+                return ResourceManager.GetString("LBAddTask", resourceCulture);
             }
         }
         
@@ -345,6 +390,15 @@ namespace Yara.Resource {
         public static string LBAddTypesOfRequest {
             get {
                 return ResourceManager.GetString("LBAddTypesOfRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Adding and modifying Types Of Task.
+        /// </summary>
+        public static string LBAddTypesOfTask {
+            get {
+                return ResourceManager.GetString("LBAddTypesOfTask", resourceCulture);
             }
         }
         
@@ -736,6 +790,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task Description Arabic.
+        /// </summary>
+        public static string LbDescriptionAr {
+            get {
+                return ResourceManager.GetString("LbDescriptionAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         public static string Lbdescriptioncity {
@@ -750,6 +813,15 @@ namespace Yara.Resource {
         public static string LbDescriptionClint {
             get {
                 return ResourceManager.GetString("LbDescriptionClint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task Description English.
+        /// </summary>
+        public static string LbDescriptionEn {
+            get {
+                return ResourceManager.GetString("LbDescriptionEn", resourceCulture);
             }
         }
         
@@ -795,6 +867,15 @@ namespace Yara.Resource {
         public static string LbEmailCompany {
             get {
                 return ResourceManager.GetString("LbEmailCompany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endt Date.
+        /// </summary>
+        public static string LbEndtDate {
+            get {
+                return ResourceManager.GetString("LbEndtDate", resourceCulture);
             }
         }
         
@@ -970,6 +1051,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Informaition Ar.
+        /// </summary>
+        public static string LbInformaitionAr {
+            get {
+                return ResourceManager.GetString("LbInformaitionAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to customer information.
         /// </summary>
         public static string LbInformaitioncl {
@@ -984,6 +1074,15 @@ namespace Yara.Resource {
         public static string LbInformaitionco {
             get {
                 return ResourceManager.GetString("LbInformaitionco", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Informaition En.
+        /// </summary>
+        public static string LbInformaitionEn {
+            get {
+                return ResourceManager.GetString("LbInformaitionEn", resourceCulture);
             }
         }
         
@@ -1339,6 +1438,24 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Project Information.
+        /// </summary>
+        public static string LBMyProjectInformation {
+            get {
+                return ResourceManager.GetString("LBMyProjectInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Type.
+        /// </summary>
+        public static string LBMyProjectType {
+            get {
+                return ResourceManager.GetString("LBMyProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Roles .
         /// </summary>
         public static string LBMyRolesName {
@@ -1362,6 +1479,15 @@ namespace Yara.Resource {
         public static string LBMyShippingPrice {
             get {
                 return ResourceManager.GetString("LBMyShippingPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task Information.
+        /// </summary>
+        public static string LBMyTask {
+            get {
+                return ResourceManager.GetString("LBMyTask", resourceCulture);
             }
         }
         
@@ -1416,6 +1542,15 @@ namespace Yara.Resource {
         public static string LBMyTypesOfRequest {
             get {
                 return ResourceManager.GetString("LBMyTypesOfRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Types Of Task.
+        /// </summary>
+        public static string LBMyTypesOfTask {
+            get {
+                return ResourceManager.GetString("LBMyTypesOfTask", resourceCulture);
             }
         }
         
@@ -1789,6 +1924,78 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Project Description Ar.
+        /// </summary>
+        public static string LbProjectDescriptionAr {
+            get {
+                return ResourceManager.GetString("LbProjectDescriptionAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Description En.
+        /// </summary>
+        public static string LbProjectDescriptionEn {
+            get {
+                return ResourceManager.GetString("LbProjectDescriptionEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project End.
+        /// </summary>
+        public static string LbProjectEnd {
+            get {
+                return ResourceManager.GetString("LbProjectEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Name Ar.
+        /// </summary>
+        public static string LbProjectNameAr {
+            get {
+                return ResourceManager.GetString("LbProjectNameAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Name En.
+        /// </summary>
+        public static string LbProjectNameEn {
+            get {
+                return ResourceManager.GetString("LbProjectNameEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Start.
+        /// </summary>
+        public static string LbProjectStart {
+            get {
+                return ResourceManager.GetString("LbProjectStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Type.
+        /// </summary>
+        public static string LbProjectType {
+            get {
+                return ResourceManager.GetString("LbProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Project Type Ar.
+        /// </summary>
+        public static string LbProjectTypeAr {
+            get {
+                return ResourceManager.GetString("LbProjectTypeAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quastion.
         /// </summary>
         public static string LbQuastion {
@@ -1987,6 +2194,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Start Date.
+        /// </summary>
+        public static string LbStartDate {
+            get {
+                return ResourceManager.GetString("LbStartDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Street.
         /// </summary>
         public static string LBStreet {
@@ -2005,11 +2221,38 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Task Status Ar.
+        /// </summary>
+        public static string LbTaskStatusAr {
+            get {
+                return ResourceManager.GetString("LbTaskStatusAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Title.
         /// </summary>
         public static string LbTitle {
             get {
                 return ResourceManager.GetString("LbTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task title Arabic.
+        /// </summary>
+        public static string LbTitleAr {
+            get {
+                return ResourceManager.GetString("LbTitleAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Task title English.
+        /// </summary>
+        public static string LbTitleEn {
+            get {
+                return ResourceManager.GetString("LbTitleEn", resourceCulture);
             }
         }
         
@@ -2073,6 +2316,24 @@ namespace Yara.Resource {
         public static string LbTypesOfRequest {
             get {
                 return ResourceManager.GetString("LbTypesOfRequest", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Types Of Task.
+        /// </summary>
+        public static string LbTypesOfTask {
+            get {
+                return ResourceManager.GetString("LbTypesOfTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to فئة المهمة عربي .
+        /// </summary>
+        public static string LbTypesOfTaskAr {
+            get {
+                return ResourceManager.GetString("LbTypesOfTaskAr", resourceCulture);
             }
         }
         
@@ -2190,6 +2451,15 @@ namespace Yara.Resource {
         public static string Lbwith_delivery {
             get {
                 return ResourceManager.GetString("Lbwith_delivery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Workspaces.
+        /// </summary>
+        public static string LBWorkspaces {
+            get {
+                return ResourceManager.GetString("LBWorkspaces", resourceCulture);
             }
         }
         
@@ -2491,6 +2761,33 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The project name has already been entered in Arabic. Please check and try again later...!.
+        /// </summary>
+        public static string VLProjectInformationArDoplceted {
+            get {
+                return ResourceManager.GetString("VLProjectInformationArDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The project name has already been entered. Please check and try again later....!.
+        /// </summary>
+        public static string VLProjectInformationDoplceted {
+            get {
+                return ResourceManager.GetString("VLProjectInformationDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The project type has already been defined. Please check and try again later...!.
+        /// </summary>
+        public static string VLProjectTypeDoplceted {
+            get {
+                return ResourceManager.GetString("VLProjectTypeDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The bond number has already been entered. Please check and try again later...!.
         /// </summary>
         public static string VLReceiptNoDoplceted {
@@ -2527,6 +2824,24 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The task status has already been entered in Arabic. Please check and try again later..
+        /// </summary>
+        public static string VLTaskStatusArDoplceted {
+            get {
+                return ResourceManager.GetString("VLTaskStatusArDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The task status has already been entered in English. Please check and try again later..
+        /// </summary>
+        public static string VLTaskStatusDoplceted {
+            get {
+                return ResourceManager.GetString("VLTaskStatusDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The shipping price address has been entered. Please verify and try again later....!.
         /// </summary>
         public static string VLTitleShippingoplceted {
@@ -2559,6 +2874,15 @@ namespace Yara.Resource {
         public static string VLTypesOfRequestDoplceted {
             get {
                 return ResourceManager.GetString("VLTypesOfRequestDoplceted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The task type has already been added, please check and try again later...!.
+        /// </summary>
+        public static string VLTypesOfTaskDoplceted {
+            get {
+                return ResourceManager.GetString("VLTypesOfTaskDoplceted", resourceCulture);
             }
         }
         

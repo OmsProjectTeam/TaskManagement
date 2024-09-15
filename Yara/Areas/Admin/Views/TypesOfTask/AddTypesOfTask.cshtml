@@ -1,0 +1,79 @@
+﻿@model ViewmMODeElMASTER
+@{
+    ViewData["Title"] = ResourceWeb.LBAddTypesOfTask;
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="box-content">
+    <ul class="list-inline">
+        <li class="margin-bottom-10"><a href="#"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">@ResourceWeb.LBAddTypesOfTask</button></a></li>/
+        <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Home" asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Admin Home</button></a></li>/
+        <li class="margin-bottom-10"><a asp-area="" asp-controller="Home" asp-action="Index"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Home</button></a></li>
+
+    </ul>
+    <div class="row small-spacing">
+        <div class="col-xs-6">
+            <div class="box-content card white">
+                <h4 class="box-title">@ResourceWeb.LBAddTypesOfTask</h4>
+                <!-- /.box-title -->
+                <div class="card-content">
+                    <form role="form" method="post" asp-controller="TypesOfTask" asp-action="Save" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="hidden" asp-for="@Model.TypesOfTask.DataEntry" class="form-control" value="@User.Identity.Name">
+                            <input type="hidden" asp-for="@Model.TypesOfTask.IdTypesOfTask" class="form-control">
+                            <input type="hidden" asp-for="@Model.TypesOfTask.DateTimeEntry" value="@DateTime.Now">
+                            <input type="hidden" asp-for="@Model.returnUrl" id="url">
+                            <span style="color:royalblue"> <strong>@TempData["Saved successfully"]</strong></span>
+                            <span style="color:red"> <strong>@TempData["ErrorSave"]</strong></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row small-spacing">
+                                <div class="col-12 col-sm-6">
+                                    <label asp-for="@Model.TypesOfTask.TypesOfTask" for="exampleInputEmail1">@ResourceWeb.LbTypesOfTask</label>
+                                    <input asp-for="@Model.TypesOfTask.TypesOfTask" type="text" placeholder="@ResourceWeb.LbTypesOfTask ...." class="form-control" maxlength="300">
+                                    <span asp-validation-for="@Model.TypesOfTask.TypesOfTask" class="text-danger"></span>
+                                    <span style="color:red"> <strong>@TempData["TypesOfTask"]</strong></span>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <label asp-for="@Model.TypesOfTask.TypesOfTaskAr" for="exampleInputEmail1">@ResourceWeb.LbTypesOfTaskAr</label>
+                                    <input asp-for="@Model.TypesOfTask.TypesOfTaskAr" type="text" placeholder="@ResourceWeb.LbTypesOfTaskAr ...." class="form-control" maxlength="300">
+                                    <span asp-validation-for="@Model.TypesOfTask.TypesOfTaskAr" class="text-danger"></span>
+                                    <span style="color:red"> <strong>@TempData["TypesOfTaskAr"]</strong></span>
+                                </div>
+                                <!-- /.col-xs-3 -->
+                                <!-- /.col-xs-4 -->
+                                <!-- /.col-xs-5 -->
+                            </div>
+
+
+                            <!-- /.row -->
+                        </div>
+                        <div class="checkbox margin-bottom-20">
+                            <div class="switch success"><input type="checkbox" asp-for="@Model.TypesOfTask.Active" id="switch-2"><label for="switch-2">@ResourceWeb.LbActive</label></div>
+                        </div>
+                        <div class="checkbox margin-bottom-20">
+                            <div class="switch success"><input type="checkbox" asp-for="@Model.TypesOfTask.CurrentState" id="switch-10" checked="checked"><label for="switch-10">@ResourceWeb.lbCurrentState</label></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">@ResourceWeb.lbSave</button>
+                    </form>
+                </div>
+                <!-- /.card-content -->
+            </div>
+            <!-- /.box-content -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var loadFile = function (event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+    <script>
+        $("#url").val(window.location.href);
+    </script>
+}
+

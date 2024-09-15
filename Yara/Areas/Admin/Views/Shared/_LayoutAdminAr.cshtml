@@ -120,21 +120,11 @@
 					<li>
 						<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-adjust"></i><span>@ResourceWebAr.LBGeneralSettings</span><span class="menu-arrow fa fa-angle-down"></span></a>
 						<ul class="sub-menu js__content">
-							<li><a asp-area="Admin" asp-controller="TypeSystem" asp-action="MyTypeSystemAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTypeSystem</a></li>
-							<li><a asp-area="Admin" asp-controller="TypesCompanies" asp-action="MyTypesCompaniesAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTypesCompanies</a></li>
-							<li><a asp-area="Admin" asp-controller="InformationCompanies" asp-action="MYInformationCompaniesAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMYInformationCompanies</a></li>
-							<li><a asp-area="Admin" asp-controller="City" asp-action="MyCityAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyCity</a></li>
-							<li><a asp-area="Admin" asp-controller="Area" asp-action="MyAreaAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyArea</a></li>
+							<li><a asp-area="Admin" asp-controller="ProjectType" asp-action="MyProjectTypeAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyProjectType</a></li>
+							<li><a asp-area="Admin" asp-controller="TypesOfTask" asp-action="MyTypesOfTaskAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTypesOfTask</a></li>
 							<li><a asp-area="Admin" asp-controller="TaskStatus" asp-action="MyTaskStatusAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTaskStatus</a></li>
-							<li><a asp-area="Admin" asp-controller="RolesName" asp-action="MyRolesNameAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyRolesName</a></li>
-							<li><a asp-area="Admin" asp-controller="OrderCase" asp-action="MyOrderCaseAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyOrderCase</a></li>
-
-							<li><a asp-area="Admin" asp-controller="OrderStatus" asp-action="MyOrderStatusAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyOrderStatus</a></li>
-							<li><a asp-area="Admin" asp-controller="EmailAlartSetting" asp-action="MyEmailAlartSettingAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyEmailAlartSettingAr</a></li>
-							<li><a asp-area="Admin" asp-controller="ShippingAddress" asp-action="MyShippingAddressAr" asp-route-userId="@user.Id">@ResourceWebAr.LBShippingAddress</a></li>
-							<li><a asp-area="Admin" asp-controller="TypesOfRequest" asp-action="MyTypesOfRequestAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTypesOfRequest</a></li>
-							<li><a asp-area="Admin" asp-controller="TypesOfMessage" asp-action="MyTypesOfMessageAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTypesOfMessage</a></li>
-
+							<li><a asp-area="Admin" asp-controller="EmailAlartSetting" asp-action="MyEmailAlartSettingAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyEmailAlartSetting</a></li>
+							
 
 
 
@@ -150,15 +140,12 @@
 				<!-- /.title -->
 				<ul class="menu js__accordion">
 					<li>
-						<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-bar-chart"></i><span>@ResourceWebAr.LBPricingSystem</span><span class="menu-arrow fa fa-angle-down"></span></a>
+						<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon fa fa-bar-chart"></i><span>@ResourceWebAr.LBLBWorkspaces</span><span class="menu-arrow fa fa-angle-down"></span></a>
 						<ul class="sub-menu js__content">
-							<li><a asp-area="Admin" asp-controller="CurrenciesExchangeRates" asp-action="MyCurrenciesExchangeRates" asp-route-userId="@user.Id">@ResourceWebAr.LBMyCurrenciesExchangeRates</a></li>
-							<li><a asp-area="Admin" asp-controller="ExchangeRate" asp-action="MyExchangeRateAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyExchangeRate</a></li>
-							<li><a asp-area="Admin" asp-controller="Transaction" asp-action="MyTransactionAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTransaction</a></li>
-							<li><a asp-area="Admin" asp-controller="ShippingPrice" asp-action="MyShippingPriceAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyShippingPrice</a></li>
-							<li><a asp-area="Admin" asp-controller="TypeSystemDelivery" asp-action="MyTypeSystemDeliveryAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTypeSystemDelivery</a></li>
-							<li><a asp-area="Admin" asp-controller="CityDeliveryTariffs" asp-action="MyCityDeliveryTariffsAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyCityDeliveryTariffs</a></li>
-							<li><a asp-area="Admin" asp-controller="ClintWitheDeliveryTariffs" asp-action="MyClintWitheDeliveryTariffsAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyClintWitheDeliveryTariffs</a></li>
+							<li><a asp-area="Admin" asp-controller="ProjectInformation" asp-action="MyProjectInformationAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyProjectInformation</a></li>
+							<li><a asp-area="Admin" asp-controller="Task" asp-action="MyTaskAr" asp-route-userId="@user.Id">@ResourceWebAr.LBMyTask</a></li>
+
+
 						</ul>
 						<!-- /.sub-menu js__content -->
 					</li>
@@ -514,12 +501,22 @@
 	<script src="~/Admin/assets/plugin/fullcalendar/fullcalendar.min.js"></script>
 	<script src="~/Admin/assets/scripts/fullcalendar.init.js"></script>
 	<script src="~/Admin/assets/scripts/main.min.js"></script>
+	@*     <script src="~/lib/jquery/dist/jquery.min.js"></script> *@
+	<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+	<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
 
 
 
-
-
-
+	<script src="~/Admin/assets/plugin/form-wizard/prettify.js"></script>
+	<script src="~/Admin/assets/plugin/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script src="~/Admin/assets/plugin/datatables/media/js/dataTables.bootstrap.min.js"></script>
+	<script src="~/Admin/assets/plugin/datatables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="~/Admin/assets/plugin/datatables/extensions/Responsive/js/responsive.bootstrap.min.js"></script>
+	<script src="~/Admin/assets/plugin/form-wizard/jquery.bootstrap.wizard.min.js"></script>
+	<script src="~/Admin/assets/plugin/jquery-validation/jquery.validate.min.js"></script>
+	<script src="~/Admin/assets/scripts/datatables.demo.min.js"></script>
+	<script src="~/Admin/assets/scripts/form.wizard.init.min.js"></script>
+	<script src="~/js/site.js"></script>
 
 
 	<!-- Placed at the end of the document so the pages load faster -->
