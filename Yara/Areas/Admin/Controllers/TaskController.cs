@@ -161,23 +161,22 @@ namespace Yara.Areas.Admin.Controllers
                             message.From.Add(new MailboxAddress("New new message", emailSetting.MailSender));
                             message.To.Add(new MailboxAddress(namedovlober, email));
                             message.Cc.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
-                            message.Subject = "مهمة جديدة  :" + slider.DataEntry;
+                            message.Subject = "New Task  " +"By:"+ slider.AddedBy;
                             var builder = new BodyBuilder
                             {
-                                TextBody = $"مهمة جديدة  \n" +
+                                TextBody = $"مهمة جديدة  \n\n\n" +
 
-                                           $"عناية السيد : {namedovlober}\n" +
-                                           $"تحية طيبة وبعد " +
-                                           $"أليك المهمة الجديدة وتاليا تفاصيلها :" +
-                                           $"وهية مهمة : {taskstEn}\n" +
-                                           $"عنوان المهمة : {slider.TitleEn}\n" +
-                                           $"وصف المهمة : {slider.DescriptionEn}\n" +
-                                           $"التابعة لمشروع  : {projektNameEn}\n" +
-                                           $"تاريخ بدأ المهمة : {slider.StartDate}\n"+
-                                           $"تاريخ انتهاء المهمة: {slider.EndtDate}\n"+
-                                           $"مضافة من قبل : {slider.AddedBy}\n"
+                                           $"Attn: Mr  {namedovlober}\n\n\n" +
+                                           $"Greetings" +
+                                           $"Here is the new mission and its details :\n\n\n" +
+                                           $"The Task : {taskstEn}\n\n\n" +
+                                           $"Titel : {slider.TitleEn}\n\n\n" +
+                                           $"Description : {slider.DescriptionEn}\n\n\n" +
+                                           $"Project  : {projektNameEn}\n\n\n" +
+                                           $"Start Date : {slider.StartDate}\n\n\n" +
+                                           $"End Date: {slider.EndtDate}\n\n\n" +
+                                           $"Add by  : {slider.AddedBy}\n\n\n"
 
-                                           //mmvmvmvmvmv
 
                             };
 
@@ -204,8 +203,7 @@ namespace Yara.Areas.Admin.Controllers
                             // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
                         }
 
-                        TempData["Saved successfully"] = ResourceWeb.VLSavedSuccessfully;
-                        return RedirectToAction("MyCustomerMessages");
+                    
 
 
 
