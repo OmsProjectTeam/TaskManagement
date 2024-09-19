@@ -14,7 +14,7 @@ namespace Infarstuructre.ViewModel
 			ErrorMessage = new List<string>();
 		}
 
-		public HttpStatusCode StatusCode { get; set; }
+		public HttpStatusCode StatusCode  { get; set; } = HttpStatusCode.OK;
 		public bool IsSuccess { get; set; } = true;
 		public List<string> ErrorMessage { get; set; }
 		public object Result { get; set; }
