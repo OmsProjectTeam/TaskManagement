@@ -142,8 +142,9 @@ namespace Yara.Areas.Admin.APIsControllers
 
         private async Task SendEmail(TBTask model)
         {
-            var userd = iUserInformation.GetById(model.UserId);
-            var user = await _userManager.FindByIdAsync(model.UserId);
+
+            var user = await _userManager.GetUserAsync(User);
+            var userd = await _userManager.FindByIdAsync(user.Id);
             string develovoer = user.Name;
             string email = user.Email;
 
