@@ -41,7 +41,7 @@
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label asp-for="@Model.Task.IdTypesOfTask" for="merchant-select">@ResourceWebAr.LbTypesOfTask</label>
-                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdTypesOfTask" asp-items="@(new SelectList(ViewBag.TypesOfTask, "IdTypesOfTask", "TypesOfTask"))">
+                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdTypesOfTask" asp-items="@(new SelectList(ViewBag.TypesOfTask, "IdTypesOfTask", "TypesOfTaskAr"))">
                                         </select>
                                         <span asp-validation-for="@Model.Task.IdTypesOfTask" class="text-danger"></span>
 
@@ -55,7 +55,7 @@
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label asp-for="@Model.Task.IdTaskStatus" for="merchant-select">@ResourceWebAr.LbTaskStatus</label>
-                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdTaskStatus" asp-items="@(new SelectList(ViewBag.TaskStatus, "IdTaskStatus", "TaskStatus"))">
+                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdTaskStatus" asp-items="@(new SelectList(ViewBag.TaskStatus, "IdTaskStatus", "TaskStatusAr"))">
                                         </select>
                                         <span asp-validation-for="@Model.Task.IdTaskStatus" class="text-danger"></span>
 
@@ -65,7 +65,7 @@
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label asp-for="@Model.Task.IdProjectInformation" for="merchant-select">@ResourceWebAr.LbProjectNameEn</label>
-                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdProjectInformation" asp-items="@(new SelectList(ViewBag.ProjectInformation, "IdProjectInformation", "ProjectName"))">
+                                        <select id="merchant-select" class="form-control" asp-for="@Model.Task.IdProjectInformation" asp-items="@(new SelectList(ViewBag.ProjectInformation, "IdProjectInformation", "ProjectNameAr"))">
                                         </select>
                                         <span asp-validation-for="@Model.Task.IdProjectInformation" class="text-danger"></span>
 
@@ -153,7 +153,9 @@
 
                         <div class="card-content">
 
-
+                            <div class="checkbox margin-bottom-20">
+                                <div class="switch success"><input type="checkbox" asp-for="@Model.Task.CurrentState" id="switch-10" checked="checked"><label for="switch-10">@ResourceWeb.lbCurrentState</label></div>
+                            </div>
 
 
 
