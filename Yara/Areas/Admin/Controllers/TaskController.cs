@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.AspNetCore.Identity;
 using Microsoft.VisualStudio.Web.CodeGeneration.Utils;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace Yara.Areas.Admin.Controllers
 {
@@ -85,8 +86,7 @@ namespace Yara.Areas.Admin.Controllers
                 slider.IdTask = model.Task.IdTask;
                 slider.IdTaskStatus = model.Task.IdTaskStatus;
                 slider.IdProjectInformation = model.Task.IdProjectInformation;
-                slider.IdTypesOfTask = model.Task.IdTypesOfTask;
-           
+                slider.IdTypesOfTask = model.Task.IdTypesOfTask;           
                 slider.TitleAr = model.Task.TitleAr;
                 slider.TitleEn = model.Task.TitleEn;
                 slider.DescriptionAr = model.Task.DescriptionAr;
@@ -98,56 +98,95 @@ namespace Yara.Areas.Admin.Controllers
                 slider.DataEntry = model.Task.DataEntry;
                 slider.DateTimeEntry = model.Task.DateTimeEntry;
                 slider.CurrentState = model.Task.CurrentState;
-
-
                 ViewmMODeElMASTER vmodel = new ViewmMODeElMASTER();
-
                 var userd = vmodel.sUser = iUserInformation.GetById(slider.UserId);
-
                 var user = await _userManager.FindByIdAsync(slider.UserId);
                 //var user = await _userManager.GetUserAsync(User);
                 if (user == null)
                     return NotFound();
-
                 string namedovlober = user.Name;
                 string email = user.Email;
-
-
-
-
                 var Project = vmodel.ProjectInformation = iProjectInformation.GetById(slider.IdProjectInformation);
-
                 //var ProjectInfo = await iProjectInformation.FindByIdAsync(slider.IdProjectInformation);
                 //var user = await _userManager.GetUserAsync(User);
                 if (user == null)
                     return NotFound();
-
                 string projektNameEn= Project.ProjectName;
                 string projektNameAr= Project.ProjectNameAr;
-
-
                 var TAskStatus = vmodel.TaskStatus = iTaskStatus.GetById(slider.IdTaskStatus);
-
                 //var ProjectInfo = await iProjectInformation.FindByIdAsync(slider.IdProjectInformation);
                 //var user = await _userManager.GetUserAsync(User);
                 if (user == null)
                     return NotFound();
-
                 string taskstEn = TAskStatus.TaskStatus;
-                string taskstAr = TAskStatus.TaskStatusAr;
-           
-
-
+                string taskstAr = TAskStatus.TaskStatusAr;         
                 if (slider.IdTask == 0 || slider.IdTask == null)
                 {      
                     
-
-
-
                     var reqwest = iTask.saveData(slider);
                     if (reqwest == true)
                     {
-
+                        //send email
+                        var emailSetting = await dbcontext.TBEmailAlartSettings
+                           .OrderByDescending(n => n.IdEmailAlartSetting)
+                           .Where(a => a.CurrentState == true && a.Active == true)
+                           .FirstOrDefaultAsync();
+                        // التحقق من وجود إعدادات البريد الإلكتروني
+                        if (emailSetting != null)
+                        {
+                            var message = new MimeMessage();
+                            message.From.Add(new MailboxAddress(slider.TitleEn, emailSetting.MailSender));
+                            message.To.Add(new MailboxAddress(namedovlober, email));
+                            message.Cc.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+                            message.Subject = "New Task  " +"By:"+ slider.AddedBy;
+                            var builder = new BodyBuilder
+                            {
+                                TextBody = $"New Task  \n\n\n" +
+                                           $"Attn: Mr  {namedovlober}\n\n\n" +
+                                           $"Greetings" +
+                                           $"Here is the new mission and its details :\n\n\n" +
+                                           $"The Task : {taskstEn}\n\n\n" +
+                                           $"Titel : {slider.TitleEn}\n\n\n" +
+                                           $"Description : {slider.DescriptionEn}\n\n\n" +
+                                           $"Project  : {projektNameEn}\n\n\n" +
+                                           $"Start Date : {slider.StartDate}\n\n\n" +
+                                           $"End Date: {slider.EndtDate}\n\n\n" +
+                                           $"Add by  : {slider.AddedBy}\n\n\n"
+                            };
+                            //// إضافة الصورة كملف مرفق إذا كانت موجودة
+                            //if (!string.IsNullOrEmpty(slider.Photo))
+                            //{
+                            //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
+                            //    builder.Attachments.Add(imagePath);
+                            //}
+                            message.Body = builder.ToMessageBody();
+                            using (var client = new SmtpClient())
+                            {
+                                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                                await client.SendAsync(message);
+                                await client.DisconnectAsync(true);
+                            }
+                        }
+                        else
+                        {
+                            // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
+                            // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
+                        }                   
+                        TempData["Saved successfully"] = ResourceWeb.VLSavedSuccessfully;
+                        return RedirectToAction("MyTask");
+                    }
+                    else
+                    {
+                        TempData["ErrorSave"] = ResourceWeb.VLErrorSave;
+                        return RedirectToAction("AddTask");
+                    }
+                }
+                else
+                {
+                    var reqestUpdate = iTask.UpdateData(slider);
+                    if (reqestUpdate == true)
+                    {
                         //send email
                         var emailSetting = await dbcontext.TBEmailAlartSettings
                            .OrderByDescending(n => n.IdEmailAlartSetting)
@@ -158,13 +197,13 @@ namespace Yara.Areas.Admin.Controllers
                         if (emailSetting != null)
                         {
                             var message = new MimeMessage();
-                            message.From.Add(new MailboxAddress("New new message", emailSetting.MailSender));
+                            message.From.Add(new MailboxAddress(slider.TitleEn, emailSetting.MailSender));
                             message.To.Add(new MailboxAddress(namedovlober, email));
                             message.Cc.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
-                            message.Subject = "New Task  " +"By:"+ slider.AddedBy;
+                            message.Subject = "Modify the task  " + "By:" + slider.AddedBy;
                             var builder = new BodyBuilder
                             {
-                                TextBody = $"مهمة جديدة  \n\n\n" +
+                                TextBody = $"Modify the task  \n\n\n" +
 
                                            $"Attn: Mr  {namedovlober}\n\n\n" +
                                            $"Greetings" +
@@ -176,8 +215,6 @@ namespace Yara.Areas.Admin.Controllers
                                            $"Start Date : {slider.StartDate}\n\n\n" +
                                            $"End Date: {slider.EndtDate}\n\n\n" +
                                            $"Add by  : {slider.AddedBy}\n\n\n"
-
-
                             };
 
                             //// إضافة الصورة كملف مرفق إذا كانت موجودة
@@ -186,7 +223,6 @@ namespace Yara.Areas.Admin.Controllers
                             //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
                             //    builder.Attachments.Add(imagePath);
                             //}
-
                             message.Body = builder.ToMessageBody();
 
                             using (var client = new SmtpClient())
@@ -202,30 +238,6 @@ namespace Yara.Areas.Admin.Controllers
                             // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
                             // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
                         }
-
-                    
-
-
-
-
-
-
-
-
-                        TempData["Saved successfully"] = ResourceWeb.VLSavedSuccessfully;
-                        return RedirectToAction("MyTask");
-                    }
-                    else
-                    {
-                        TempData["ErrorSave"] = ResourceWeb.VLErrorSave;
-                        return RedirectToAction("AddTask");
-                    }
-                }
-                else
-                {
-                    var reqestUpdate = iTask.UpdateData(slider);
-                    if (reqestUpdate == true)
-                    {
                         TempData["Saved successfully"] = ResourceWeb.VLUpdatedSuccessfully;
                         return RedirectToAction("MyTask");
                     }
@@ -265,12 +277,82 @@ namespace Yara.Areas.Admin.Controllers
                 slider.DataEntry = model.Task.DataEntry;
                 slider.DateTimeEntry = model.Task.DateTimeEntry;
                 slider.CurrentState = model.Task.CurrentState;
+                ViewmMODeElMASTER vmodel = new ViewmMODeElMASTER();
+                var userd = vmodel.sUser = iUserInformation.GetById(slider.UserId);
+                var user = await _userManager.FindByIdAsync(slider.UserId);
+                //var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                    return NotFound();
+                string namedovlober = user.Name;
+                string email = user.Email;
+                var Project = vmodel.ProjectInformation = iProjectInformation.GetById(slider.IdProjectInformation);
+                //var ProjectInfo = await iProjectInformation.FindByIdAsync(slider.IdProjectInformation);
+                //var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                    return NotFound();
+                string projektNameEn = Project.ProjectName;
+                string projektNameAr = Project.ProjectNameAr;
+                var TAskStatus = vmodel.TaskStatus = iTaskStatus.GetById(slider.IdTaskStatus);
+                //var ProjectInfo = await iProjectInformation.FindByIdAsync(slider.IdProjectInformation);
+                //var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                    return NotFound();
+                string taskstEn = TAskStatus.TaskStatus;
+                string taskstAr = TAskStatus.TaskStatusAr;
                 if (slider.IdTask == 0 || slider.IdTask == null)
-                {
-              
+                {            
                     var reqwest = iTask.saveData(slider);
                     if (reqwest == true)
                     {
+                        //send email
+                        var emailSetting = await dbcontext.TBEmailAlartSettings
+                           .OrderByDescending(n => n.IdEmailAlartSetting)
+                           .Where(a => a.CurrentState == true && a.Active == true)
+                           .FirstOrDefaultAsync();
+
+                        // التحقق من وجود إعدادات البريد الإلكتروني
+                        if (emailSetting != null)
+                        {
+                            var message = new MimeMessage();
+                            message.From.Add(new MailboxAddress(slider.TitleAr, emailSetting.MailSender));
+                            message.To.Add(new MailboxAddress(namedovlober, email));
+                            message.Cc.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+                            message.Subject = "مهمة جديدة  " + "بواسطة :" + slider.AddedBy;
+                            var builder = new BodyBuilder
+                            {
+                                TextBody = $"مهمة جديدة   \n\n\n" +
+                                           $"عناية السيد/ة: {namedovlober} . المحترم/ة\n\n\n" +
+                                           $"تحية طيبة وبعد " +
+                                           $"أليك تفاصيل المهمة الجديد  :\n\n\n" +
+                                           $"الحالة   : {taskstAr}\n\n\n" +
+                                           $"المهمة  : {slider.TitleAr}\n\n\n" +
+                                           $"الوصف : {slider.DescriptionAr}\n\n\n" +
+                                           $"المشروع  : {projektNameAr}\n\n\n" +
+                                           $"تاريخ البداية : {slider.StartDate}\n\n\n" +
+                                           $"تاريخ الانتهاء: {slider.EndtDate}\n\n\n" +
+                                           $"مضافة بواسطة  : {slider.AddedBy}\n\n\n"
+                            };
+
+                            //// إضافة الصورة كملف مرفق إذا كانت موجودة
+                            //if (!string.IsNullOrEmpty(slider.Photo))
+                            //{
+                            //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
+                            //    builder.Attachments.Add(imagePath);
+                            //}
+                            message.Body = builder.ToMessageBody();
+                            using (var client = new SmtpClient())
+                            {
+                                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                                await client.SendAsync(message);
+                                await client.DisconnectAsync(true);
+                            }
+                        }
+                        else
+                        {
+                            // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
+                            // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
+                        }
                         TempData["Saved successfully"] = ResourceWebAr.VLSavedSuccessfully;
                         return RedirectToAction("MyTaskAr");
                     }
@@ -285,6 +367,54 @@ namespace Yara.Areas.Admin.Controllers
                     var reqestUpdate = iTask.UpdateData(slider);
                     if (reqestUpdate == true)
                     {
+                        //send email
+                        var emailSetting = await dbcontext.TBEmailAlartSettings
+                           .OrderByDescending(n => n.IdEmailAlartSetting)
+                           .Where(a => a.CurrentState == true && a.Active == true)
+                           .FirstOrDefaultAsync();
+                        // التحقق من وجود إعدادات البريد الإلكتروني
+                        if (emailSetting != null)
+                        {
+                            var message = new MimeMessage();
+                            message.From.Add(new MailboxAddress(slider.TitleAr, emailSetting.MailSender));
+                            message.To.Add(new MailboxAddress(namedovlober, email));
+                            message.Cc.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+                            message.Subject = "تعديل على المهمة  " + "بواسطة :" + slider.AddedBy;
+                            var builder = new BodyBuilder
+                            {
+                                TextBody = $"تعديل على المهمة   \n\n\n" +
+                                           $"عناية السيد/ة: {namedovlober} . المحترم/ة\n\n\n" +
+                                           $"تحية طيبة وبعد " +
+                                           $"أليك تفاصيل المهمة الجديد  :\n\n\n" +
+                                           $"الحالة   : {taskstAr}\n\n\n" +
+                                           $"المهمة  : {slider.TitleAr}\n\n\n" +
+                                           $"الوصف : {slider.DescriptionAr}\n\n\n" +
+                                           $"المشروع  : {projektNameAr}\n\n\n" +
+                                           $"تاريخ البداية : {slider.StartDate}\n\n\n" +
+                                           $"تاريخ الانتهاء: {slider.EndtDate}\n\n\n" +
+                                           $"مضافة بواسطة  : {slider.AddedBy}\n\n\n"
+                            };
+
+                            //// إضافة الصورة كملف مرفق إذا كانت موجودة
+                            //if (!string.IsNullOrEmpty(slider.Photo))
+                            //{
+                            //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
+                            //    builder.Attachments.Add(imagePath);
+                            //}
+                            message.Body = builder.ToMessageBody();
+                            using (var client = new SmtpClient())
+                            {
+                                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                                await client.SendAsync(message);
+                                await client.DisconnectAsync(true);
+                            }
+                        }
+                        else
+                        {
+                            // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
+                            // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
+                        }
                         TempData["Saved successfully"] = ResourceWebAr.VLUpdatedSuccessfully;
                         return RedirectToAction("MyTaskAr");
                     }
