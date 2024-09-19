@@ -177,6 +177,8 @@ namespace Yara.Areas.Admin.Controllers
                                            $"تاريخ انتهاء المهمة: {slider.EndtDate}\n"+
                                            $"مضافة من قبل : {slider.AddedBy}\n"
 
+                                           //mmvmvmvmvmv
+
                             };
 
                             //// إضافة الصورة كملف مرفق إذا كانت موجودة
