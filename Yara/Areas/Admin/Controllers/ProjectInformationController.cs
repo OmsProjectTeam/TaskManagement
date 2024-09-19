@@ -1,4 +1,6 @@
-﻿namespace Yara.Areas.Admin.Controllers
+﻿using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+
+namespace Yara.Areas.Admin.Controllers
 {
 	[Area("Admin")]
 	[Authorize(Roles = "Admin")]
@@ -88,7 +90,57 @@
 					var reqwest = iProjectInformation.saveData(slider);
 					if (reqwest == true)
 					{
-						TempData["Saved successfully"] = ResourceWeb.VLSavedSuccessfully;
+                        //send email
+                        var emailSetting = await dbcontext.TBEmailAlartSettings
+                           .OrderByDescending(n => n.IdEmailAlartSetting)
+                           .Where(a => a.CurrentState == true && a.Active == true)
+                           .FirstOrDefaultAsync();
+                        // التحقق من وجود إعدادات البريد الإلكتروني
+                        if (emailSetting != null)
+                        {
+                            var message = new MimeMessage();
+                            message.From.Add(new MailboxAddress(slider.ProjectName, emailSetting.MailSender));
+
+                            message.To.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+                            message.Subject = "New Project  " + "By:" + slider.DataEntry;
+                            var builder = new BodyBuilder
+                            {
+                                TextBody = $"New Project  \n\n\n" +
+                                           $"Attn: Mr  saif aldin\n\n\n" +
+                                           $"Greetings" +
+                                           $"A new project has been created entitled :\n\n\n" +
+                                           $"Titel : {slider.ProjectName}\n\n\n" +
+                                           $"Description : {slider.ProjectDescription}\n\n\n" +
+                                           $"Start Date : {slider.ProjectStart}\n\n\n" +
+                                           $"End Date: {slider.ProjectEnd}\n\n\n" +
+                                           $"Add by  : {slider.DataEntry}\n\n\n"
+                            };
+                            //// إضافة الصورة كملف مرفق إذا كانت موجودة
+                            //if (!string.IsNullOrEmpty(slider.Photo))
+                            //{
+                            //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
+                            //    builder.Attachments.Add(imagePath);
+                            //}
+                            message.Body = builder.ToMessageBody();
+                            using (var client = new SmtpClient())
+                            {
+                                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                                await client.SendAsync(message);
+                                await client.DisconnectAsync(true);
+                            }
+                        }
+                        else
+                        {
+                            // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
+                            // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
+                        }
+
+
+
+
+
+                        TempData["Saved successfully"] = ResourceWeb.VLSavedSuccessfully;
 						return RedirectToAction("MyProjectInformation");
 					}
 					else
@@ -102,7 +154,53 @@
 					var reqestUpdate = iProjectInformation.UpdateData(slider);
 					if (reqestUpdate == true)
 					{
-						TempData["Saved successfully"] = ResourceWeb.VLUpdatedSuccessfully;
+                        //send email
+                        var emailSetting = await dbcontext.TBEmailAlartSettings
+                           .OrderByDescending(n => n.IdEmailAlartSetting)
+                           .Where(a => a.CurrentState == true && a.Active == true)
+                           .FirstOrDefaultAsync();
+                        // التحقق من وجود إعدادات البريد الإلكتروني
+                        if (emailSetting != null)
+                        {
+                            var message = new MimeMessage();
+                            message.From.Add(new MailboxAddress(slider.ProjectName, emailSetting.MailSender));
+                           
+                            message.To.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+                            message.Subject = "Update Project  " + "By:" + slider.DataEntry;
+                            var builder = new BodyBuilder
+                            {
+                                TextBody = $"New Project  \n\n\n" +
+                                           $"Attn: Mr  saif aldin\n\n\n" +
+                                           $"Greetings" +
+                                           $"Please note that the following project has been modified. :\n\n\n" +
+                                        
+                                           $"Titel : {slider.ProjectName}\n\n\n" +
+                                           $"Description : {slider.ProjectDescription}\n\n\n" +                                      
+                                           $"Start Date : {slider.ProjectStart}\n\n\n" +
+                                           $"End Date: {slider.ProjectEnd}\n\n\n" +
+                                           $"Add by  : {slider.DataEntry}\n\n\n"
+                            };
+                            //// إضافة الصورة كملف مرفق إذا كانت موجودة
+                            //if (!string.IsNullOrEmpty(slider.Photo))
+                            //{
+                            //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
+                            //    builder.Attachments.Add(imagePath);
+                            //}
+                            message.Body = builder.ToMessageBody();
+                            using (var client = new SmtpClient())
+                            {
+                                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                                await client.SendAsync(message);
+                                await client.DisconnectAsync(true);
+                            }
+                        }
+                        else
+                        {
+                            // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
+                            // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
+                        }
+                        TempData["Saved successfully"] = ResourceWeb.VLUpdatedSuccessfully;
 						return RedirectToAction("MyProjectInformation");
 					}
 					else
@@ -153,7 +251,53 @@
 					var reqwest = iProjectInformation.saveData(slider);
 					if (reqwest == true)
 					{
-						TempData["Saved successfully"] = ResourceWebAr.VLSavedSuccessfully;
+                        //send email
+                        var emailSetting = await dbcontext.TBEmailAlartSettings
+                           .OrderByDescending(n => n.IdEmailAlartSetting)
+                           .Where(a => a.CurrentState == true && a.Active == true)
+                           .FirstOrDefaultAsync();
+                        // التحقق من وجود إعدادات البريد الإلكتروني
+                        if (emailSetting != null)
+                        {
+                            var message = new MimeMessage();
+                            message.From.Add(new MailboxAddress(slider.ProjectNameAr, emailSetting.MailSender));
+
+                            message.To.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+                            message.Subject = "مشروع جديد  " + "By:" + slider.DataEntry;
+                            var builder = new BodyBuilder
+                            {
+                                TextBody = $"مشروع جديد   \n\n\n" +
+                                           $"عناية السيد/ة :  saif aldin . المحترم /ة\n\n\n" +
+                                           $"تحية طيبة وبعد " +
+                                           $"تم أنشاء مشروع جديد وتاليا تفاصيله  :\n\n\n" +
+                                        
+                                           $"اسم المشروع  : {slider.ProjectNameAr}\n\n\n" +
+                                           $"وصف المشروع : {slider.ProjectDescriptionAr}\n\n\n" +
+                                           $"تاريخ البدأ  : {slider.ProjectStart}\n\n\n" +
+                                           $"تاريخ الانتهاء: {slider.ProjectEnd}\n\n\n" +
+                                           $"تم الاضافة بواسطة  : {slider.DataEntry}\n\n\n"
+                            };
+                            //// إضافة الصورة كملف مرفق إذا كانت موجودة
+                            //if (!string.IsNullOrEmpty(slider.Photo))
+                            //{
+                            //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
+                            //    builder.Attachments.Add(imagePath);
+                            //}
+                            message.Body = builder.ToMessageBody();
+                            using (var client = new SmtpClient())
+                            {
+                                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                                await client.SendAsync(message);
+                                await client.DisconnectAsync(true);
+                            }
+                        }
+                        else
+                        {
+                            // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
+                            // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
+                        }
+                        TempData["Saved successfully"] = ResourceWebAr.VLSavedSuccessfully;
 						return RedirectToAction("MyProjectInformationAr");
 					}
 					else
@@ -167,7 +311,58 @@
 					var reqestUpdate = iProjectInformation.UpdateData(slider);
 					if (reqestUpdate == true)
 					{
-						TempData["Saved successfully"] = ResourceWebAr.VLUpdatedSuccessfully;
+                        //send email
+                        var emailSetting = await dbcontext.TBEmailAlartSettings
+                           .OrderByDescending(n => n.IdEmailAlartSetting)
+                           .Where(a => a.CurrentState == true && a.Active == true)
+                           .FirstOrDefaultAsync();
+                        // التحقق من وجود إعدادات البريد الإلكتروني
+                        if (emailSetting != null)
+                        {
+                            var message = new MimeMessage();
+                            message.From.Add(new MailboxAddress(slider.ProjectNameAr, emailSetting.MailSender));
+
+                            message.To.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+                            message.Subject = "تعديل مشروع " + "By:" + slider.DataEntry;
+                            var builder = new BodyBuilder
+                            {
+                                TextBody = $"مشروع جديد   \n\n\n" +
+                                           $"عناية السيد/ة :  saif aldin . المحترم /ة\n\n\n" +
+                                           $"تحية طيبة وبعد " +
+                                           $"يرجى العلم بأنه تم تعديل المشروع التالي   :\n\n\n" +
+
+                                           $"اسم المشروع  : {slider.ProjectNameAr}\n\n\n" +
+                                           $"وصف المشروع : {slider.ProjectDescriptionAr}\n\n\n" +
+                                           $"تاريخ البدأ  : {slider.ProjectStart}\n\n\n" +
+                                           $"تاريخ الانتهاء: {slider.ProjectEnd}\n\n\n" +
+                                           $"تم الاضافة بواسطة  : {slider.DataEntry}\n\n\n"
+                            };
+                            //// إضافة الصورة كملف مرفق إذا كانت موجودة
+                            //if (!string.IsNullOrEmpty(slider.Photo))
+                            //{
+                            //    var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Images/Home", slider.Photo);
+                            //    builder.Attachments.Add(imagePath);
+                            //}
+                            message.Body = builder.ToMessageBody();
+                            using (var client = new SmtpClient())
+                            {
+                                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                                await client.SendAsync(message);
+                                await client.DisconnectAsync(true);
+                            }
+                        }
+                        else
+                        {
+                            // التعامل مع الحالة التي لا توجد فيها إعدادات البريد الإلكتروني
+                            // يمكنك تسجيل خطأ أو تنفيذ إجراءات أخرى هنا
+                        }
+
+
+
+
+
+                        TempData["Saved successfully"] = ResourceWebAr.VLUpdatedSuccessfully;
 						return RedirectToAction("MyProjectInformationAr");
 					}
 					else
