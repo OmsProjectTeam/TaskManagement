@@ -5,11 +5,11 @@ namespace Yara.Areas.Admin.APIsControllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductTypeAPIController : ControllerBase
+    public class ProjectTypeAPIController : ControllerBase
     {
         IIProjectType iProjectType;
         ApiResponse ApiResponse;
-        public ProductTypeAPIController(IIProjectType iProjectType1)
+        public ProjectTypeAPIController(IIProjectType iProjectType1)
         {
             iProjectType = iProjectType1;
             ApiResponse = new ApiResponse();

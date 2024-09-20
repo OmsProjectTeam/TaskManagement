@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Yara.Areas.Admin.APIsControllers
@@ -9,11 +10,13 @@ namespace Yara.Areas.Admin.APIsControllers
     {
         IIProjectInformation iProjectInformation;
         ApiResponse ApiResponse;
-        public ProjectInfomationAPIController(IIProjectInformation iProjectInformation)
+        MasterDbcontext dbcontext;
+        public ProjectInfomationAPIController(IIProjectInformation iProjectInformation, MasterDbcontext dbcontext)
         {
 
             ApiResponse = new ApiResponse();
             this.iProjectInformation = iProjectInformation;
+            this.dbcontext = dbcontext;
         }
 
         [HttpGet]
@@ -64,7 +67,10 @@ namespace Yara.Areas.Admin.APIsControllers
                 if (!ModelState.IsValid)
                     ApiResponse.StatusCode = System.Net.HttpStatusCode.BadRequest;
 
-                await iProjectInformation.AddDataAsync(model);
+                var result = await iProjectInformation.AddDataAsync(model);
+                if (result)
+                    await SendEmail(model);
+
                 return Ok(ApiResponse);
 
             }
@@ -84,7 +90,10 @@ namespace Yara.Areas.Admin.APIsControllers
                 if (!ModelState.IsValid)
                     ApiResponse.StatusCode = System.Net.HttpStatusCode.BadRequest;
 
-                await iProjectInformation.UpdateDataAsync(model);
+                var result = await iProjectInformation.UpdateDataAsync(model);
+                if (result)
+                    await SendEmail(model);
+
                 return Ok(ApiResponse);
 
             }
@@ -114,6 +123,41 @@ namespace Yara.Areas.Admin.APIsControllers
                 ApiResponse.IsSuccess = false;
             }
             return Ok(ApiResponse);
+        }
+
+        private async Task SendEmail(TBProjectInformation model)
+        {
+            var emailSetting = await dbcontext.TBEmailAlartSettings
+                                    .OrderByDescending(n => n.IdEmailAlartSetting)
+                                    .Where(a => a.CurrentState == true && a.Active == true)
+                                    .FirstOrDefaultAsync();
+
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress(model.ProjectName, emailSetting.MailSender));
+
+            message.To.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
+            message.Subject = "New Project  " + "By:" + model.DataEntry;
+            var builder = new BodyBuilder
+            {
+                TextBody = $"New Project  \n\n\n" +
+                           $"Attn: Mr  saif aldin\n\n\n" +
+                           $"Greetings" +
+                           $"A new project has been created entitled :\n\n\n" +
+                           $"Titel : {model.ProjectName}\n\n\n" +
+                           $"Description : {model.ProjectDescription}\n\n\n" +
+                           $"Start Date : {model.ProjectStart}\n\n\n" +
+                           $"End Date: {model.ProjectEnd}\n\n\n" +
+                           $"Add by  : {model.DataEntry}\n\n\n"
+            };
+
+            message.Body = builder.ToMessageBody();
+            using (var client = new SmtpClient())
+            {
+                await client.ConnectAsync(emailSetting.SmtpServer, emailSetting.PortServer, SecureSocketOptions.StartTls);
+                await client.AuthenticateAsync(emailSetting.MailSender, emailSetting.PasswordEmail);
+                await client.SendAsync(message);
+                await client.DisconnectAsync(true);
+            }
         }
     }
 }
