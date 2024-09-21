@@ -128,6 +128,11 @@
                                                         @foreach (var item in Model.ListViewTask)
                                                         {
                                                     <tr role="row" class="odd">
+
+
+                                                             
+
+
                                                         <td>@item.IdTask</td>
                                                         <td class="sorting_1"> <img src="@string.Format("/Images/Users/{0}",item.ImageUser)" class="img-bordered img-circle img-circle" style="width:100px; height:100px"></td>
                                                         <td class="truncate-50">@item.Name</td>                                                 
@@ -135,7 +140,43 @@
                                                         <td class="truncate-50">@item.TitleEn</td>
                                                         <td class="truncate-50">@item.DescriptionEn</td>
                                                         <td class="truncate-50">@item.TypesOfTask</td>
-                                                        <td class="truncate-50">@item.TaskStatus</td>                                           
+                                                        
+
+
+                                                                    @switch (@item.TaskStatus)
+                                                                    {
+                                                                        case "New mission":
+
+                                                                <td class="truncate-50 fc-event bg-info ui-draggable ui-draggable-handle"> @item.TaskStatus </td>
+                                                             
+                                                                        break;
+
+
+                                                                    case "Reopen the mission":
+                                                                <td class="truncate-50 fc-event bg-orange  ui-draggable ui-draggable-handle">@item.TaskStatus </td>
+                                                                        break;
+
+                                                                    case "In progress":
+                                                                <td class="truncate-50 fc-event bg-warning  ui-draggable ui-draggable-handle">@item.TaskStatus </td>
+                                                                        break;
+
+                                                                    case "Mission accomplished":
+                                                                <td class="truncate-50 fc-event bg-violet ui-draggable ui-draggable-handle">@item.TaskStatus </td>
+                                                                        break;
+                                                                  
+
+                                                                <td class="truncate-50 fc-event bg-info ui-draggable ui-draggable-handle">@item.TaskStatus </td>
+
+                                                                        break;
+
+                                                                        default:
+                                                                <td class="truncate-50 list-group-item list-group-item-success">@item.TaskStatus </td>
+                                                                            break;
+                                                                    }
+                                                        
+                                                        
+                                                        
+                                                                                                 
                                                         <td class="truncate-50">@item.ProjectName</td>
                                                         <td class="truncate-50">@item.AddedBy</td>
                                                    
