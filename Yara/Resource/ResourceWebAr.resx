@@ -1041,4 +1041,10 @@
   <data name="LBAddTask" xml:space="preserve">
     <value>أضافة وتعديل المهام </value>
   </data>
+  <data name="LBMYRequestsTask" xml:space="preserve">
+    <value>طلبات المهام </value>
+  </data>
+  <data name="LBMyEmailAlartSetting" xml:space="preserve">
+    <value>أعدادات البريد الاكتوني</value>
+  </data>
 </root>

@@ -62,7 +62,10 @@ namespace Infarstuructre.ViewModel
 		public List<TBViewTask> ListViewTask { get; set; }
         public TBTask Task { get; set; }
 		public List<TBEmailAlartSetting> ListEmailAlartSetting { get; set; }
-        public TBEmailAlartSetting EmailAlartSetting { get; set; }
+        public TBEmailAlartSetting EmailAlartSetting { get; set; }	
+		public List<TBViewRequestsTask> ListViewRequestsTask { get; set; }
+        public TBRequestsTask RequestsTask { get; set; }
+        public TBViewRequestsTask ViewRequestsTask { get; set; }
 
 
     }

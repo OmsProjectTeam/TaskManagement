@@ -101,6 +101,7 @@ builder.Services.AddScoped<IITaskStatus, CLSTBTaskStatus>();
 builder.Services.AddScoped<IIProjectInformation, CLSTBProjectInformation>();
 builder.Services.AddScoped<IITask, CLSTBTask>();
 builder.Services.AddScoped<IIEmailAlartSetting, CLSTBEmailAlartSetting>();
+builder.Services.AddScoped<IIRequestsTask, CLSTBRequestsTask>();
 
 builder.Services.AddScoped<AccountsController>();
 
