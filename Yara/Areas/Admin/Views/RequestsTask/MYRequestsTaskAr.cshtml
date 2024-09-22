@@ -1,5 +1,270 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ViewmMODeElMASTER
 @{
+    ViewData["Title"] = ResourceWebAr.LBMYRequestsTask;
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdminAr.cshtml";
 }
+<div class="col-xs-12">
+    <div class="box-content">
+        <ul class="list-inline">
+            <li class="margin-bottom-10"><a href="#"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">@ResourceWebAr.LBMYRequestsTask</button></a></li>/
+            <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="Home" asp-action="IndexAr"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Admin Home</button></a></li>/
+            <li class="margin-bottom-10"><a asp-area="" asp-controller="Home" asp-action="IndexAr"><button type="button" class="btn btn-primary btn-rounded btn-bordered waves-effect waves-light">Home</button></a></li>
+        </ul>
+        <!-- /.box-title -->
+        <div class="dropdown js__drop_down">
+            <a asp-area="Admin" asp-controller="RequestsTask" asp-action="AddEditRequestsTaskAr"><button type="button" class="btn btn-violet btn-rounded btn-bordered waves-effect waves-light" style="margin-bottom:20px">Add</button></a>
+        </div>
+        <!-- /.dropdown js__dropdown -->
+        <div id="example_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="rootwizard-progress">
+                        <div class="tab-header">
+                            <div class="navbar">
+                                <div class="navbar-inner">
+                                    <ul>
+                                        <li><a href="#tab-progress-1" data-toggle="tab">@ResourceWebAr.LbInformaitionAr</a></li>
+                                        <li><a href="#tab-progress-2" data-toggle="tab">@ResourceWebAr.LbInformaitionEn</a></li>
+                                        <li><a href="#tab-progress-3" data-toggle="tab">@ResourceWebAr.LbOpration</a></li>
+                                        @*    <li><a href="#tab-progress-5" data-toggle="tab">Fifth</a></li>  *@
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span style="color:royalblue"> <strong>@TempData["Saved successfully"]</strong></span>
+                                    <span style="color:red"> <strong>@TempData["ErrorSave"]</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content">
+                            <div id="bar" class="progress">
+                                <div class="progress-bar active progress-bar-info progress-bar-striped bar"></div>
+                            </div>
+                            <div class="tab-pane" id="tab-progress-1">
+                                <div class='table-responsive'>
+                                    <div style="overflow-x:auto;">
+                                        <table id="example" class="table table-striped table-bordered table-hover display dataTable responsive" style="width: 100%;" role="grid" aria-describedby="example_info">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending">@ResourceWebAr.LbId</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbPhoto</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbUserName</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbUserPhone</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbProjectNameAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbTitleAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbDescriptionAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbStartDate</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbEndtDate</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbPhoto</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbRequestsTitelAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbRequestsAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbAddedBy</th>
+                                            <tfoot>
+                                                <tr>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbId</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbPhoto</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbUserName</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbUserPhone</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbProjectNameAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbTitleAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbDescriptionAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbStartDate</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbEndtDate</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbPhoto</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbRequestsTitelAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbRequestsAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbAddedBy</th>
+                                            </tfoot>
+                                            <tbody>
+                                                        @foreach (var item in Model.ListViewRequestsTask)
+                                                        {
+                                                    <tr role="row" class="odd">
+                                                        <td>@item.IdRequestsTask</td>
+                                                        <td class="sorting_1"> <img src="@string.Format("/Images/Users/{0}",item.ImageUser)" class="img-bordered img-circle img-circle" style="width:100px; height:100px"></td>
+                                                        <td class="truncate-50">@item.Name</td>
+                                                        <td class="truncate-50">@item.PhoneNumber</td>
+                                                        <td class="truncate-50">@item.ProjectNameAr</td>
+                                                        <td class="truncate-50">@item.TitleAr</td>
+                                                        <td class="truncate-50">@item.DescriptionAr</td>
+                                                        <td class="truncate-50">@item.StartDate</td>
+                                                        <td class="truncate-50">@item.EndtDate</td>
+                                                        <td class="sorting_1">
+                                                                    @if (string.IsNullOrEmpty(item.Photo))
+                                                                    {
+                                                                <img src="/Images/Home/default-image.jpg" class="img-bordered img-circle" style="width:100px; height:100px" />
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                <img src="@string.Format("/Images/Home/{0}", item.Photo)" class="img-bordered img-circle" style="width:100px; height:100px" />
+                                                                    }
+                                                        </td>
+                                                        <td class="truncate-50">@item.RequestsTitelAr</td>
+                                                        <td class="truncate-50">@item.RequestsAr</td>
+                                                        <td class="truncate-50">@item.AddedBy</td>
+                                                    </tr>
+                                                        }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-progress-2">
+                                <div class='table-responsive'>
+                                    <div style="overflow-x:auto;">
+                                        <table id="example2" class="table table-striped table-bordered table-hover display dataTable responsive" style="width: 100%;" role="grid" aria-describedby="example_info">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending">@ResourceWebAr.LbId</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbPhoto</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbUserName</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbUserPhone</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbProjectNameEn</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbTitleEn</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbDescriptionEn</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbStartDate</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbEndtDate</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbPhoto</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbRequestsTitelEn</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbRequestsEn</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbAddedBy</th>
+                                            <tfoot>
+                                                <tr>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbId</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbPhoto</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbUserName</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbUserPhone</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbProjectNameEn</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbTitleEn</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbDescriptionEn</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbStartDate</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbEndtDate</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbPhoto</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbRequestsTitelEn</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbRequestsEn</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbAddedBy</th>
+                                            </tfoot>
+                                            <tbody>
+                                                        @foreach (var item in Model.ListViewRequestsTask)
+                                                        {
+                                                    <tr role="row" class="odd">
+                                                        <td>@item.IdRequestsTask</td>
+                                                        <td class="sorting_1"> <img src="@string.Format("/Images/Users/{0}",item.ImageUser)" class="img-bordered img-circle img-circle" style="width:100px; height:100px"></td>
+                                                        <td class="truncate-50">@item.Name</td>
+                                                        <td class="truncate-50">@item.PhoneNumber</td>
+                                                        <td class="truncate-50">@item.ProjectName</td>
+                                                        <td class="truncate-50">@item.TitleEn</td>
+                                                        <td class="truncate-50">@item.DescriptionEn</td>
+                                                        <td class="truncate-50">@item.StartDate</td>
+                                                        <td class="truncate-50">@item.EndtDate</td>
+                                                        <td class="sorting_1">
+                                                                    @if (string.IsNullOrEmpty(item.Photo))
+                                                                    {
+                                                                <img src="/Images/Home/default-image.jpg" class="img-bordered img-circle" style="width:100px; height:100px" />
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                <img src="@string.Format("/Images/Home/{0}", item.Photo)" class="img-bordered img-circle" style="width:100px; height:100px" />
+                                                                    }
+                                                        </td>
+                                                        <td class="truncate-50">@item.RequestsTitelEn</td>
+                                                        <td class="truncate-50">@item.RequestsEn</td>
+                                                        <td class="truncate-50">@item.AddedBy</td>
+                                                    </tr>
+                                                        }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="tab-progress-3">
+                                <div class='table-responsive'>
+                                    <div style="overflow-x:auto;">
+                                        <table id="example3" class="table table-striped table-bordered display dataTable table-responsive" style="width: 100%;" role="grid" aria-describedby="example_info">
+                                            <thead>
+                                                <tr role="row">
+                                                    <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending">@ResourceWebAr.LbId</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbPhoto</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbUserName</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbTitleAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbProjectNameAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbRequestsTitelAr</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbAddedBy</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbDataEntry</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.LbDateTimeEntry</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 64px;">@ResourceWebAr.lbCurrentState</th>
+                                                    <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">@ResourceWebAr.LbOpration</th>
+                                            <tfoot>
+                                                <tr>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbId</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbPhoto</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbUserName</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbTitleAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbProjectNameAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbRequestsTitelAr</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbAddedBy</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbDataEntry</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbDateTimeEntry</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.lbCurrentState</th>
+                                                    <th rowspan="1" colspan="1">@ResourceWebAr.LbOpration</th>
+                                            </tfoot>
+                                            <tbody>
+                                                        @foreach (var item in Model.ListViewRequestsTask)
+                                                        {
+                                                    <tr role="row" class="odd">
+                                                        <td>@item.IdRequestsTask</td>
+                                                        <td class="sorting_1"> <img src="@string.Format("/Images/Users/{0}",item.ImageUser)" class="img-bordered img-circle img-circle" style="width:100px; height:100px"></td>
+                                                        <td class="truncate-50">@item.Name</td>
+                                                        <td class="truncate-50">@item.TitleAr</td>
+                                                        <td class="truncate-50">@item.ProjectNameAr</td>
+                                                        <td class="truncate-50">@item.RequestsTitelAr</td>
+                                                        <td class="truncate-50">@item.AddedBy</td>
+                                                        <td>@item.DataEntry</td>
+                                                        <td>@item.DateTimeEntry</td>
+                                                        <td>
+                                                            <div class="switch primary"><input type="checkbox" checked="@item.CurrentState" IdRequestsTask="switch-2" disabled><label for="switch-2">@item.CurrentState</label></div>
+                                                        </td>
+                                                        <td>
+                                                            <ul class="list-inline">
+                                                                <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="RequestsTask" asp-action="AddEditRequestsTaskImageAr" asp-route-IdRequestsTask="@item.IdRequestsTask"><button type="button" class="btn btn-primary btn-circle btn-lg waves-effect waves-light"><i class="ico fa fa-edit"></i></button></a></li>|
+                                                                <li class="margin-bottom-10"><a asp-area="Admin" asp-controller="RequestsTask" asp-action="DeleteData" asp-route-IdRequestsTask="@item.IdRequestsTask"><button type="button" class="btn btn-danger btn-circle btn-lg waves-effect waves-light"><i class="ico fa fa-remove"></i></button></a></li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                        }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="pager wizard">
+                                <li class="previous"><a href="javascript:void(0)">Previous</a></li>
+                                <li class="next"><a href="javascript:void(0)">Next</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries (filtered from 57 total entries)</div>
+            </div><div class="col-sm-7"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button previous disabled" id="example_previous"><a href="#" aria-controls="example" data-dt-idx="0" tabindex="0">Previous</a></li><li class="paginate_button active"><a href="#" aria-controls="example" data-dt-idx="1" tabindex="0">1</a></li><li class="paginate_button next disabled" id="example_next"><a href="#" aria-controls="example" data-dt-idx="2" tabindex="0">Next</a></li></ul></div></div>
+        </div>
+    </div>
+</div>
+<!-- /.box-content -->
+@* <img src="~/images/user gide/RequestsTask.png" width="1920" height="1077" /> *@
+
+@section Scripts
+{
+
+
+
+}
+
+
+
+
+
+
+
+

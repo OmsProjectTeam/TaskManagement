@@ -1047,4 +1047,19 @@
   <data name="LBMyEmailAlartSetting" xml:space="preserve">
     <value>أعدادات البريد الاكتوني</value>
   </data>
+  <data name="LbRequestsTitelAr" xml:space="preserve">
+    <value>عنوان الطلب عربي</value>
+  </data>
+  <data name="LbRequestsAr" xml:space="preserve">
+    <value>تفاصيل الطلب</value>
+  </data>
+  <data name="LbRequestsTitelEn" xml:space="preserve">
+    <value>عنوان الطلب انكليزي</value>
+  </data>
+  <data name="LbRequestsEn" xml:space="preserve">
+    <value>الطلب انكليزي</value>
+  </data>
+  <data name="LBAddEditRequestsTask" xml:space="preserve">
+    <value>إضافة وتعديل طلبات المهام </value>
+  </data>
 </root>

@@ -169,6 +169,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to إضافة وتعديل طلبات المهام .
+        /// </summary>
+        public static string LBAddEditRequestsTask {
+            get {
+                return ResourceManager.GetString("LBAddEditRequestsTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to إضافةو تعديل سيرفر التنبيهات .
         /// </summary>
         public static string LBAddEmailAlartSetting {
@@ -2046,6 +2055,42 @@ namespace Yara.Resource {
         public static string LbReceiptStatment {
             get {
                 return ResourceManager.GetString("LbReceiptStatment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to تفاصيل الطلب.
+        /// </summary>
+        public static string LbRequestsAr {
+            get {
+                return ResourceManager.GetString("LbRequestsAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الطلب انكليزي.
+        /// </summary>
+        public static string LbRequestsEn {
+            get {
+                return ResourceManager.GetString("LbRequestsEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عنوان الطلب عربي.
+        /// </summary>
+        public static string LbRequestsTitelAr {
+            get {
+                return ResourceManager.GetString("LbRequestsTitelAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to عنوان الطلب انكليزي.
+        /// </summary>
+        public static string LbRequestsTitelEn {
+            get {
+                return ResourceManager.GetString("LbRequestsTitelEn", resourceCulture);
             }
         }
         

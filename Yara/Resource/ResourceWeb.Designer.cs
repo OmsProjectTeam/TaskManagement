@@ -178,6 +178,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add and edit task requests.
+        /// </summary>
+        public static string LBAddEditRequestsTask {
+            get {
+                return ResourceManager.GetString("LBAddEditRequestsTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Adding and modifying Email Alart Setting.
         /// </summary>
         public static string LBAddEmailAlartSetting {
@@ -2064,6 +2073,42 @@ namespace Yara.Resource {
         public static string LbReceiptStatment {
             get {
                 return ResourceManager.GetString("LbReceiptStatment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Request Ar.
+        /// </summary>
+        public static string LbRequestsAr {
+            get {
+                return ResourceManager.GetString("LbRequestsAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requests En.
+        /// </summary>
+        public static string LbRequestsEn {
+            get {
+                return ResourceManager.GetString("LbRequestsEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requests Titel Ar.
+        /// </summary>
+        public static string LbRequestsTitelAr {
+            get {
+                return ResourceManager.GetString("LbRequestsTitelAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requests Titel En.
+        /// </summary>
+        public static string LbRequestsTitelEn {
+            get {
+                return ResourceManager.GetString("LbRequestsTitelEn", resourceCulture);
             }
         }
         

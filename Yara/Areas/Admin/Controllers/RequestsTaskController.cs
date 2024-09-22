@@ -80,7 +80,7 @@ namespace Yara.Areas.Admin.Controllers
                 slider.DataEntry = model.RequestsTask.DataEntry;
                 slider.CurrentState = model.RequestsTask.CurrentState;
                 var file = HttpContext.Request.Form.Files;
-                if (slider.IdTask == 0 || slider.IdTask == null)
+                if (slider.IdRequestsTask == 0 || slider.IdRequestsTask == null)
                 {
                     if (file.Count() > 0)
                     {
@@ -447,7 +447,7 @@ namespace Yara.Areas.Admin.Controllers
                 slider.DataEntry = model.RequestsTask.DataEntry;
                 slider.CurrentState = model.RequestsTask.CurrentState;
                 var file = HttpContext.Request.Form.Files;
-                if (slider.IdTask == 0 || slider.IdTask == null)
+                if (slider.IdRequestsTask == 0 || slider.IdRequestsTask == null)
                 {
                     if (file.Count() > 0)
                     {
@@ -471,9 +471,11 @@ namespace Yara.Areas.Admin.Controllers
                         var TAskStatus = vmodel.ViewRequestsTask = iRequestsTask.GetByIdview(slider.IdRequestsTask);
                         if (user == null)
                             return NotFound();
-                        string ProjectName = TAskStatus.ProjectName;
-                        string taskstEn = TAskStatus.TitleEn;
-                        string DescriptionEn = TAskStatus.DescriptionEn;
+                      
+                        string ProjectNameAr = TAskStatus.ProjectNameAr;
+                       
+                        string taskstAr = TAskStatus.TitleAr;
+                        string DescriptionAr = TAskStatus.DescriptionAr;
                         string StartDate = TAskStatus.StartDate.ToString();
                         string EndtDate = TAskStatus.EndtDate.ToString();
                         //send email
@@ -485,7 +487,7 @@ namespace Yara.Areas.Admin.Controllers
                         if (emailSetting != null)
                         {
                             var message = new MimeMessage();
-                            message.From.Add(new MailboxAddress(slider.RequestsTitelEn, emailSetting.MailSender));
+                            message.From.Add(new MailboxAddress(slider.RequestsTitelAr, emailSetting.MailSender));
                             message.To.Add(new MailboxAddress(namedovlober, email));
                             message.Cc.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
                             message.Subject = "طلب جديد من قبل : "  + slider.AddedBy;
@@ -495,13 +497,13 @@ namespace Yara.Areas.Admin.Controllers
                                            $"عناية السيد/ة  {namedovlober}  المحترم  ...,\n\n\n" +
 
                                            $"يرجى الانتباه جيدًا للطلب التالي والرد عليه في أقرب وقت ممكن.. :\n\n\n" +
-                                           $"الطلب متعلق بمشروع : {ProjectName}\n\n\n" +
-                                           $"والمرتبط بالمهمة: {taskstEn}\n\n\n" +
-                                           $"الموضحة تاليا : {DescriptionEn}\n\n\n" +
+                                           $"الطلب متعلق بمشروع : {ProjectNameAr}\n\n\n" +
+                                           $"والمرتبط بالمهمة: {taskstAr}\n\n\n" +
+                                           $"الموضحة تاليا : {DescriptionAr}\n\n\n" +
                                            $"والتي تبدأ : {StartDate}\n\n\n" +
                                            $"وتنتهي: {EndtDate}\n\n\n" +
-                                           $"عنوان الطلب : {slider.RequestsTitelEn}\n\n\n" +
-                                           $"وصف الطلب : {slider.RequestsEn}\n\n\n" +
+                                           $"عنوان الطلب : {slider.RequestsTitelAr}\n\n\n" +
+                                           $"وصف الطلب : {slider.RequestsAr}\n\n\n" +
                                            $"أنشأ بواسطة   : {slider.AddedBy}\n\n\n"
                             };
                             // إضافة الصورة كملف مرفق إذا كانت موجودة
@@ -564,9 +566,10 @@ namespace Yara.Areas.Admin.Controllers
                             var TAskStatus = vmodel.ViewRequestsTask = iRequestsTask.GetByIdview(slider.IdRequestsTask);
                             if (user == null)
                                 return NotFound();
-                            string ProjectName = TAskStatus.ProjectName;
-                            string taskstEn = TAskStatus.TitleEn;
-                            string DescriptionEn = TAskStatus.DescriptionEn;
+                            string ProjectNameAr = TAskStatus.ProjectNameAr;
+
+                            string taskstAr = TAskStatus.TitleAr;
+                            string DescriptionAr = TAskStatus.DescriptionAr;
                             string StartDate = TAskStatus.StartDate.ToString();
                             string EndtDate = TAskStatus.EndtDate.ToString();
                             //send email
@@ -578,7 +581,7 @@ namespace Yara.Areas.Admin.Controllers
                             if (emailSetting != null)
                             {
                                 var message = new MimeMessage();
-                                message.From.Add(new MailboxAddress(slider.RequestsTitelEn, emailSetting.MailSender));
+                                message.From.Add(new MailboxAddress(slider.RequestsTitelAr, emailSetting.MailSender));
                                 message.To.Add(new MailboxAddress(namedovlober, email));
                                 message.Cc.Add(new MailboxAddress("saif aldin", "saifaldin_s@hotmail.com"));
                                 message.Subject = "تعديل الطلب  من قبل : " + slider.AddedBy;
@@ -588,13 +591,13 @@ namespace Yara.Areas.Admin.Controllers
                                                $"عناية السيد/ة  {namedovlober}  المحترم  ...,\n\n\n" +
 
                                                $"يرجى الانتباه جيدًا للطلب التالي والرد عليه في أقرب وقت ممكن.. :\n\n\n" +
-                                               $"الطلب متعلق بمشروع : {ProjectName}\n\n\n" +
-                                               $"والمرتبط بالمهمة: {taskstEn}\n\n\n" +
-                                               $"الموضحة تاليا : {DescriptionEn}\n\n\n" +
+                                               $"الطلب متعلق بمشروع : {ProjectNameAr}\n\n\n" +
+                                               $"والمرتبط بالمهمة: {taskstAr}\n\n\n" +
+                                               $"الموضحة تاليا : {DescriptionAr}\n\n\n" +
                                                $"والتي تبدأ : {StartDate}\n\n\n" +
                                                $"وتنتهي: {EndtDate}\n\n\n" +
-                                               $"عنوان الطلب : {slider.RequestsTitelEn}\n\n\n" +
-                                               $"وصف الطلب : {slider.RequestsEn}\n\n\n" +
+                                               $"عنوان الطلب : {slider.RequestsTitelAr}\n\n\n" +
+                                               $"وصف الطلب : {slider.RequestsAr}\n\n\n" +
                                                $"أنشأ بواسطة   : {slider.AddedBy}\n\n\n"
                                 };
                                 // إضافة الصورة كملف مرفق إذا كانت موجودة
@@ -651,9 +654,10 @@ namespace Yara.Areas.Admin.Controllers
                             var TAskStatus = vmodel.ViewRequestsTask = iRequestsTask.GetByIdview(slider.IdRequestsTask);
                             if (user == null)
                                 return NotFound();
-                            string ProjectName = TAskStatus.ProjectName;
-                            string taskstEn = TAskStatus.TitleEn;
-                            string DescriptionEn = TAskStatus.DescriptionEn;
+                            string ProjectNameAr = TAskStatus.ProjectNameAr;
+
+                            string taskstAr = TAskStatus.TitleAr;
+                            string DescriptionAr = TAskStatus.DescriptionAr;
                             string StartDate = TAskStatus.StartDate.ToString();
                             string EndtDate = TAskStatus.EndtDate.ToString();
                             //send email
@@ -675,13 +679,13 @@ namespace Yara.Areas.Admin.Controllers
                                                $"عناية السيد/ة  {namedovlober}  المحترم  ...,\n\n\n" +
 
                                                $"يرجى الانتباه جيدًا للطلب التالي والرد عليه في أقرب وقت ممكن.. :\n\n\n" +
-                                               $"الطلب متعلق بمشروع : {ProjectName}\n\n\n" +
-                                               $"والمرتبط بالمهمة: {taskstEn}\n\n\n" +
-                                               $"الموضحة تاليا : {DescriptionEn}\n\n\n" +
+                                               $"الطلب متعلق بمشروع : {ProjectNameAr}\n\n\n" +
+                                               $"والمرتبط بالمهمة: {taskstAr}\n\n\n" +
+                                               $"الموضحة تاليا : {DescriptionAr}\n\n\n" +
                                                $"والتي تبدأ : {StartDate}\n\n\n" +
                                                $"وتنتهي: {EndtDate}\n\n\n" +
-                                               $"عنوان الطلب : {slider.RequestsTitelEn}\n\n\n" +
-                                               $"وصف الطلب : {slider.RequestsEn}\n\n\n" +
+                                               $"عنوان الطلب : {slider.RequestsTitelAr}\n\n\n" +
+                                               $"وصف الطلب : {slider.RequestsAr}\n\n\n" +
                                                $"أنشأ بواسطة   : {slider.AddedBy}\n\n\n"
                                 };
                                 // إضافة الصورة كملف مرفق إذا كانت موجودة

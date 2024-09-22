@@ -22,8 +22,8 @@ namespace Domin.Entity
         public string TitleEn { get; set; }
         public string DescriptionAr { get; set; }
         public string DescriptionEn { get; set; }
-        public DateOnly StartDate { get; set; }
-        public DateOnly EndtDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndtDate { get; set; }
         public string? Photo { get; set; }
         public string RequestsAr { get; set; }
         public string RequestsEn { get; set; }
