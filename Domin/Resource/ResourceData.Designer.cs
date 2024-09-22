@@ -867,6 +867,22 @@ namespace Domin.Resource {
         public static string VlTypeSystemDelivery {
             get {
                 return ResourceManager.GetString("VlTypeSystemDelivery", resourceCulture);
+            } 
+            } 
+
+            public static string VlRequestsTitelAr { 
+        
+
+            get {
+                return ResourceManager.GetString("VlRequestsTitelAr", resourceCulture);
+            }
+        }  
+        public static string VlRequestsTitelEn
+        { 
+        
+
+            get {
+                return ResourceManager.GetString("VlRequestsTitelEn", resourceCulture);
             }
         }
     }

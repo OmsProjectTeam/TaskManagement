@@ -387,10 +387,10 @@
   <data name="VlRequestsEn" xml:space="preserve">
     <value>Please write the request in English for the process to be completed successfully...!</value>
   </data>
-  <data name="VlRequestsTitelEn" xml:space="preserve">
-    <value>Please enter the order address for the process to be completed successfully...!</value>
-  </data>
   <data name="VlRequestsTitelAr" xml:space="preserve">
     <value>يرجى أدراج عنوان الطلب لتتم العملية بنجاح ...!</value>
+  </data>
+  <data name="VlRequestsTitelEn" xml:space="preserve">
+    <value>Please include the title of the request related to the task for the process to be completed successfully....!</value>
   </data>
 </root>

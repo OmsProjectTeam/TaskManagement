@@ -1071,4 +1071,19 @@
   <data name="LBMYRequestsTask" xml:space="preserve">
     <value>Request Task</value>
   </data>
+  <data name="LbRequestsTitelAr" xml:space="preserve">
+    <value>Requests Titel Ar</value>
+  </data>
+  <data name="LbRequestsAr" xml:space="preserve">
+    <value>Request Ar</value>
+  </data>
+  <data name="LbRequestsTitelEn" xml:space="preserve">
+    <value>Requests Titel En</value>
+  </data>
+  <data name="LbRequestsEn" xml:space="preserve">
+    <value>Requests En</value>
+  </data>
+  <data name="LBAddEditRequestsTask" xml:space="preserve">
+    <value>Add and edit task requests</value>
+  </data>
 </root>
