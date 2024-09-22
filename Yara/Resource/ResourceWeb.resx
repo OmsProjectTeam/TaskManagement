@@ -1068,4 +1068,7 @@
   <data name="VLUpdatedSuccessfully" xml:space="preserve">
     <value>The modification process was completed successfully</value>
   </data>
+  <data name="LBMYRequestsTask" xml:space="preserve">
+    <value>Request Task</value>
+  </data>
 </root>

@@ -51,6 +51,14 @@ namespace Infarstuructre.Data
 
 
             //*********************************************************
+            builder.Entity<TBViewRequestsTask>(entity =>
+			{
+				entity.HasNoKey();
+				entity.ToView("ViewRequestsTask");
+			});
+
+
+            //*********************************************************
             //---------------------------------
             builder.Entity<TBProjectType>()
            .Property(b => b.DateTimeEntry)
@@ -113,6 +121,16 @@ namespace Infarstuructre.Data
            .Property(b => b.Active)
            .HasDefaultValueSql("((1))");
     
+            //---------------------------------   
+            //---------------------------------
+            builder.Entity<TBRequestsTask>()
+           .Property(b => b.DateTimeEntry)
+           .HasDefaultValueSql("getdate()");
+            builder.Entity<TBRequestsTask>()
+           .Property(b => b.CurrentState)
+           .HasDefaultValueSql("((1))");  
+  
+    
             //---------------------------------
         }
         //***********************************
@@ -125,5 +143,7 @@ namespace Infarstuructre.Data
         public DbSet<TBTask> TBTasks { get; set; } 
         public DbSet<TBViewTask> ViewTask { get; set; } 
         public DbSet<TBEmailAlartSetting> TBEmailAlartSettings { get; set; } 
+        public DbSet<TBRequestsTask> TBRequestsTasks { get; set; } 
+        public DbSet<TBViewRequestsTask> ViewRequestsTask { get; set; } 
     }
 }

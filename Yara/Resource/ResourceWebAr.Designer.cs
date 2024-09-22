@@ -1321,6 +1321,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to أعدادات البريد الاكتوني.
+        /// </summary>
+        public static string LBMyEmailAlartSetting {
+            get {
+                return ResourceManager.GetString("LBMyEmailAlartSetting", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to أعدادات بريد التنبيهات.
         /// </summary>
         public static string LBMyEmailAlartSettingAr {
@@ -1434,6 +1443,15 @@ namespace Yara.Resource {
         public static string LBMyProjectType {
             get {
                 return ResourceManager.GetString("LBMyProjectType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to طلبات المهام .
+        /// </summary>
+        public static string LBMYRequestsTask {
+            get {
+                return ResourceManager.GetString("LBMYRequestsTask", resourceCulture);
             }
         }
         
@@ -2829,11 +2847,6 @@ namespace Yara.Resource {
         public static string VLUpdatedSuccessfully {
             get {
                 return ResourceManager.GetString("VLUpdatedSuccessfully", resourceCulture);
-            }
-        }
-        public static string LBMyEmailAlartSetting {
-            get {
-                return ResourceManager.GetString("LBMyEmailAlartSetting", resourceCulture);
             }
         }
     }

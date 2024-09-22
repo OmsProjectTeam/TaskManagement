@@ -1456,6 +1456,15 @@ namespace Yara.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Request Task.
+        /// </summary>
+        public static string LBMYRequestsTask {
+            get {
+                return ResourceManager.GetString("LBMYRequestsTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Roles .
         /// </summary>
         public static string LBMyRolesName {

@@ -691,6 +691,24 @@ namespace Domin.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to يرجى كتابة الطلب باللغة العربية  لتتم العملية بنجاح ...!.
+        /// </summary>
+        public static string VlRequestsAr {
+            get {
+                return ResourceManager.GetString("VlRequestsAr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please write the request in English for the process to be completed successfully...!.
+        /// </summary>
+        public static string VlRequestsEn {
+            get {
+                return ResourceManager.GetString("VlRequestsEn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please include the amount for the transaction to complete successfully..!.
         /// </summary>
         public static string VlResivedMony {
