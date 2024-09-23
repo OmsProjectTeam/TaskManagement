@@ -1,5 +1,7 @@
 ﻿
 
+using Microsoft.EntityFrameworkCore;
+
 namespace Infarstuructre.BL
 {
     public interface IIRequestsTask
@@ -14,6 +16,18 @@ namespace Infarstuructre.BL
         bool DELETPHOTO(int IdRequestsTask);
         bool DELETPHOTOWethError(string PhotoNAme);
         public TBViewRequestsTask GetByIdview(int IdRequestsTask);
+
+        //////////////////////API////////////////////////////////////////////
+        ///
+        Task<List<TBViewRequestsTask>> GetAllAsync();
+        Task<TBRequestsTask> GetByIdAsync(int IdRequestsTask);
+        Task<bool> AddDataAsync(TBRequestsTask savee);
+        Task<bool> UpdateDataAsync(TBRequestsTask updatss);
+        Task<bool> DeleteDataAsync(int IdRequestsTask);
+        Task<List<TBViewRequestsTask>> GetAllvAsync(int IdRequestsTask);
+        Task<bool> DELETPHOTOAsync(int IdRequestsTask);
+        Task<bool> DELETPHOTOWethErrorAsync(string PhotoNAme);
+        Task<TBViewRequestsTask> GetByIdviewAsync(int IdRequestsTask);
 
     }
     public class CLSTBRequestsTask : IIRequestsTask
@@ -156,6 +170,113 @@ namespace Infarstuructre.BL
             return sslid;
         }
 
+        // ////////////////////////////////////////////////API//////////////////////////////////////////////
+        public async Task<TBViewRequestsTask> GetByIdviewAsync(int IdRequestsTask)
+        {
+            TBViewRequestsTask sslid = await dbcontext.ViewRequestsTask.FirstOrDefaultAsync(a => a.IdRequestsTask == IdRequestsTask);
+            return sslid;
+        }
 
+
+        public async Task<List<TBViewRequestsTask>> GetAllAsync()
+        {
+            List<TBViewRequestsTask> MySlider = await dbcontext.ViewRequestsTask.OrderByDescending(n => n.IdRequestsTask).Where(a => a.CurrentState == true).ToListAsync();
+            return MySlider;
+        }
+
+        public async Task<TBRequestsTask> GetByIdAsync(int IdRequestsTask)
+        {
+            TBRequestsTask sslid = await dbcontext.TBRequestsTasks.FirstOrDefaultAsync(a => a.IdRequestsTask == IdRequestsTask);
+            return sslid;
+        }
+
+        public async Task<bool> AddDataAsync(TBRequestsTask savee)
+        {
+            try
+            {
+                await dbcontext.AddAsync<TBRequestsTask>(savee);
+                await dbcontext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateDataAsync(TBRequestsTask updatss)
+        {
+            try
+            {
+                dbcontext.Entry(updatss).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                await dbcontext.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> DeleteDataAsync(int IdRequestsTask)
+        {
+            try
+            {
+                var catr = await GetByIdAsync(IdRequestsTask);
+                //using (FileStream fs = new FileStream(catr.Photo, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                //{
+                if (!string.IsNullOrEmpty(catr.Photo))
+                {
+                    // إذا كان هناك صورة قديمة، قم بمسحها من الملف
+                    var oldFilePath = Path.Combine(@"wwwroot/Images/Home", catr.Photo);
+                    if (System.IO.File.Exists(oldFilePath))
+                    {
+
+
+                        // استخدم FileShare.None للسماح بحذف الملف أثناء استخدامه
+                        using (FileStream fs = new FileStream(oldFilePath, FileMode.Open, FileAccess.Read, FileShare.None))
+                        {
+                            System.Threading.Thread.Sleep(200);
+                            GC.Collect();
+                            GC.WaitForPendingFinalizers();
+                        }
+
+                        System.IO.File.Delete(oldFilePath);
+                    }
+                }
+                //}
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public async Task<List<TBViewRequestsTask>> GetAllvAsync(int IdRequestsTask)
+        {
+            List<TBViewRequestsTask> MySlider = await dbcontext.ViewRequestsTask.OrderByDescending(n => n.IdRequestsTask == IdRequestsTask).Where(a => a.IdRequestsTask == IdRequestsTask).Where(a => a.CurrentState == true).ToListAsync();
+            return MySlider;
+        }
+
+
+
+        public Task<bool> DELETPHOTOAsync(int IdRequestsTask)
+        {
+            var result = DELETPHOTO(IdRequestsTask);
+            if(result)
+                return Task.FromResult(true);
+
+            return Task.FromResult(false);
+        }
+
+        public Task<bool> DELETPHOTOWethErrorAsync(string PhotoNAme)
+        {
+            var result = DELETPHOTOWethError(PhotoNAme);
+            if (result)
+                return Task.FromResult(true);
+
+            return Task.FromResult(false);
+        }
     }
 }

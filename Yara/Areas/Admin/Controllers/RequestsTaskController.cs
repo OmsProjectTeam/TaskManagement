@@ -362,16 +362,6 @@ namespace Yara.Areas.Admin.Controllers
 
 
 
-
-
-
-
-
-
-
-
-
-
         [Authorize(Roles = "Admin")]
         public IActionResult DeleteData(int IdRequestsTask)
         {
